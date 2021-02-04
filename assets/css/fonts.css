@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Akzidenz Grotesk Bold';
+  src: url('../fonts/akzidenz-grotesk-bq-bold.woff2') format('woff2'),
+       url('../fonts/akzidenz-grotesk-bq-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz Grotesk Light';
+  src: url('../fonts/akzidenz-grotesk-bq-light.woff2') format('woff2'),
+       url('../fonts/akzidenz-grotesk-bq-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz Grotesk Medium';
+  src: url('../fonts/akzidenz-grotesk-bq-medium.woff2') format('woff2'),
+       url('../fonts/akzidenz-grotesk-bq-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BourtonBase Regular';
+  src: url('../fonts/BourtonBase.woff2') format('woff2'),
+       url('../fonts/BourtonBase.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF UI Display Regular';
+    src: url('../fonts/SFUIDisplay-Regular.woff2') format('woff2'),
+         url('../fonts/SFUIDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'SF UI Display Bold';
+    src: url('../fonts/SFUIDisplay-Bold.woff2') format('woff2'),
+         url('../fonts/SFUIDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Regular';
+    src: url('../fonts/Helvetica.woff2') format('woff2'),
+         url('../fonts/Helvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Bold';
+    src: url('../fonts/Helvetica-Bold.woff2') format('woff2'),
+         url('../fonts/Helvetica-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
