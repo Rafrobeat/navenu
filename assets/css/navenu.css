@@ -49,6 +49,13 @@ button.btn:focus {
   box-shadow: 0 0 0 0;
 }
 
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 1);
+}
+
 /*------ menu -------*/
 .navbar {
   padding: 0 .75rem;
@@ -282,10 +289,14 @@ p.textButtonDown {
 .modal.bottom .modal-content {
   height: auto;
   overflow-y: auto;
+  border-radius: 0;
 }
 
 .modal.bottom .modal-body {
-  padding: 15px 15px;
+  padding: 2rem 1rem;
+  border-radius: 16px 16px 0 0;
+  background-color: #FFFFFF;
+  margin-top: -1rem;
 }
 
 /* Bottom */
@@ -333,6 +344,83 @@ p.textButtonDown {
   opacity: 1;
   cursor: pointer;
   z-index: 99999999;
+}
+
+.modal-header {
+  position: relative;
+  height: 35vh;
+  padding: 0;
+  border: none;
+}
+
+.modal-header::before {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 63.85%, #000000 100%);
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  content: "";
+}
+
+.modal-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.buttonRedeem {
+  font-family: 'Helvetica Bold';
+  font-size: 16px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 0.307692px;
+  padding: .5rem;
+  color: #000000;
+  background: #FFB600;
+  border: 3px solid #000000;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.modalHeaderText {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.modalHeaderText h1 {
+  font-family: 'BourtonBase regular';
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 0.141952px;
+  color: #FFFFFF;
+  margin-bottom: .5rem;
+}
+
+.modalHeaderText .tags .tagLeft {
+  font-family: 'Helvetica Bold';
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.modalHeaderText .tags .tagRight {
+  font-family: 'Helvetica Regular';
+  font-size: 14px;
+  letter-spacing: 0.116667px;
+  color: #F2F2F2;
+}
+
+.modal-body h3 {
+  font-family: 'BourtonBase Regular';
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.116667px;
+  color: #292929;
 }
 
 /*-------- responsive styles --------*/
