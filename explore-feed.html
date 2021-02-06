@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,39 +21,74 @@
 
   <!-- Custom styles for this template -->
   <link href="./assets/css/navenu.css" rel="stylesheet">
+  <link href="./assets/css/carousel.css" rel="stylesheet">
   <link href="./assets/css/fonts.css" rel="stylesheet">
+
+  <!-- Flickity slider -->
+  <link rel="stylesheet" href="./assets/css/vendor/flickity.min.css">
+
 </head>
+
 <body>
   <!-- menu-top -->
   <nav class="navbar navbar-expand-sm menuTop">
-    <button class="iconMap" onclick="showMap()">
+    <button id="iconMap" class="iconMap" onclick="showMap()">
+      <img src="./assets/images/icons/header/icon-map.svg" class="map" alt="icon map">
+      <img src="./assets/images/icons/header/icon-btnStories.svg" class="stories" alt="icon Stories">
     </button>
-    <div class="logo">
+    <div class="logo text-center">
       <img src="./assets/images/icons/header/icon-navenu.svg" alt="logo navenu">
+      <p class="location">LONDON, <b>Hackney</b></p>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler menuFilter collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span>
-        <img src="./assets/images/icons/header/icon-filter.svg" alt="icon filter">
+        <img src="./assets/images/icons/header/icon-filter.svg" class="filter" alt="icon filter">
+        <img src="./assets/images/icons/header/icon-buttonBack.svg" class="back" alt="icon back">
       </span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse iconsFilter" id="navbarCollapse">
+      <ul class="nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="explore-feed.html">
+            <img src="./assets/images/icons/explore/iconDo.svg" alt="icon do">
+            <p class="textFilter">DO</p>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="explore-feed.html">
+            <img src="./assets/images/icons/explore/iconSee.svg" alt="icon see">
+            <p class="textFilter">SEE</p>
+          </a>
+        </li>
+        <li class="nav-item iconMenu">
+          <a class="nav-link" href="explore-feed.html">
+            <img src="./assets/images/icons/explore/iconEat.svg" alt="icon eat">
+            <p class="textFilter">EAT</p>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link" href="explore-feed.html">
+            <img src="./assets/images/icons/explore/iconNight.svg" alt="icon night">
+            <p class="textFilter">NIGHT</p>
+          </a>
         </li>
-        <li class="nav-item dropup">
-          <a class="nav-link dropdown-toggle" href="https://getbootstrap.com/" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown10">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="explore-feed.html">
+            <img src="./assets/images/icons/explore/iconShop.svg" alt="icon shop">
+            <p class="textFilter">SHOP</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="explore-feed.html">
+            <img src="./assets/images/icons/explore/iconStay.svg" alt="icon stay">
+            <p class="textFilter">STAY</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="explore-feed.html">
+            <img src="./assets/images/icons/explore/iconFit.svg" alt="icon fit">
+            <p class="textFilter">FIT</p>
+          </a>
         </li>
       </ul>
     </div>
@@ -61,12 +97,159 @@
 
   <!-- container -->
   <div class="container">
-    <div class="jumbotron mt-3">
-      <h1>Bottom Navbar example</h1>
-      <p class="lead">This example is a quick exercise to illustrate how the bottom navbar works.</p>
+    <div id="carousel-home" class="carousel active" data-flickity='{ "wrapAround": true, "pageDots": false }'>
+      <div class="item">
+        <div class="bg">
+          <img src="./assets/images/home/slider/slider01.jpg" alt="Silider 01">
+        </div>
+        <a href="#" class="sliderUrl">
+          <div class="content">
+            <h2>EXCLUSIVE ITEM</h2>
+            <h1>Virtual Gin Masterclass</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">@GINMASTERS</p>
+              <p class="text-right tagRight">2.3Km away</p>
+            </div>
+          </div>
+        </a>
+        <button id="contentCard" class="btn contentCard" data-toggle="modal" data-target="#content1_modal">
+          <span class="elastic-scroll-wrapper">
+            <span class="elastic-scroll" id="elastic-move-down">
+              <div class="elastic-scroll-arrow">
+                <img src="./assets/images/icons/iconDown.svg" class="down" alt="icon down">
+                <p class="textButtonDown">more</p>
+              </div>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="item">
+        <div class="bg">
+          <img src="./assets/images/home/slider/slider02.jpg" alt="Silider 02">
+        </div>
+        <a href="#" class="sliderUrl">
+          <div class="content">
+            <h2>Competition</h2>
+            <h1>Win a VIP holiday to Dubai</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">@businessname</p>
+              <p class="text-right tagRight">2.3Km away</p>
+            </div>
+          </div>
+        </a>
+        <button id="contentCard" class="btn contentCard">
+          <span class="elastic-scroll-wrapper">
+            <span class="elastic-scroll" id="elastic-move-down">
+              <div class="elastic-scroll-arrow">
+                <img src="./assets/images/icons/iconDown.svg" class="down" alt="icon down">
+                <p class="textButtonDown">more</p>
+              </div>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="item">
+        <div class="bg">
+          <img src="./assets/images/home/slider/slider03.jpg" alt="Silider 03">
+        </div>
+        <a href="#" class="sliderUrl">
+          <div class="content">
+            <h2>OFFER</h2>
+            <h1>Best Cocktails  in London 2020</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">@businessname</p>
+              <p class="text-right tagRight">2.3Km away</p>
+            </div>
+          </div>
+        </a>
+        <button id="contentCard" class="btn contentCard">
+          <span class="elastic-scroll-wrapper">
+            <span class="elastic-scroll" id="elastic-move-down">
+              <div class="elastic-scroll-arrow">
+                <img src="./assets/images/icons/iconDown.svg" class="down" alt="icon down">
+                <p class="textButtonDown">more</p>
+              </div>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="item">
+        <div class="bg">
+          <img src="./assets/images/home/slider/slider04.jpg" alt="Silider 04">
+        </div>
+        <a href="#" class="sliderUrl">
+          <div class="content">
+            <h2>Event</h2>
+            <h1>Bottomless Brunch</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">@businessname</p>
+              <p class="text-right tagRight">2.3Km away</p>
+            </div>
+          </div>
+        </a>
+        <button id="contentCard" class="btn contentCard">
+          <span class="elastic-scroll-wrapper">
+            <span class="elastic-scroll" id="elastic-move-down">
+              <div class="elastic-scroll-arrow">
+                <img src="./assets/images/icons/iconDown.svg" class="down" alt="icon down">
+                <p class="textButtonDown">more</p>
+              </div>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="item">
+        <div class="bg">
+          <img src="./assets/images/home/slider/slider05.jpg" alt="Silider 05">
+        </div>
+        <a href="#" class="sliderUrl">
+          <div class="content">
+            <h2>@ CRAZY BEAR - 2.3k away</h2>
+            <h1>Pizza Night</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">@businessname</p>
+              <p class="text-right tagRight">2.3Km away</p>
+            </div>
+          </div>
+        </a>
+        <button id="contentCard" class="btn contentCard">
+          <span class="elastic-scroll-wrapper">
+            <span class="elastic-scroll" id="elastic-move-down">
+              <div class="elastic-scroll-arrow">
+                <img src="./assets/images/icons/iconDown.svg" class="down" alt="icon down">
+                <p class="textButtonDown">more</p>
+              </div>
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div id="maps" class="maps">
+      <div class="containerMap">
+        <img src="./assets/images/explore/map.png" class="imageMap" alt="map">
+      </div>
     </div>
   </div>
   <!-- ./container -->
+
+<!-- content modal -->
+<div class="modal bottom full fade" id="content1_modal" tabindex="-1" role="dialog" aria-labelledby="fullscreen_modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="container-close">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <img src="./assets/images/icons/iconClose.svg" class="img-fluid" alt="Close Content">
+        </button>
+      </div>
+      <div class="modal-body d-flex align-items-center justify-content-center flex-column bg-dark">
+
+      </div>
+      <div class="modal-footer modal-footer-fixed d-none">
+
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- menu-bottom -->
   <nav class="navbar navbar-default fixed-bottom menuBottom">
@@ -106,5 +289,32 @@
   <script src="./assets/vendor/jquery/jquery.min.js"></script>
   <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="./assets/js/plugins/lazysizes.min.js" async=""></script>
+
+  <!-- Flickity slider -->
+  <script src="./assets/js/vendor/flickity.pkgd.min.js"></script>
+
+  <!-- script change button map | slider -->
+  <script>
+    $(".iconMap").click(function() {
+      $(this).toggleClass("active");
+    })
+  </script>
+
+  <!-- script change map | slider -->
+  <script>
+    function showMap() {
+      console.log("showmap");
+      if (document.querySelector('#carousel-home.active') !== null) {
+        $(".maps").addClass("active");
+        $("#carousel-home").removeClass("active");
+      }
+      else {
+        $("#carousel-home").addClass("active");
+        $(".maps").removeClass("active");
+      }
+    }
+  </script>
+
 </body>
+
 </html>

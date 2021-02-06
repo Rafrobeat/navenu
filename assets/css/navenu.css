@@ -12,49 +12,14 @@ caption, tbody, tfoot, thead, tr, th, td {
   border: 0;
   outline: 0;
   font-size: 100%;
-  vertical-align: baseline;
   background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-:focus {
-  outline: 0;
-}
-
-ins {
-  text-decoration: none;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 /*------------ regular styles navenu ----------------*/
 body {
   color: #000;
   background-color: #F2F2F2;
+  overflow-y: hidden;
 }
 
 a {
@@ -86,11 +51,11 @@ button.btn:focus {
 
 /*------ menu -------*/
 .navbar {
-  padding: .5rem .5rem 0 .5rem;
+  padding: 0 .75rem;
 }
 
 .navbar-toggler {
-  padding: .25rem .5rem;
+  padding: .25rem 0 .25rem .5rem;
 }
 
 .menuTop {
@@ -102,20 +67,45 @@ button.btn:focus {
 }
 
 .iconMap {
+  position: relative;
   border: none;
-  background-image: url("../images/icons/header/icon-map.svg");
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.iconMap:active {
-  background-image: url("../images/icons/header/icon-slider.svg");
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
+.iconMap .map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: .25rem .5rem .25rem 0;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.iconMap .stories {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: .25rem .5rem .25rem 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.iconMap.active .map {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.iconMap.active .stories {
+  opacity: 1;
 }
 
 .iconMenu {
@@ -130,6 +120,237 @@ button.btn:focus {
   padding-bottom: 1px;
 }
 
-@media (max-wisth:768px) {
-  /*---- menu-top ------*/
+.menuFilter span {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.menuFilter.collapsed .filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: .25rem 0 .25rem 1rem;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.menuFilter.collapsed .back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: .25rem 0 .25rem 1rem;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.menuFilter .filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: .25rem 0 .25rem 1rem;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.menuFilter .back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: .25rem 0 .25rem 1rem;
+  object-fit: contain;
+  opacity: 1;
+}
+
+.iconsFilter ul li img {
+  vertical-align: middle;
+  padding: .35rem 0.25rem;
+}
+
+.iconsFilter ul li.active {
+  border: none;
+}
+
+.iconsFilter ul li.active img {
+  background: #FF6800;
+  border-radius: 7.91336px;
+  vertical-align: middle;
+  padding: .35rem 0.45rem;
+}
+
+.iconsFilter .nav-link {
+  padding: .5rem .3rem;
+}
+
+.iconsFilter .nav-item.active .nav-link {
+  padding-bottom: .5rem;
+}
+
+p.location {
+  font-family: 'Helvetica Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+p.textFilter {
+  font-family: 'BourtonBase Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12.3474px;
+  line-height: 16px;
+  align-items: center;
+  text-align: center;
+  color: #333333;
+}
+
+.elastic-scroll-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.5rem;
+  width: 40px;
+  margin: 0 auto;
+  z-index: 5;
+  margin-top: -1.25rem;
+}
+
+.elastic-scroll {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+p.textButtonDown {
+  font-family: 'Helvetica Bold';
+  font-size: 7.05602px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 2.016px;
+  text-transform: uppercase;
+  color: #F2F2F2;
+}
+
+.maps {
+  opacity: 0;
+  transition: opacity .5s;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  top: 10%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  overflow: auto;
+  z-index: 0;
+}
+
+.containerMap {
+  position: absolute;
+}
+
+.maps.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/*------- modal content ------*/
+.modal.bottom .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.modal.bottom .modal-content {
+  height: auto;
+  overflow-y: auto;
+}
+
+.modal.bottom .modal-body {
+  padding: 15px 15px;
+}
+
+/* Bottom */
+.modal.bottom.fade .modal-dialog {
+  bottom: -100%;
+  -webkit-transition: opacity 0.3s linear, bottom 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, bottom 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, bottom 0.3s ease-out;
+  transition: opacity 0.3s linear, bottom 0.3s ease-out;
+}
+
+.modal.bottom.fade.show .modal-dialog {
+  bottom: 0;
+}
+
+.modal.bottom.fade .modal-dialog {
+  bottom: -100%;
+}
+
+/* Full Screen */
+.modal.full .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.modal.full .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal.full .close-modal {
+  position: fixed;
+  top: 0;
+  right: 3rem;
+}
+
+.modal .close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  line-height: .5;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 99999999;
+}
+
+/*-------- responsive styles --------*/
+/*-------- iphone X -------*/
+@media (max-width:375px) {
+  .iconsFilter ul li img {
+    vertical-align: middle;
+    padding: .35rem 0.225rem;
+  }
+
+  .iconsFilter .nav-link {
+    padding: .5rem .15rem;
+  }
+}
+
+@media (max-width:768px) {
+  .modal .close {
+    top: 1rem;
+    right: 1rem;
+  }
 }

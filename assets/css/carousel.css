@@ -1,0 +1,169 @@
+:focus {
+  outline: none;
+}
+
+#carousel-home {
+  z-index: 1;
+}
+
+.carousel {
+  opacity: 0;
+  z-index: 0;
+  display: none;
+}
+
+.carousel.active {
+  opacity: 1;
+  z-index: 1;
+  display: block;
+}
+
+#carousel-home .item {
+  height: 100vh;
+  width: 90vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.carousel .item .bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  border-radius: 16px 16px 0 0;
+}
+
+.carousel .item .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1
+}
+
+#carousel-home .item .content {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  left: 5%;
+  bottom: 10%;
+  width: 95%;
+}
+
+.carousel .item .content h2 {
+  font-family: 'Helvetica Bold';
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #F2F2F2;
+}
+
+.carousel .item .content h1 {
+  font-family: 'BourtonBase Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40.3201px;
+  line-height: 40px;
+  letter-spacing: 0.143087px;
+  color: #FFFFFF;
+}
+
+.carousel .item.is-selected .content {
+  transform: translateX(0px);
+}
+
+.carousel .item.is-before-selected .content {
+  transform: translateX(calc(((100vw - 100%)/2 + 5vw)));
+}
+
+.carousel .item.is-after-selected .content {
+  transform: translateX(calc(((100vw - 100%)/2 + 5vw)*-1));
+}
+
+.carousel .flickity-prev-next-button {
+  height: 100%;
+  width: 10%;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.carousel .flickity-prev-next-button.next {
+  right: 0;
+}
+
+.carousel .flickity-prev-next-button.previous {
+  left: 0;
+}
+
+.carousel .flickity-prev-next-button:focus {
+  box-shadow: none;
+}
+
+.carousel .flickity-prev-next-button svg {
+  display: none;
+}
+
+/* position dots in carousel */
+.flickity-page-dots {
+  bottom: 25px;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.sliderUrl {
+  width: 100%;
+  height: 100%;
+}
+
+.tags {
+  display: inline-block;
+  width: 100%;
+}
+
+.tagLeft {
+  display: inline;
+  font-family: 'Helvetica Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.116667px;
+  color: #F2F2F2;
+  text-transform: uppercase;
+}
+
+.tagRight {
+  display: inline;
+  float: right;
+  padding-right: 1rem;
+  font-family: 'Helvetica Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.116667px;
+  color: #F2F2F2;
+}
+
+/*-------- responsive styles ------------*/
+@media(max-width:767px) {
+  #carousel-home .item .content h1 {
+    font-size: 2.5em;
+    width: 75%;
+  }
+
+  #carousel-home .item {
+    height: 90vh;
+    width: 93vw;
+  }
+}
