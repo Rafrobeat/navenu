@@ -56,6 +56,14 @@ hr {
   border-top: 1px solid rgba(255, 255, 255, 1);
 }
 
+.center-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
 /*------ menu -------*/
 .navbar {
   padding: 0 .75rem;
@@ -73,6 +81,10 @@ hr {
   background-color: #F2F2F2;
 }
 
+.nav-link {
+  padding: .5rem;
+}
+
 .iconMap {
   position: relative;
   border: none;
@@ -80,6 +92,7 @@ hr {
   height: 40px;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: transparent;
 }
 
 .iconMap .map {
@@ -104,6 +117,7 @@ hr {
   object-fit: contain;
   opacity: 0;
   transition: opacity .5s;
+  background-color: transparent;
 }
 
 .iconMap.active .map {
@@ -117,6 +131,7 @@ hr {
 
 .iconMenu {
   margin-bottom: 4px;
+  background-color: transparent;
 }
 
 .nav-item.active {
@@ -180,6 +195,10 @@ hr {
   opacity: 1;
 }
 
+.iconsFilter {
+  width: 100%;
+}
+
 .iconsFilter ul li img {
   vertical-align: middle;
   padding: .35rem 0.25rem;
@@ -197,11 +216,15 @@ hr {
 }
 
 .iconsFilter .nav-link {
-  padding: .5rem .3rem;
+  padding: .5rem 0;
 }
 
 .iconsFilter .nav-item.active .nav-link {
   padding-bottom: .5rem;
+}
+
+.contentIconsFilter {
+  width: 100%;
 }
 
 p.location {
@@ -230,7 +253,7 @@ p.textFilter {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 1.5rem;
+  bottom: .5rem;
   width: 40px;
   margin: 0 auto;
   z-index: 5;
@@ -277,6 +300,18 @@ p.textButtonDown {
   z-index: 1;
 }
 
+.menuBottom {
+  width: 100%;
+}
+
+.containerMenuBottom {
+  width: 100%;
+}
+
+.iconSearch {
+  margin-bottom: -2px;
+}
+
 /*------- modal content ------*/
 .modal.bottom .modal-dialog {
   position: fixed;
@@ -293,10 +328,10 @@ p.textButtonDown {
 }
 
 .modal.bottom .modal-body {
-  padding: 2rem 1rem;
-  border-radius: 16px 16px 0 0;
-  background-color: #FFFFFF;
-  margin-top: -1rem;
+  padding: 2rem 1rem 6rem;
+  background: #F2F2F2;
+  border-radius: 24px 24px 0px 0px;
+  margin-top: -2rem;
 }
 
 /* Bottom */
@@ -337,7 +372,7 @@ p.textButtonDown {
 }
 
 .modal .close {
-  position: absolute;
+  position: fixed;
   top: 2rem;
   right: 3rem;
   line-height: .5;
@@ -372,24 +407,10 @@ p.textButtonDown {
   object-position: center;
 }
 
-.buttonRedeem {
-  font-family: 'Helvetica Bold';
-  font-size: 16px;
-  line-height: 34px;
-  text-align: center;
-  letter-spacing: 0.307692px;
-  padding: .5rem;
-  color: #000000;
-  background: #FFB600;
-  border: 3px solid #000000;
-  border-radius: 8px;
-  width: 100%;
-}
-
 .modalHeaderText {
   position: absolute;
   bottom: 0;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem 1rem 2.5rem 1rem;
 }
 
 .modalHeaderText h1 {
@@ -421,6 +442,98 @@ p.textButtonDown {
   line-height: 20px;
   letter-spacing: 0.116667px;
   color: #292929;
+  margin-bottom: 1rem;
+}
+
+.modal-body p {
+  font-family: 'Helvetica Regular';
+  font-size: 14px;
+  line-height: 20px;
+  color: #292929;
+  margin-bottom: 1rem;
+}
+
+.modal-image {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.modalImageText {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.modalImageText h1 {
+  font-family: 'BourtonBase regular';
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.141952px;
+  color: #FFFFFF;
+  margin-bottom: .25rem;
+}
+
+.modalImageText p {
+  font-family: 'Helvetica Bold';
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #F2F2F2;
+}
+
+.iconCardLocation {
+  margin-top: -1.5rem;
+  padding: 0;
+}
+
+.rainbow {
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(0 2 5 / 0.3), rgba(0, 0, 0, 0)) 1;
+  font-family: 'Helvetica Bold';
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.modal-video {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.modalPlayVideo {}
+
+.iconPlayVideo {
+  padding: 0;
+}
+
+.modal-footer-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #FFFFFF;
+  border-top: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.25));
+}
+
+.buttonRedeem {
+  font-family: 'Helvetica Bold';
+  font-size: 16px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 0.307692px;
+  padding: .5rem;
+  color: #000000;
+  background: #FFB600;
+  border: 3px solid #000000;
+  border-radius: 8px;
+  width: 100%;
 }
 
 /*-------- responsive styles --------*/
@@ -429,10 +542,6 @@ p.textButtonDown {
   .iconsFilter ul li img {
     vertical-align: middle;
     padding: .35rem 0.225rem;
-  }
-
-  .iconsFilter .nav-link {
-    padding: .5rem .15rem;
   }
 }
 

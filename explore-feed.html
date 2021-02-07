@@ -47,7 +47,7 @@
       </span>
     </button>
     <div class="collapse navbar-collapse iconsFilter" id="navbarCollapse">
-      <ul class="nav">
+      <ul class="nav d-flex justify-content-around contentIconsFilter">
         <li class="nav-item active">
           <a class="nav-link" href="explore-feed.html">
             <img src="./assets/images/icons/explore/iconDo.svg" alt="icon do">
@@ -113,7 +113,7 @@
             </div>
           </div>
         </a>
-        <button id="contentCard" class="btn contentCard" data-toggle="modal" data-target="#content1_modal">
+        <button id="contentCard" class="btn contentCard" data-toggle="modal" data-target="#content1_modal" ontouchstart="touchModal(1)">
           <span class="elastic-scroll-wrapper">
             <span class="elastic-scroll" id="elastic-move-down">
               <div class="elastic-scroll-arrow">
@@ -157,7 +157,7 @@
         <a href="#" class="sliderUrl">
           <div class="content">
             <h2>OFFER</h2>
-            <h1>Best Cocktails  in London 2020</h1>
+            <h1>Best Cocktails in London 2020</h1>
             <hr>
             <div class="tags">
               <p class="text-left tagLeft">@businessname</p>
@@ -239,15 +239,15 @@
 
   <!-- menu-bottom -->
   <nav class="navbar navbar-default fixed-bottom menuBottom">
-    <div>
-      <ul class="nav align-items-end">
+    <div class="flex-column justify-content-center containerMenuBottom">
+      <ul class="nav d-flex justify-content-around align-items-end">
         <li class="nav-item active">
           <a class="nav-link" href="explore-feed.html">
             <img src="./assets/images/icons/nav/home.svg" alt="icon home">
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="explore-feed.html">
+          <a class="nav-link iconSearch" href="explore-feed.html">
             <img src="./assets/images/icons/nav/search.svg" alt="icon search">
           </a>
         </li>
@@ -290,14 +290,56 @@
             </div>
           </div>
         </div>
-        <div class="modal-body d-flex align-items-center justify-content-center flex-column">
+        <div class="modal-body d-flex flex-column">
           <h3>Enjoy a Gin Masterclass where you will learn from an extpert and taste a range of different Gins</h3>
-        </div>
-        <div class="modal-footer modal-footer-fixed">
-          <button type="button" class="buttonRedeem" name="button">£ 20 - Redeem Now</button>
+          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
+            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <div class="modal-image">
+            <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
+            <div class="modalImageText">
+              <h1>Location name</h1>
+              <div class="tags">
+                <p class="text-left tagLeft">Category</p>
+                <button type="button" name="buttonCard" class="btn iconCardLocation float-right">
+                  <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
+                </button>
+              </div>
+            </div>
+          </div>
+          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
+            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <button type="button" name="buttonProfile" class="rainbow">View Full Profile</button>
+          <div class="modal-image">
+            <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
+            <div class="modalImageText">
+              <h1>Location name</h1>
+              <div class="tags">
+                <p class="text-left tagLeft">Category</p>
+                <button type="button" name="buttonCard" class="btn iconCardLocation float-right">
+                  <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
+                </button>
+              </div>
+            </div>
+          </div>
+          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
+            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <button type="button" name="buttonProfile" class="rainbow">View Full Profile</button>
+          <div class="modal-video">
+            <img src="./assets/images/explore/video.jpg" class="img-fluid" alt="video content">
+            <div class="modalPlayVideo center-content">
+              <button type="button" name="buttonPlay" class="btn iconPlayVideo">
+                <img src="./assets/images/icons/explore/iconPlaySmall.svg" class="text-right" alt="icon play video">
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="modal-footer modal-footer-fixed">
+      <button type="button" class="buttonRedeem" name="button">£ 20 - Redeem Now</button>
+    </div>
+  </div>
+  </div>
   </div>
 
   <!-- Bootstrap core JavaScript -->
@@ -322,14 +364,21 @@
       if (document.querySelector('#carousel-home.active') !== null) {
         $(".maps").addClass("active");
         $("#carousel-home").removeClass("active");
-      }
-      else {
+      } else {
         $("#carousel-home").addClass("active");
         $(".maps").removeClass("active");
       }
     }
   </script>
+  <script>
+    document.addEventListener("touchstart", function() {}, true);
+  </script>
+
+  <script>
+  function touchModal(number) {
+   $("#content" + number + "_modal").modal('show');
+  };
+  </script>
 
 </body>
-
 </html>
