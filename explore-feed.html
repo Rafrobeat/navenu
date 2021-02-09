@@ -33,8 +33,8 @@
   <!-- menu-top -->
   <nav class="navbar navbar-expand-sm menuTop">
     <button id="iconMap" class="iconMap" onclick="showMap()">
-      <img src="./assets/images/icons/header/icon-map.svg" class="map" alt="icon map">
-      <img src="./assets/images/icons/header/icon-btnStories.svg" class="stories" alt="icon Stories">
+      <img src="./assets/images/icons/header/icon-map.svg" class="map iconShadow" alt="icon map">
+      <img src="./assets/images/icons/header/icon-btnStories.svg" class="stories iconShadow" alt="icon Stories">
     </button>
     <div class="logo text-center">
       <img src="./assets/images/icons/header/icon-navenu.svg" alt="logo navenu">
@@ -42,55 +42,32 @@
     </div>
     <button class="navbar-toggler menuFilter collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span>
-        <img src="./assets/images/icons/header/icon-filter.svg" class="filter" alt="icon filter">
+        <img src="./assets/images/icons/header/icon-filter.svg" class="filter iconShadow" alt="icon filter">
         <img src="./assets/images/icons/header/icon-buttonBack.svg" class="back" alt="icon back">
       </span>
     </button>
-    <div class="collapse navbar-collapse iconsFilter" id="navbarCollapse">
-      <ul class="nav d-flex justify-content-around contentIconsFilter">
-        <li class="nav-item active">
-          <a class="nav-link" href="explore-feed.html">
-            <img src="./assets/images/icons/explore/iconDo.svg" alt="icon do">
-            <p class="textFilter">DO</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="explore-feed.html">
-            <img src="./assets/images/icons/explore/iconSee.svg" alt="icon see">
-            <p class="textFilter">SEE</p>
-          </a>
-        </li>
-        <li class="nav-item iconMenu">
-          <a class="nav-link" href="explore-feed.html">
-            <img src="./assets/images/icons/explore/iconEat.svg" alt="icon eat">
-            <p class="textFilter">EAT</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="explore-feed.html">
-            <img src="./assets/images/icons/explore/iconNight.svg" alt="icon night">
-            <p class="textFilter">NIGHT</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="explore-feed.html">
-            <img src="./assets/images/icons/explore/iconShop.svg" alt="icon shop">
-            <p class="textFilter">SHOP</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="explore-feed.html">
-            <img src="./assets/images/icons/explore/iconStay.svg" alt="icon stay">
-            <p class="textFilter">STAY</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="explore-feed.html">
-            <img src="./assets/images/icons/explore/iconFit.svg" alt="icon fit">
-            <p class="textFilter">FIT</p>
-          </a>
-        </li>
-      </ul>
+    <div class="collapse navbar-collapse iconsFilter btn-group" id="navbarCollapse">
+      <button class="btn nav-link btn-block do active">
+        <img src="./assets/images/icons/explore/iconDo.svg" class="img-fluid" alt="icon do">
+      </button>
+      <button class="btn nav-link btn-block see">
+        <img src="./assets/images/icons/explore/iconSee.svg" class="img-fluid" alt="icon see">
+      </button>
+      <button class="btn nav-link btn-block eat">
+        <img src="./assets/images/icons/explore/iconEat.svg" class="img-fluid" alt="icon eat">
+      </button>
+      <button class="btn nav-link btn-block night">
+        <img src="./assets/images/icons/explore/iconNight.svg" class="img-fluid" alt="icon night">
+      </button>
+      <button class="btn nav-link btn-block shop">
+        <img src="./assets/images/icons/explore/iconShop.svg" class="img-fluid" alt="icon shop">
+      </button>
+      <button class="btn nav-link btn-block stay">
+        <img src="./assets/images/icons/explore/iconStay.svg" class="img-fluid" alt="icon stay">
+      </button>
+      <button class="btn nav-link btn-block fit">
+        <img src="./assets/images/icons/explore/iconFit.svg" class="img-fluid" alt="icon fit">
+      </button>
     </div>
   </nav>
   <!-- ./menu-top -->
@@ -242,27 +219,27 @@
     <div class="flex-column justify-content-center containerMenuBottom">
       <ul class="nav d-flex justify-content-around align-items-end">
         <li class="nav-item active">
-          <a class="nav-link" href="explore-feed.html">
+          <a class="nav-link iconShadow" href="explore-feed.html">
             <img src="./assets/images/icons/nav/home.svg" alt="icon home">
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link iconSearch" href="explore-feed.html">
+          <a class="nav-link iconShadow" href="explore-feed.html">
             <img src="./assets/images/icons/nav/search.svg" alt="icon search">
           </a>
         </li>
-        <li class="nav-item iconMenu">
+        <li class="nav-item">
           <a class="nav-link" href="explore-feed.html">
             <img src="./assets/images/icons/nav/navenu-logo.svg" alt="icon navenu">
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="explore-feed.html">
+          <a class="nav-link iconShadow" href="explore-feed.html">
             <img src="./assets/images/icons/nav/favorites.svg" alt="icon favorites">
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="explore-feed.html">
+          <a class="nav-link iconShadow" href="explore-feed.html">
             <img src="./assets/images/icons/nav/user.svg" alt="icon user">
           </a>
         </li>
@@ -339,8 +316,6 @@
       <button type="button" class="buttonRedeem" name="button">£ 20 - Redeem Now</button>
     </div>
   </div>
-  </div>
-  </div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="./assets/vendor/jquery/jquery.min.js"></script>
@@ -370,15 +345,28 @@
       }
     }
   </script>
+
+  <script>
+    $(document).ready(function() {
+      $(".nav-link").on("click", function() {
+        $(this).toggleClass(" active").toggleClass("");
+      })
+    });
+  </script>
+
+
+  // active touch in mobile
   <script>
     document.addEventListener("touchstart", function() {}, true);
   </script>
 
+  // active touch in modal content
   <script>
-  function touchModal(number) {
-   $("#content" + number + "_modal").modal('show');
-  };
+    function touchModal(number) {
+      $("#content" + number + "_modal").modal('show');
+    };
   </script>
 
 </body>
+
 </html>

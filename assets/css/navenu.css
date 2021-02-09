@@ -101,7 +101,7 @@ hr {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: .25rem .5rem .25rem 0;
+  padding: .5rem .5rem .5rem 0;
   object-fit: contain;
   opacity: 1;
   transition: opacity .5s;
@@ -113,7 +113,7 @@ hr {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: .25rem .5rem .25rem 0;
+  padding: .5rem .5rem .5rem 0;
   object-fit: contain;
   opacity: 0;
   transition: opacity .5s;
@@ -129,9 +129,8 @@ hr {
   opacity: 1;
 }
 
-.iconMenu {
-  margin-bottom: 4px;
-  background-color: transparent;
+.menuTop .iconShadow {
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
 }
 
 .nav-item.active {
@@ -155,7 +154,7 @@ hr {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: .25rem 0 .25rem 1rem;
+  padding: .5rem 0 .5rem 1rem;
   object-fit: contain;
   opacity: 1;
   transition: opacity .5s;
@@ -190,33 +189,101 @@ hr {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: .25rem 0 .25rem 1rem;
+  padding: .5rem 0 .5rem 1rem;
   object-fit: contain;
   opacity: 1;
 }
 
 .iconsFilter {
   width: 100%;
+  height: 15vh;
+  align-items: baseline;
 }
 
-.iconsFilter ul li img {
-  vertical-align: middle;
-  padding: .35rem 0.25rem;
+.iconsFilter button {
+  border-radius: 6px !important;
+  background: transparent;
+  transition: background-color .3s linear;
+  margin: 0 auto;
 }
 
-.iconsFilter ul li.active {
-  border: none;
+.iconsFilter button.active {
+  border-radius: 6px !important;
 }
 
-.iconsFilter ul li.active img {
+.iconsFilter button:after {
+  width: 100%;
+  font-family: 'BourtonBase Regular';
+  font-size: 12.3474px;
+  text-align: center;
+  color: #333333;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  margin-bottom: -1.5rem;
+}
+
+.iconsFilter button.do:after {
+  content: 'do';
+}
+
+.iconsFilter button.do.active {
   background: #FF6800;
-  border-radius: 7.91336px;
-  vertical-align: middle;
-  padding: .35rem 0.45rem;
+}
+
+.iconsFilter button.see:after {
+  content: 'see';
+}
+
+.iconsFilter button.see.active {
+  background: #FFB600;
+}
+
+.iconsFilter button.eat:after {
+  content: 'eat';
+}
+
+.iconsFilter button.eat.active {
+  background: #E33B3B;
+}
+
+.iconsFilter button.night:after {
+  content: 'night';
+}
+
+.iconsFilter button.night.active {
+  background: #C849D9;
+}
+
+.iconsFilter button.shop:after {
+  content: 'shop';
+}
+
+.iconsFilter button.shop.active {
+  background: #FF2894;
+}
+
+.iconsFilter button.stay:after {
+  content: 'stay';
+}
+
+.iconsFilter button.stay.active {
+  background: #007CFF;
+}
+
+.iconsFilter button.fit:after {
+  content: 'fit';
+}
+
+.iconsFilter button.fit.active {
+  background: #00BC00;
 }
 
 .iconsFilter .nav-link {
-  padding: .5rem 0;
+  padding: .25rem;
+  margin: .25rem;
+  height: 9vh;
 }
 
 .iconsFilter .nav-item.active .nav-link {
@@ -304,12 +371,20 @@ p.textButtonDown {
   width: 100%;
 }
 
+.menuBottom ul li {
+  padding-bottom: .5rem;
+}
+
+.menuBottom ul li a.iconShadow {
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+}
+
 .containerMenuBottom {
   width: 100%;
 }
 
 .iconSearch {
-  margin-bottom: -2px;
+  /* margin-bottom: -2px; */
 }
 
 /*------- modal content ------*/
