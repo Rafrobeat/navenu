@@ -129,7 +129,7 @@ hr {
   opacity: 1;
 }
 
-.menuTop .iconShadow {
+.iconShadow {
   filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -349,11 +349,6 @@ p.textButtonDown {
   width: 100%;
   height: 90vh;
   position: relative;
-  top: 10%;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  object-fit: contain;
   overflow: auto;
   z-index: 0;
 }
@@ -388,6 +383,14 @@ p.textButtonDown {
 }
 
 /*------- modal content ------*/
+.modalCard {
+  z-index: 1998;
+}
+
+.modalLocation {
+  z-index: 1999;
+}
+
 .modal.bottom .modal-dialog {
   position: fixed;
   margin: auto;
@@ -409,7 +412,7 @@ p.textButtonDown {
   margin-top: -2rem;
 }
 
-/* Bottom */
+/* Bottom card fade */
 .modal.bottom.fade .modal-dialog {
   bottom: -100%;
   -webkit-transition: opacity 0.3s linear, bottom 0.3s ease-out;
@@ -484,6 +487,7 @@ p.textButtonDown {
 
 .modalHeaderText {
   position: absolute;
+  width: 100%;
   bottom: 0;
   padding: 1rem 1rem 2.5rem 1rem;
 }
@@ -580,8 +584,6 @@ p.textButtonDown {
   margin-bottom: 1rem;
 }
 
-.modalPlayVideo {}
-
 .iconPlayVideo {
   padding: 0;
 }
@@ -611,6 +613,187 @@ p.textButtonDown {
   width: 100%;
 }
 
+/*----------- modal locations ----------*/
+.modalLocation {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modalLocation .modal-body {
+  padding: 2rem 1rem;
+}
+
+.modalLocation .modal-content {
+  border-radius: 1rem;
+}
+
+/* Bottom location fade */
+.modal.bottox.fade .modal-dialog {
+  bottom: -100%;
+  -webkit-transition: bottom 0.3s ease-out;
+  -moz-transition: bottom 0.3s ease-out;
+  -o-transition: bottom 0.3s ease-out;
+  transition: bottom 0.3s ease-out;
+}
+
+.modal.bottox.fade.show .modal-dialog {
+  bottom: 0;
+}
+
+.modal.bottox.fade .modal-dialog {
+  bottom: -100%;
+}
+
+.modalLocation .modal-header {
+  position: relative;
+  height: 40vh;
+  padding: 0;
+  border: none;
+}
+
+.modalLocation .modal-content {
+  background-color: #F2F2F2;
+}
+
+.modalLocation .modal-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: .5rem;
+}
+
+.modalLocation .modalHeaderText {
+  padding: 1rem;
+}
+
+.modalLocation .modalHeaderText h1 {
+  font-family: 'BourtonBase regular';
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.141952px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.modalLocation .modalHeaderText p {
+  font-family: 'Helvetica Bold';
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #F2F2F2;
+}
+
+/*----- tabs cards -----*/
+.nav-tabs {
+  border-bottom: 1px solid transparent;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border-color: transparent;
+}
+
+.modalLocation .locationMenuTab .nav-link {
+  padding: .25rem .5rem;
+}
+
+.modalLocation .locationMenuTab a {
+  font-family: 'SF UI Display Regular';
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
+  text-align: center;
+}
+
+.modalLocation .locationMenuTab a.active {
+  font-weight: bold;
+  color: #000000;
+  background-color: transparent;
+  border: none;
+}
+
+.modalLocation .locationContentTab p.textCard {
+  font-family: 'Helvetica Regular';
+  font-size: 12px;
+  line-height: 18px;
+  color: #292929;
+}
+
+.modalLocation .locationContentTab #nav-info .sliderTab {
+  overflow-x: scroll;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.modalLocation .locationContentTab #nav-info .sliderTabContent {
+  width: max-content;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.sliderTabContent .col-auto {
+  padding-left: 0;
+}
+
+.sliderTabContent .col-auto:last-child {
+  padding-right: 0;
+}
+
+.modalLocation .locationContentTab #nav-info .sliderTabContent img {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  display: block;
+}
+
+.modalLocation .locationContentTab #nav-info .mapCard {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+  object-fit: contain;
+  overflow: auto;
+  margin: 1rem 0;
+}
+
+.containerMapCard {
+  position: absolute;
+}
+
+.containerMapCard .imageMapCard {
+  width: 150%;
+}
+
+.modalLocation #nav-directions {
+  min-height: 50vh;
+  background: #FFFA8A;
+  font-family: 'Helvetica Regular';
+  font-style: normal;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.229753px;
+  color: #000000;
+  padding: 2rem 1rem;
+}
+
+.locationContentTab .loc-address-times {
+  border-top: none;
+}
+
+.modalLocation #nav-reserve {
+  min-height: 50vh;
+  background: #FFFA8A;
+  font-family: 'Helvetica Regular';
+  font-style: normal;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.229753px;
+  color: #000000;
+  padding: 2rem 1rem;
+}
+
+.modalLocation #nav-store {}
+
 /*-------- responsive styles --------*/
 /*-------- iphone X -------*/
 @media (max-width:375px) {
@@ -624,5 +807,10 @@ p.textButtonDown {
   .modal .close {
     top: 1rem;
     right: 1rem;
+  }
+
+  .modalLocation .modal .close {
+    top: 1.5rem;
+    right: 1.5rem;
   }
 }

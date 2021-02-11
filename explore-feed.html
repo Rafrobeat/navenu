@@ -47,25 +47,25 @@
       </span>
     </button>
     <div class="collapse navbar-collapse iconsFilter btn-group" id="navbarCollapse">
-      <button class="btn nav-link btn-block do active">
+      <button class="btn nav-link btn-block btn-filter do active">
         <img src="./assets/images/icons/explore/iconDo.svg" class="img-fluid" alt="icon do">
       </button>
-      <button class="btn nav-link btn-block see">
+      <button class="btn nav-link btn-block btn-filter see">
         <img src="./assets/images/icons/explore/iconSee.svg" class="img-fluid" alt="icon see">
       </button>
-      <button class="btn nav-link btn-block eat">
+      <button class="btn nav-link btn-block btn-filter eat">
         <img src="./assets/images/icons/explore/iconEat.svg" class="img-fluid" alt="icon eat">
       </button>
-      <button class="btn nav-link btn-block night">
+      <button class="btn nav-link btn-block btn-filter night">
         <img src="./assets/images/icons/explore/iconNight.svg" class="img-fluid" alt="icon night">
       </button>
-      <button class="btn nav-link btn-block shop">
+      <button class="btn nav-link btn-block btn-filter shop">
         <img src="./assets/images/icons/explore/iconShop.svg" class="img-fluid" alt="icon shop">
       </button>
-      <button class="btn nav-link btn-block stay">
+      <button class="btn nav-link btn-block btn-filter stay">
         <img src="./assets/images/icons/explore/iconStay.svg" class="img-fluid" alt="icon stay">
       </button>
-      <button class="btn nav-link btn-block fit">
+      <button class="btn nav-link btn-block btn-filter fit">
         <img src="./assets/images/icons/explore/iconFit.svg" class="img-fluid" alt="icon fit">
       </button>
     </div>
@@ -90,7 +90,7 @@
             </div>
           </div>
         </a>
-        <button id="contentCard" class="btn contentCard" data-toggle="modal" data-target="#content1_modal" ontouchstart="touchModal(1)">
+        <button id="contentCard" class="btn contentCard" data-toggle="modal" data-target="#contentCard1_modal" ontouchstart="touchModal(1)">
           <span class="elastic-scroll-wrapper">
             <span class="elastic-scroll" id="elastic-move-down">
               <div class="elastic-scroll-arrow">
@@ -248,8 +248,8 @@
   </nav>
   <!-- ./menu-bottom -->
 
-  <!-- content modal -->
-  <div class="modal bottom full fade" id="content1_modal" tabindex="-1" role="dialog" aria-labelledby="fullscreen_modal">
+  <!-- content modal card1 -->
+  <div class="modal modalCard bottom full fade" id="contentCard1_modal" role="dialog" aria-labelledby="fullscreen_modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="container-close">
@@ -277,7 +277,7 @@
               <h1>Location name</h1>
               <div class="tags">
                 <p class="text-left tagLeft">Category</p>
-                <button type="button" name="buttonCard" class="btn iconCardLocation float-right">
+                <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right" data-toggle="modal" data-target="#contentLocation1_modal">
                   <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
                 </button>
               </div>
@@ -292,7 +292,7 @@
               <h1>Location name</h1>
               <div class="tags">
                 <p class="text-left tagLeft">Category</p>
-                <button type="button" name="buttonCard" class="btn iconCardLocation float-right">
+                <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
                   <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
                 </button>
               </div>
@@ -314,6 +314,90 @@
     </div>
     <div class="modal-footer modal-footer-fixed">
       <button type="button" class="buttonRedeem" name="button">£ 20 - Redeem Now</button>
+    </div>
+  </div>
+
+  <!-- content modal location1 -->
+  <div class="modal modalLocation bottox fade" id="contentLocation1_modal" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="container-close">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <img src="./assets/images/icons/iconClose.svg" class="img-fluid" alt="Close Content">
+          </button>
+        </div>
+        <div class="modal-header">
+          <img src="./assets/images/location/header.jpg" class="img-fluid" alt="Header Content">
+          <div class="modalHeaderText">
+            <h1>location name</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">Category</p>
+              <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow iconShadow float-right">
+                <img src="./assets/images/icons/explore/iconLocationDisabled.svg" class="text-right" alt="icon card location">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body d-flex flex-column">
+          <nav>
+            <div class="nav nav-tabs nav-justified rainbow locationMenuTab" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">Info</a>
+              <a class="nav-item nav-link" id="nav-directions-tab" data-toggle="tab" href="#nav-directions" role="tab" aria-controls="nav-directions" aria-selected="false">Directions</a>
+              <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="tab" href="#nav-reserve" role="tab" aria-controls="nav-reserve" aria-selected="false">Reserve</a>
+              <a class="nav-item nav-link" id="nav-store-tab" data-toggle="tab" href="#nav-store" role="tab" aria-controls="nav-store" aria-selected="false">Store</a>
+              <a class="nav-item nav-link" id="nav-share-tab" href="#" aria-controls="nav-share" aria-selected="false">
+                <img src="./assets/images/icons/iconShare.svg" class="img-fluid" alt="icon share location">
+              </a>
+            </div>
+          </nav>
+          <div class="tab-content locationContentTab" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+              <div class="loc-address-times rainbow text-left">
+                <p class="textCard"><b>a:</b> 1 Westgate St, Hackney, London E8 3RL</p>
+                <p class="textCard"><b>p:</b> +44 20 3095 9407</p>
+                <p class="textCard"><b>h: Open</b> - closes  9:00pm</p>
+                <p class="textCard"><b>£:</b> Dinner for two with drinks and service: around <b>£105.</b></p>
+              </div>
+              <p>Heard of P Franco? It’s a super-cool Dalston wine shop that also happens to do a mean line in comestibles. Bright is from the same crew, but is a restaurant proper. And it’s the best thing to hit the neighbourhood since sliced bread.
+              Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And cut into
+              quarters.</p>
+              <div class="sliderTab">
+                <div class="row sliderTabContent">
+                  <div class="col-auto">
+                    <img src="./assets/images/location/slider/01.jpg" img="img-fluid" alt="Slider image">
+                  </div>
+                  <div class="col-auto">
+                    <img src="./assets/images/location/slider/02.jpg" img="img-fluid" alt="Slider image">
+                  </div>
+                  <div class="col-auto">
+                    <img src="./assets/images/location/slider/03.jpg" img="img-fluid" alt="Slider image">
+                  </div>
+                  <div class="col-auto">
+                    <img src="./assets/images/location/slider/01.jpg" img="img-fluid" alt="Slider image">
+                  </div>
+                  <div class="col-auto">
+                    <img src="./assets/images/location/slider/02.jpg" img="img-fluid" alt="Slider image">
+                  </div>
+                  <div class="col-auto">
+                    <img src="./assets/images/location/slider/03.jpg" img="img-fluid" alt="Slider image">
+                  </div>
+                </div>
+
+              </div>
+              <div id="mapCard" class="mapCard">
+                <div class="containerMapCard">
+                  <img src="./assets/images/explore/map.png" class="imageMapCard" alt="map location">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-directions" role="tabpanel" aria-labelledby="nav-directions-tab">
+            <b>Navigation APP</b><br>is launched here</div>
+            <div class="tab-pane fade" id="nav-reserve" role="tabpanel" aria-labelledby="nav-reserve-tab">
+            <b>OpenTable API</b><br>loads here</div>
+            <div class="tab-pane fade" id="nav-store" role="tabpanel" aria-labelledby="nav-store-tab">store</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -348,7 +432,7 @@
 
   <script>
     $(document).ready(function() {
-      $(".nav-link").on("click", function() {
+      $(".btn-filter").on("click", function() {
         $(this).toggleClass(" active").toggleClass("");
       })
     });
@@ -363,7 +447,7 @@
   // active touch in modal content
   <script>
     function touchModal(number) {
-      $("#content" + number + "_modal").modal('show');
+      $("#contentCard" + number + "_modal").modal('show');
     };
   </script>
 
