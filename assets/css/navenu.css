@@ -196,7 +196,7 @@ hr {
 
 .iconsFilter {
   width: 100%;
-  height: 15vh;
+  height: 13vh;
   align-items: baseline;
 }
 
@@ -229,14 +229,6 @@ hr {
 }
 
 .iconsFilter button.do.active {
-  background: #FF6800;
-}
-
-.iconsFilter button.see:after {
-  content: 'see';
-}
-
-.iconsFilter button.see.active {
   background: #FFB600;
 }
 
@@ -245,14 +237,14 @@ hr {
 }
 
 .iconsFilter button.eat.active {
-  background: #E33B3B;
+  background: #FF6800;
 }
 
-.iconsFilter button.night:after {
-  content: 'night';
+.iconsFilter button.drink:after {
+  content: 'drink';
 }
 
-.iconsFilter button.night.active {
+.iconsFilter button.drink.active {
   background: #C849D9;
 }
 
@@ -283,7 +275,7 @@ hr {
 .iconsFilter .nav-link {
   padding: .25rem;
   margin: .25rem;
-  height: 9vh;
+  height: 7.5vh;
 }
 
 .iconsFilter .nav-item.active .nav-link {
