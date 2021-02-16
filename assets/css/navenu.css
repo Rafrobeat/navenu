@@ -811,21 +811,69 @@ p.textButtonDown {
 
 .modalLocation .locationContentTab #nav-store .sliderTabContent img {
   width: 285px;
-  height: 220px;
+  height: 210px;
   object-fit: cover;
   display: block;
 }
 
-.modalLocation .locationContentTab #nav-store .sliderTabContent .dealContent::before {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, #000000 -40.51%, rgba(0, 0, 0, 0) 32.41%);
-    mix-blend-mode: multiply;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: none;
-    content: "";
+.modalLocation .locationContentTab #nav-store .sliderTabContent .dealContent .dealImage::before {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #000000 -40.51%, rgba(0, 0, 0, 0) 32.41%);
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  content: "";
+}
+
+h1.titleMedium {
+  font-family: 'BourtonBase Regular';
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.116667px;
+  color: #000000;
+}
+
+#nav-store .dealImage {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+#nav-store .dealValue {
+  position: absolute;
+  font-family: 'Helvetica Bold';
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.229753px;
+  color: #000000;
+  right: .5rem;
+  bottom: .5rem;
+  padding: 6px 12px;
+  background: #FFFFFF;
+  border-radius: 33px;
+  margin-bottom: 0;
+}
+
+#nav-store .dealInfo {
+  position: relative;
+}
+
+#nav-store .dealInfo .dealTitle {
+  font-family: 'Helvetica Regular';
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+}
+
+#nav-store .dealInfo .dealDescription {
+  font-family: 'Helvetica Regular';
+  font-size: 14px;
+  line-height: 20px;
+  color: #292929;
+  max-width: 75vw;
 }
 
 /*-------- responsive styles --------*/

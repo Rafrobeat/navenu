@@ -31,7 +31,7 @@
 
 <body>
   <!-- menu-top -->
-  <nav class="navbar navbar-expand-sm menuTop">
+  <nav class="navbar menuTop">
     <button id="iconMap" class="iconMap" onclick="showMap()">
       <img src="./assets/images/icons/header/icon-map.svg" class="map iconShadow" alt="icon map">
       <img src="./assets/images/icons/header/icon-btnStories.svg" class="stories iconShadow" alt="icon Stories">
@@ -282,7 +282,7 @@
           </a>
           <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
             aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
-          <button type="button" name="buttonProfile" class="rainbow">View Full Profile</button>
+          <button type="button" name="buttonProfile" class="rainbow"  data-toggle="modal" data-target="#contentLocation1_modal">View Full Profile</button>
           <a href="#" class="modal-image" data-toggle="modal" data-target="#contentArticle1_modal">
             <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
             <div class="modalImageText">
@@ -297,7 +297,7 @@
           </a>
           <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
             aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
-          <button type="button" name="buttonProfile" class="rainbow">View Full Profile</button>
+          <button type="button" name="buttonProfile" class="rainbow"  data-toggle="modal" data-target="#contentArticle1_modal">View Full Profile</button>
           <div class="modal-video">
             <img src="./assets/images/explore/video.jpg" class="img-fluid" alt="video content">
             <div class="modalPlayVideo center-content">
@@ -392,12 +392,18 @@
             <div class="tab-pane fade" id="nav-reserve" role="tabpanel" aria-labelledby="nav-reserve-tab">
               <b>OpenTable API</b><br>loads here</div>
             <div class="tab-pane fade" id="nav-store" role="tabpanel" aria-labelledby="nav-store-tab">
-              <h1>Deals</h1>
+              <h1 class="titleMedium">Deals</h1>
               <div class="sliderTab">
                 <div class="row sliderTabContent">
                   <div class="col-auto dealContent">
-                    <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
-
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
                   </div>
                   <div class="col-auto dealContent">
                     <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
