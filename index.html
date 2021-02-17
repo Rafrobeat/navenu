@@ -113,7 +113,7 @@
             </div>
           </div>
         </a>
-        <button id="contentCard" class="btn contentCard">
+        <button id="contentCard" class="btn contentCard" data-toggle="modal" data-target="#contentArticle_modal" ontouchstart="touchArticleModal(1)">
           <span class="elastic-scroll-wrapper">
             <span class="elastic-scroll" id="elastic-move-down">
               <div class="elastic-scroll-arrow">
@@ -268,22 +268,8 @@
           <h3>Enjoy a Gin Masterclass where you will learn from an extpert and taste a range of different Gins</h3>
           <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
             aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <!-- card location 1 -->
           <a href="#" class="modal-image" data-toggle="modal" data-target="#contentLocation1_modal">
-            <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
-            <div class="modalImageText">
-              <h1>Location name</h1>
-              <div class="tags">
-                <p class="text-left tagLeft">Category</p>
-                <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right" data-toggle="modal" data-target="#contentLocation1_modal">
-                  <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
-                </button>
-              </div>
-            </div>
-          </a>
-          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
-            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
-          <button type="button" name="buttonProfile" class="rainbow"  data-toggle="modal" data-target="#contentLocation1_modal">View Full Profile</button>
-          <a href="#" class="modal-image" data-toggle="modal" data-target="#contentArticle1_modal">
             <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
             <div class="modalImageText">
               <h1>Location name</h1>
@@ -297,7 +283,24 @@
           </a>
           <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
             aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
-          <button type="button" name="buttonProfile" class="rainbow"  data-toggle="modal" data-target="#contentArticle1_modal">View Full Profile</button>
+          <button type="button" name="buttonProfile" class="rainbow"  data-toggle="modal" data-target="#contentLocation1_modal">View Full Profile</button>
+          <!-- card location 2 -->
+          <a href="#" class="modal-image" data-toggle="modal" data-target="#contentLocation2_modal">
+            <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
+            <div class="modalImageText">
+              <h1>Location name</h1>
+              <div class="tags">
+                <p class="text-left tagLeft">Category</p>
+                <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                  <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
+                </button>
+              </div>
+            </div>
+          </a>
+          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
+            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <button type="button" name="buttonProfile" class="rainbow"  data-toggle="modal" data-target="#contentLocation2_modal">View Full Profile</button>
+          <!-- video location -->
           <div class="modal-video">
             <img src="./assets/images/explore/video.jpg" class="img-fluid" alt="video content">
             <div class="modalPlayVideo center-content">
@@ -406,24 +409,129 @@
                     </div>
                   </div>
                   <div class="col-auto dealContent">
-                    <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
                   </div>
                   <div class="col-auto dealContent">
-                    <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+              <h1 class="titleMedium">Category A</h1>
               <div class="sliderTab">
                 <div class="row sliderTabContent">
                   <div class="col-auto dealContent">
-                    <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
                   </div>
                   <div class="col-auto dealContent">
-                    <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
-
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
                   </div>
                   <div class="col-auto dealContent">
-                    <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h1 class="titleMedium">Category B</h1>
+              <div class="sliderTab">
+                <div class="row sliderTabContent">
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h1 class="titleMedium">Category C</h1>
+              <div class="sliderTab">
+                <div class="row sliderTabContent">
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -434,8 +542,100 @@
     </div>
   </div>
 
-  <!-- content modal Article1 -->
-  <div class="modal modalLocation bottox fade" id="contentArticle1_modal" role="dialog">
+  <!-- content Article1 modal -->
+  <div class="modal modalArticleCard bottom full fade" id="contentArticle1_modal" role="dialog" aria-labelledby="fullscreen_modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="container-close">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <img src="./assets/images/icons/iconClose.svg" class="img-fluid" alt="Close Content">
+          </button>
+        </div>
+        <div class="modal-header">
+          <img src="./assets/images/explore/slider/slider01.jpg" class="img-fluid" alt="Header Article Content">
+        </div>
+        <div class="modal-body d-flex flex-column">
+          <h3>Article Title</h3>
+          <div class="profileArticle">
+            <img src="./assets/images/articles/profile.jpg" class="img-fluid profileImage" alt="image profile article">
+            <p>By <span class="profileName">@curatorname</span></p>
+          </div>
+          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
+            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <!-- article 1 modal content -->
+          <a href="#" class="modal-image" data-toggle="modal" data-target="#contentLocationArticle1_modal">
+            <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
+            <div class="modalImageText">
+              <h1>Location name</h1>
+              <div class="tags">
+                <p class="text-left tagLeft">Category</p>
+                <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                  <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
+                </button>
+              </div>
+            </div>
+          </a>
+          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
+            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <button type="button" name="buttonProfile" class="rainbow"  data-toggle="modal" data-target="#contentLocation1_modal">View Full Profile</button>
+          <!-- article 2 modal content -->
+          <a href="#" class="modal-image" data-toggle="modal" data-target="#contentLocationArticle2_modal">
+            <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
+            <div class="modalImageText">
+              <h1>Location name</h1>
+              <div class="tags">
+                <p class="text-left tagLeft">Category</p>
+                <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                  <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
+                </button>
+              </div>
+            </div>
+          </a>
+          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
+            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <button type="button" name="buttonProfile" class="rainbow" data-toggle="modal" data-target="#contentLocationArticle2_modal">View Full Profile</button>
+          <!-- article 3 modal content -->
+          <a href="#" class="modal-image" data-toggle="modal" data-target="#contentLocationArticle3_modal">
+            <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
+            <div class="modalImageText">
+              <h1>Location name</h1>
+              <div class="tags">
+                <p class="text-left tagLeft">Category</p>
+                <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                  <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
+                </button>
+              </div>
+            </div>
+          </a>
+          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
+            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <button type="button" name="buttonProfile" class="rainbow" data-toggle="modal" data-target="#contentLocationArticle3_modal">View Full Profile</button>
+          <!-- article 4 modal content -->
+          <a href="#" class="modal-image" data-toggle="modal" data-target="#contentLocationArticle4_modal">
+            <img src="./assets/images/explore/discount.jpg" class="img-fluid" alt="image content">
+            <div class="modalImageText">
+              <h1>Location name</h1>
+              <div class="tags">
+                <p class="text-left tagLeft">Category</p>
+                <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                  <img src="./assets/images/icons/explore/iconCardLocation.svg" class="text-right" alt="icon card location">
+                </button>
+              </div>
+            </div>
+          </a>
+          <p>Duis vitae sapien eget massa consequat egestas ac vel ligula. Nam tincidunt nulla ipsum, non eleifend orci rhoncus nec. In neque quam, rhoncus non sem et, faucibus dignissim sem. Donec hendrerit erat at eros varius fringilla. Mauris
+            aliquet pretium ipsum vel facilisis. Morbi sit amet feugiat tellus, molestie rhoncus massa.</p>
+          <button type="button" name="buttonProfile" class="rainbow" data-toggle="modal" data-target="#contentLocationArticle4_modal">View Full Profile</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer modal-footer-fixed">
+      <button type="button" class="buttonRedeem" name="button">£ 20 - Redeem Now</button>
+    </div>
+  </div>
+
+  <!-- content modal location Article 1 -->
+  <div class="modal modalLocation bottox fade" id="contentLocationArticle1_modal" role="dialog">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="container-close">
@@ -458,17 +658,17 @@
         <div class="modal-body d-flex flex-column">
           <nav>
             <div class="nav nav-tabs nav-justified rainbow locationMenuTab" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">Info</a>
-              <a class="nav-item nav-link" id="nav-directions-tab" data-toggle="tab" href="#nav-directions" role="tab" aria-controls="nav-directions" aria-selected="false">Directions</a>
-              <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="tab" href="#nav-reserve" role="tab" aria-controls="nav-reserve" aria-selected="false">Reserve</a>
-              <a class="nav-item nav-link" id="nav-store-tab" data-toggle="tab" href="#nav-store" role="tab" aria-controls="nav-store" aria-selected="false">Store</a>
+              <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab" href="#nav-info-article" role="tab" aria-controls="nav-info" aria-selected="true">Info</a>
+              <a class="nav-item nav-link" id="nav-directions-tab" data-toggle="tab" href="#nav-directions-article" role="tab" aria-controls="nav-directions" aria-selected="false">Directions</a>
+              <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="tab" href="#nav-reserve-article" role="tab" aria-controls="nav-reserve" aria-selected="false">Reserve</a>
+              <a class="nav-item nav-link" id="nav-store-tab" data-toggle="tab" href="#nav-store-article" role="tab" aria-controls="nav-store" aria-selected="false">Store</a>
               <a class="nav-item nav-link" id="nav-share-tab" href="#" aria-controls="nav-share" aria-selected="false">
                 <img src="./assets/images/icons/iconShare.svg" class="img-fluid" alt="icon share location">
               </a>
             </div>
           </nav>
           <div class="tab-content locationContentTab" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+            <div class="tab-pane fade show active" id="nav-info-article" role="tabpanel" aria-labelledby="nav-info-tab">
               <div class="loc-address-times rainbow text-left">
                 <p class="textCard"><b>a:</b> 1 Westgate St, Hackney, London E8 3RL</p>
                 <p class="textCard"><b>p:</b> +44 20 3095 9407</p>
@@ -500,7 +700,6 @@
                     <img src="./assets/images/location/slider/03.jpg" img="img-fluid" alt="Slider image">
                   </div>
                 </div>
-
               </div>
               <div id="mapCard" class="mapCard">
                 <div class="containerMapCard">
@@ -508,11 +707,152 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="nav-directions" role="tabpanel" aria-labelledby="nav-directions-tab">
+            <div class="tab-pane fade" id="nav-directions-article" role="tabpanel" aria-labelledby="nav-directions-tab">
               <b>Navigation APP</b><br>is launched here</div>
-            <div class="tab-pane fade" id="nav-reserve" role="tabpanel" aria-labelledby="nav-reserve-tab">
+            <div class="tab-pane fade" id="nav-reserve-article" role="tabpanel" aria-labelledby="nav-reserve-tab">
               <b>OpenTable API</b><br>loads here</div>
-            <div class="tab-pane fade" id="nav-store" role="tabpanel" aria-labelledby="nav-store-tab">store</div>
+            <div class="tab-pane fade" id="nav-store-article" role="tabpanel" aria-labelledby="nav-store-tab">
+              <h1 class="titleMedium">Deals</h1>
+              <div class="sliderTab">
+                <div class="row sliderTabContent">
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h1 class="titleMedium">Category A</h1>
+              <div class="sliderTab">
+                <div class="row sliderTabContent">
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h1 class="titleMedium">Category B</h1>
+              <div class="sliderTab">
+                <div class="row sliderTabContent">
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h1 class="titleMedium">Category C</h1>
+              <div class="sliderTab">
+                <div class="row sliderTabContent">
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                  <div class="col-auto dealContent">
+                    <div class="dealImage">
+                      <img src="./assets/images/location/deals/deal01.jpg" img="img-fluid dealImg" alt="Deal image">
+                      <p class="dealValue">£ 25.50</p>
+                    </div>
+                    <div class="dealInfo">
+                      <h1 class="dealTitle">Item Name</h1>
+                      <p  class="dealDescription">Duis vitae sapien eget massa consequat egestas ac vel ligula  Nam tincidunt nulla ipsum, non eleifend orci.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -557,15 +897,22 @@
   </script>
 
 
-  // active touch in mobile
+  <!-- active touch in mobile -->
   <script>
     document.addEventListener("touchstart", function() {}, true);
   </script>
 
-  // active touch in modal content
+  <!-- active touch in modal content -->
   <script>
     function touchModal(number) {
       $("#contentCard" + number + "_modal").modal('show');
+    };
+  </script>
+
+  <!-- active touch in modal article content -->
+  <script>
+    function touchArticleModal(number) {
+      $("#contentArticle" + number + "_modal").modal('show');
     };
   </script>
 

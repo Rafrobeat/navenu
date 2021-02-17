@@ -711,14 +711,16 @@ p.textButtonDown {
   color: #292929;
 }
 
-.modalLocation .locationContentTab #nav-info .sliderTab {
+.modalLocation .locationContentTab #nav-info .sliderTab,
+.modalLocation .locationContentTab #nav-info-article .sliderTab {
   overflow-x: scroll;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   margin: 1.5rem 0;
 }
 
-.modalLocation .locationContentTab #nav-info .sliderTabContent {
+.modalLocation .locationContentTab #nav-info .sliderTabContent,
+.modalLocation .locationContentTab #nav-info-article .sliderTabContent {
   width: max-content;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -732,13 +734,15 @@ p.textButtonDown {
   padding-right: 0;
 }
 
-.modalLocation .locationContentTab #nav-info .sliderTabContent img {
+.modalLocation .locationContentTab #nav-info .sliderTabContent img,
+.modalLocation .locationContentTab #nav-info-article .sliderTabContent img {
   width: 112px;
   height: 112px;
   object-fit: cover;
   display: block;
 }
 
+.modalLocation .locationContentTab #nav-info-article .mapCard,
 .modalLocation .locationContentTab #nav-info .mapCard {
   width: 100%;
   height: 25vh;
@@ -756,7 +760,8 @@ p.textButtonDown {
   width: 150%;
 }
 
-.modalLocation #nav-directions {
+.modalLocation #nav-directions,
+.modalLocation #nav-directions-article {
   min-height: 50vh;
   background: #FFFA8A;
   font-family: 'Helvetica Regular';
@@ -772,7 +777,8 @@ p.textButtonDown {
   border-top: none;
 }
 
-.modalLocation #nav-reserve {
+.modalLocation #nav-reserve,
+.modalLocation #nav-reserve-article {
   min-height: 50vh;
   background: #FFFA8A;
   font-family: 'Helvetica Regular';
@@ -784,38 +790,45 @@ p.textButtonDown {
   padding: 2rem 1rem;
 }
 
-.modalLocation .locationContentTab #nav-store .sliderTab {
+.modalLocation .locationContentTab #nav-store .sliderTab,
+.modalLocation .locationContentTab #nav-store-article .sliderTab {
   overflow-x: scroll;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   margin: 1.5rem 0;
 }
 
-#nav-store .sliderTabContent .col-auto {
+#nav-store .sliderTabContent .col-auto,
+#nav-store-article .sliderTabContent .col-auto {
   padding-left: 0.75rem;
 }
 
-#nav-store .sliderTabContent .col-auto:first-child {
+#nav-store .sliderTabContent .col-auto:first-child,
+#nav-store-article .sliderTabContent .col-auto:first-child {
   padding-left: 0;
 }
 
-#nav-store .sliderTabContent .col-auto:last-child {
+#nav-store .sliderTabContent .col-auto:last-child,
+#nav-store-article .sliderTabContent .col-auto:last-child {
   padding-right: 0;
 }
 
-.modalLocation .locationContentTab #nav-store .sliderTabContent {
+.modalLocation .locationContentTab #nav-store .sliderTabContent,
+.modalLocation .locationContentTab #nav-store-article .sliderTabContent {
   width: max-content;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
-.modalLocation .locationContentTab #nav-store .sliderTabContent img {
+.modalLocation .locationContentTab #nav-store .sliderTabContent img,
+.modalLocation .locationContentTab #nav-store-article .sliderTabContent img {
   width: 285px;
   height: 210px;
   object-fit: cover;
   display: block;
 }
 
+.modalLocation .locationContentTab #nav-store-article .sliderTabContent .dealContent .dealImage::before,
 .modalLocation .locationContentTab #nav-store .sliderTabContent .dealContent .dealImage::before {
   width: 100%;
   height: 100%;
@@ -836,13 +849,15 @@ h1.titleMedium {
   color: #000000;
 }
 
-#nav-store .dealImage {
+#nav-store .dealImage,
+#nav-store-article .dealImage {
   position: relative;
   width: fit-content;
   margin-bottom: 1rem;
 }
 
-#nav-store .dealValue {
+#nav-store .dealValue,
+#nav-store-article .dealValue {
   position: absolute;
   font-family: 'Helvetica Bold';
   font-size: 16px;
@@ -850,30 +865,61 @@ h1.titleMedium {
   letter-spacing: 0.229753px;
   color: #000000;
   right: .5rem;
-  bottom: .5rem;
+  bottom: .75rem;
   padding: 6px 12px;
   background: #FFFFFF;
   border-radius: 33px;
   margin-bottom: 0;
 }
 
-#nav-store .dealInfo {
+#nav-store .dealInfo,
+#nav-store-article .dealInfo {
   position: relative;
 }
 
-#nav-store .dealInfo .dealTitle {
+#nav-store .dealInfo .dealTitle,
+#nav-store-article .dealInfo .dealTitle {
   font-family: 'Helvetica Regular';
   font-size: 20px;
   line-height: 20px;
   color: #000000;
 }
 
-#nav-store .dealInfo .dealDescription {
+#nav-store .dealInfo .dealDescription,
+#nav-store-article .dealInfo .dealDescription {
   font-family: 'Helvetica Regular';
   font-size: 14px;
   line-height: 20px;
   color: #292929;
   max-width: 75vw;
+  margin-bottom: 0;
+}
+
+/*------ modal article modal -------*/
+.modalArticleCard .modal-header {
+  position: relative;
+  height: 27.5vh;
+  padding: 0;
+  border: none;
+}
+
+.profileArticle {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.profileArticle .profileImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.profileArticle p {
+  margin-left: 1rem;
+  margin-bottom: 0;
 }
 
 /*-------- responsive styles --------*/
