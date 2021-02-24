@@ -140,37 +140,57 @@
 }
 
 .tags {
-  display: inline-block;
+  display: flex;
   width: 100%;
+  align-items: center;
+}
+
+
+.profileHomeArticle {
+  display: flex;
+  align-items: center;
+}
+
+.profileHomeArticle .profileImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 .tagLeft {
-  display: inline;
+  /* display: inline; */
   font-family: 'Helvetica Regular';
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.116667px;
   color: #F2F2F2;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  align-items: center;
+}
+
+.text-left {
+  padding-left: .5rem;
 }
 
 .tagRight {
-  display: inline;
+  /* display: inline; */
+  position: absolute;
+  right: 0;
   float: right;
   font-family: 'Helvetica Regular';
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.116667px;
   color: #F2F2F2;
+  align-items: center;
+
 }
 
 /*-------- responsive styles ------------*/
 @media(max-width:767px) {
   #carousel-home .item .content h1 {
     font-size: 2.5em;
-    width: 75%;
+    width: 90%;
   }
 
   #carousel-home .item {
