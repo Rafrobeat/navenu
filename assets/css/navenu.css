@@ -493,14 +493,23 @@ p.textButtonDown {
   margin-bottom: .5rem;
 }
 
-.modalHeaderText .tags .tagLeft {
+.tags {
+  display: inline-block;
+  width: 100%;
+}
+
+.tags .tagLeft {
+  display: inline;
   font-family: 'Helvetica Bold';
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: #F2F2F2;
 }
 
-.modalHeaderText .tags .tagRight {
+.tags .tagRight {
+  display: inline;
+  float: right;
   font-family: 'Helvetica Regular';
   font-size: 14px;
   letter-spacing: 0.116667px;
@@ -686,8 +695,13 @@ p.textButtonDown {
 }
 
 .modalLocation .locationMenuTab .nav-link {
-  padding: .25rem .5rem;
+  padding: .5rem 1rem;
 }
+
+.modalLocation .locationMenuTab .nav-link.share {
+  padding: 0;
+}
+
 
 .modalLocation .locationMenuTab a {
   font-family: 'SF UI Display Regular';
@@ -924,6 +938,21 @@ h1.titleMedium {
 .profileArticle p {
   margin-left: 1rem;
   margin-bottom: 0;
+}
+
+/*------ modal lightbox -------*/
+.modalLightbox {
+  z-index: 2001;
+  background: rgba(0,0,0,.9);
+}
+
+.modal.modalLightbox .close {
+  position: relative;
+  top: .5rem;
+}
+
+#image {
+  width: 100%;
 }
 
 /*-------- responsive styles --------*/
