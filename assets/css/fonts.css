@@ -52,8 +52,8 @@
 
 @font-face {
     font-family: 'Helvetica Regular';
-    src: url('../fonts/Helvetica.woff2') format('woff2'),
-         url('../fonts/Helvetica.woff') format('woff');
+    src: url('../fonts/HelveticaNeueLTStd-Roman.woff2') format('woff2'),
+         url('../fonts/HelveticaNeueLTStd-Roman.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -61,8 +61,8 @@
 
 @font-face {
     font-family: 'Helvetica Bold';
-    src: url('../fonts/Helvetica-Bold.woff2') format('woff2'),
-         url('../fonts/Helvetica-Bold.woff') format('woff');
+    src: url('../fonts/HelveticaNeueLTStd-Bd.woff2') format('woff2'),
+         url('../fonts/HelveticaNeueLTStd-Bd.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
