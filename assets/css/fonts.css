@@ -50,7 +50,7 @@
     font-display: swap;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Helvetica Regular';
     src: url('../fonts/HelveticaNeueLTStd-Roman.woff2') format('woff2'),
          url('../fonts/HelveticaNeueLTStd-Roman.woff') format('woff');
@@ -66,4 +66,4 @@
     font-weight: bold;
     font-style: normal;
     font-display: swap;
-}
+} */

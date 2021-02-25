@@ -287,7 +287,7 @@ hr {
 }
 
 p.location {
-  font-family: 'Helvetica Regular';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 9px;
@@ -326,7 +326,8 @@ p.textFilter {
 }
 
 p.textButtonDown {
-  font-family: 'Helvetica Bold';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
   font-size: 7.05602px;
   line-height: 16px;
   text-align: center;
@@ -500,7 +501,8 @@ p.textButtonDown {
 
 .tags .tagLeft {
   display: inline;
-  font-family: 'Helvetica Bold';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -510,7 +512,8 @@ p.textButtonDown {
 .tags .tagRight {
   display: inline;
   float: right;
-  font-family: 'Helvetica Regular';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.116667px;
   color: #F2F2F2;
@@ -526,7 +529,8 @@ p.textButtonDown {
 }
 
 .modal-body p {
-  font-family: 'Helvetica Regular';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: #292929;
@@ -555,7 +559,8 @@ p.textButtonDown {
 }
 
 .modalImageText p {
-  font-family: 'Helvetica Bold';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 2px;
@@ -572,7 +577,8 @@ p.textButtonDown {
   border-width: 1px;
   border-style: solid;
   border-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(0 2 5 / 0.3), rgba(0, 0, 0, 0)) 1;
-  font-family: 'Helvetica Bold';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
   font-size: 12px;
   line-height: 24px;
   text-align: center;
@@ -601,7 +607,8 @@ p.textButtonDown {
 }
 
 .buttonRedeem {
-  font-family: 'Helvetica Bold';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
   font-size: 16px;
   line-height: 34px;
   text-align: center;
@@ -677,7 +684,8 @@ p.textButtonDown {
 }
 
 .modalLocation .modalHeaderText p {
-  font-family: 'Helvetica Bold';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
   font-size: 11px;
   line-height: 16px;
   letter-spacing: 2px;
@@ -702,7 +710,6 @@ p.textButtonDown {
   padding: 0;
 }
 
-
 .modalLocation .locationMenuTab a {
   font-family: 'SF UI Display Regular';
   font-size: 12px;
@@ -719,7 +726,8 @@ p.textButtonDown {
 }
 
 .modalLocation .locationContentTab p.textCard {
-  font-family: 'Helvetica Regular';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
   font-size: 12px;
   line-height: 18px;
   color: #292929;
@@ -778,7 +786,8 @@ p.textButtonDown {
 .modalLocation #nav-directions-article {
   min-height: 50vh;
   background: #FFFA8A;
-  font-family: 'Helvetica Regular';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 25px;
   line-height: 29px;
@@ -795,7 +804,8 @@ p.textButtonDown {
 .modalLocation #nav-reserve-article {
   min-height: 50vh;
   background: #FFFA8A;
-  font-family: 'Helvetica Regular';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 25px;
   line-height: 29px;
@@ -873,7 +883,8 @@ h1.titleMedium {
 #nav-store .dealValue,
 #nav-store-article .dealValue {
   position: absolute;
-  font-family: 'Helvetica Bold';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0.229753px;
@@ -893,7 +904,8 @@ h1.titleMedium {
 
 #nav-store .dealInfo .dealTitle,
 #nav-store-article .dealInfo .dealTitle {
-  font-family: 'Helvetica Regular';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
   font-size: 20px;
   line-height: 20px;
   color: #000000;
@@ -901,7 +913,8 @@ h1.titleMedium {
 
 #nav-store .dealInfo .dealDescription,
 #nav-store-article .dealInfo .dealDescription {
-  font-family: 'Helvetica Regular';
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: #292929;
@@ -943,7 +956,7 @@ h1.titleMedium {
 /*------ modal lightbox -------*/
 .modalLightbox {
   z-index: 2001;
-  background: rgba(0,0,0,.9);
+  background: rgba(0, 0, 0, .9);
 }
 
 .modal.modalLightbox .close {
