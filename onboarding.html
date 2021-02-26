@@ -34,7 +34,7 @@
 <body>
   <!-- container -->
   <div class="container-full-width">
-    <div id="carousel-login" class="carousel active" data-flickity='{ "wrapAround": true }'>
+    <div id="carousel-login" class="carousel active" data-flickity='{}'>
       <div class="item">
         <div class="bg">
           <img src="./assets/images/onboarding/slider/slider01.jpg" alt="Silider 01">
@@ -46,7 +46,7 @@
       </div>
       <div class="item">
         <div class="bg">
-          <img src="./assets/images/onboarding/slider/slider01.jpg" alt="Silider 01">
+          <img src="./assets/images/onboarding/slider/slider02.jpg" alt="Silider 02">
         </div>
         <div class="content text-center">
           <img src="./assets/images/logoNavenuWhite.svg" class="img-fluid logoNavenuLogin" alt="logo Navenu">
@@ -55,7 +55,7 @@
       </div>
       <div class="item">
         <div class="bg">
-          <img src="./assets/images/onboarding/slider/slider01.jpg" alt="Silider 01">
+          <img src="./assets/images/onboarding/slider/slider03.jpg" alt="Silider 03">
         </div>
         <div class="content text-center">
           <img src="./assets/images/logoNavenuWhite.svg" class="img-fluid logoNavenuLogin" alt="logo Navenu">
@@ -64,17 +64,51 @@
       </div>
       <div class="item four text-center">
         <div class="bg">
-          <img src="./assets/images/onboarding/slider/slider01.jpg" alt="Silider 01">
+          <img src="./assets/images/onboarding/slider/slider04.jpg" alt="Silider 04">
         </div>
         <div class="content text-center">
           <h1 class="textLogin">A GLOBAL NETWORK OF UNIQUE VENUES NEAR AND FAR</h1>
           <div class="buttonsLogin">
-            <button class="btn btn-primary btnFb" type="button" name="buttonFb"><span class="fb"></span>Continue with facebook</button>
-            <button class="btn btn-primary btnApple" type="button" name="buttonApple"><span class="apple"></span>Continue with apple</button>
-            <button class="btn btn-primary  btnEmail" type="button" name="buttonEmail"><span class="email"></span>Continue with email</button>
+            <button class="btn btnFb shadow-none" type="button" name="buttonFb"><span class="fb">Continue with facebook</span></button>
+            <button class="btn btnApple shadow-none" type="button" name="buttonApple"><span class="apple">Continue with apple</span></button>
+            <button class="btn btnEmail shadow-none" type="button" name="buttonEmail" onclick="showRegisterMail()"><span class="email">Continue with email</span></button>
           </div>
         </div>
       </div>
+    </div>
+    <div class="registerMail">
+      <div class="contentRegisterMail">
+        <div class="bkgnd">
+          <img src="./assets/images/onboarding/slider/slider05.jpg" alt="Silider 05">
+        </div>
+        <div class="iconClose">
+          <button type="button" name="button" class="buttonClose" onclick="showSlider()">
+            <img src="./assets/images/icons/onboarding/iconButtonBack.svg" alt="Back Button">
+          </button>
+        </div>
+        <div class="content">
+          <h2>signup</h2>
+          <form id="loginMail" class="loginMail" action="post" method="submit">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" class="form-control" value="email" name="email" required="required">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input id="password" type="password" class="form-control" value="password" name="password" required="required">
+            </div>
+            <div class="sign-up">
+                <button class="btn btnApple shadow-none" type="submit" name="signup"><span class="email">Email signup</span></button>
+              </div>
+          </form>
+          <div class="buttonsLogin">
+            <button class="btn btnFb shadow-none" type="button" name="buttonFb"><span class="fb">Continue with facebook</span></button>
+            <button class="btn btnApple shadow-none" type="button" name="buttonApple"><span class="apple">Continue with apple</span></button>
+            <button class="btn btnAccount shadow-none" type="button" name="buttonAccount"><span>I already have an account</span></button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   <!-- ./container -->
@@ -86,6 +120,23 @@
 
   <!-- Flickity slider -->
   <script src="./assets/js/vendor/flickity.pkgd.min.js"></script>
+
+  <!-- script change slider | register mail -->
+  <script>
+    function showRegisterMail() {
+      console.log("show register");
+      $(".registerMail").addClass("active");
+      $("#carousel-login").removeClass("active");
+    }
+  </script>
+
+  <!-- script register mail | change slider -->
+  <script type="text/javascript">
+    function showSlider() {
+      $("#carousel-login").addClass("active");
+      $(".registerMail").removeClass("active");
+    }
+  </script>
 </body>
 
 </html>
