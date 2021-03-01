@@ -376,10 +376,6 @@ p.textButtonDown {
   width: 100%;
 }
 
-.iconSearch {
-  /* margin-bottom: -2px; */
-}
-
 /*------- modal content ------*/
 .modalCard {
   z-index: 1998;
@@ -624,6 +620,26 @@ p.textButtonDown {
   border: 3px solid #000000;
   border-radius: 8px;
   width: 100%;
+}
+
+/*---------search content---------*/
+.search {
+  opacity: 0;
+  transition: opacity .5s;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  overflow: auto;
+  z-index: 0;
+}
+
+.containerSearch {
+  position: absolute;
+}
+
+.search.active {
+  opacity: 1;
+  z-index: 1;
 }
 
 /*----------- modal locations ----------*/

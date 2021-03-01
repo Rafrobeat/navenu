@@ -258,11 +258,21 @@
         </button>
       </div>
     </div>
+    <!-- content maps -->
     <div id="maps" class="maps">
       <div class="containerMap">
         <img src="./assets/images/explore/map.png" class="imageMap" alt="map">
       </div>
     </div>
+    <!-- content search -->
+    <div id="search" class="search">
+      <div class="containerSearch">
+        <form class="searchBox" action="" method="post">
+          <input type="text" name="" value="search....">
+        </form>
+      </div>
+    </div>
+
   </div>
   <!-- ./container -->
 
@@ -276,7 +286,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link iconShadow" href="#">
+          <a class="nav-link iconShadow"  onclick="showSearch()">
             <img src="./assets/images/icons/nav/iconSearch.svg" alt="icon search">
           </a>
         </li>
@@ -944,6 +954,15 @@
     })
   </script>
 
+  <!-- states buttons filters -->
+    <script>
+      $(document).ready(function() {
+        $(".btn-filter").on("click", function() {
+          $(this).toggleClass(" active").toggleClass("");
+        })
+      });
+    </script>
+
   <!-- script change map | slider -->
   <script>
     function showMap() {
@@ -951,6 +970,7 @@
       if (document.querySelector('#carousel-home.active') !== null) {
         $(".maps").addClass("active");
         $("#carousel-home").removeClass("active");
+        $(".search").removeClass("active");
       } else {
         $("#carousel-home").addClass("active");
         $(".maps").removeClass("active");
@@ -958,16 +978,20 @@
     }
   </script>
 
-<!-- states buttons filters -->
+  <!-- script change search | slider -->
   <script>
-    $(document).ready(function() {
-      $(".btn-filter").on("click", function() {
-        $(this).toggleClass(" active").toggleClass("");
-      })
-    });
+    function showSearch() {
+      console.log("showsearch");
+      if (document.querySelector('#carousel-home.active') !== null) {
+        $(".search").addClass("active");
+        $("#carousel-home").removeClass("active");
+        $(".maps").removeClass("active");
+      } else {
+        $("#carousel-home").addClass("active");
+        $(".search").removeClass("active");
+      }
+    }
   </script>
-
-
   <!-- active touch in mobile -->
   <script>
     document.addEventListener("touchstart", function() {}, true);
