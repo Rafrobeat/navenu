@@ -272,7 +272,12 @@
         </form>
       </div>
     </div>
-
+    <!-- content chat -->
+    <div id="chat" class="chat">
+      <div class="containerChat">
+        <h1>chat</h1>
+      </div>
+    </div>
   </div>
   <!-- ./container -->
 
@@ -968,12 +973,13 @@
     function showMap() {
       console.log("showmap");
       if (document.querySelector('#carousel-home.active') !== null) {
-        $(".maps").addClass("active");
         $("#carousel-home").removeClass("active");
         $(".search").removeClass("active");
+        $(".maps").addClass("active");
       } else {
         $("#carousel-home").addClass("active");
         $(".maps").removeClass("active");
+        $(".search").removeClass("active");
       }
     }
   </script>
@@ -989,6 +995,7 @@
       } else {
         $("#carousel-home").addClass("active");
         $(".search").removeClass("active");
+        $(".maps").removeClass("active");
       }
     }
   </script>
