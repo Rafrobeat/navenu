@@ -31,7 +31,7 @@
 <body>
   <!-- menu-top -->
   <nav class="navbar menuTop">
-    <button id="iconMap" class="iconMap" onclick="showMap()">
+    <button id="iconMap" class="iconMap buttonContent" data-number="6">
       <img src="./assets/images/icons/header/icon-map.svg" class="map iconShadow" alt="icon map">
       <img src="./assets/images/icons/header/icon-btnStories.svg" class="stories iconShadow" alt="icon Stories">
     </button>
@@ -70,7 +70,7 @@
 
   <!-- container -->
   <div class="container">
-    <div id="carousel-home" class="carousel active" data-flickity='{ "wrapAround": true, "pageDots": false }'>
+    <div id="carousel-home" class="carousel active contentBlock" data-number="1" data-flickity='{ "wrapAround": true, "pageDots": false }'>
       <div class="item">
         <div class="bg">
           <img src="./assets/images/explore/slider/slider01.jpg" alt="Silider 01">
@@ -259,13 +259,13 @@
       </div>
     </div>
     <!-- content maps -->
-    <div id="maps" class="maps">
+    <div id="maps" class="maps contentBlock" data-number="6">
       <div class="containerMap">
         <img src="./assets/images/explore/map.png" class="imageMap" alt="map">
       </div>
     </div>
     <!-- content search -->
-    <div id="search" class="search">
+    <div id="search" class="search contentBlock"data-number="2">
       <div class="containerSearch">
         <form class="searchBox" action="" method="post">
           <input type="text" name="" value="search....">
@@ -273,8 +273,20 @@
       </div>
     </div>
     <!-- content chat -->
-    <div id="chat" class="chat">
+    <div id="chat" class="chat contentBlock" data-number="3">
       <div class="containerChat">
+        <h1>chat</h1>
+      </div>
+    </div>
+    <!-- content deals -->
+    <div id="deals" class="deals contentBlock" data-number="4">
+      <div class="containerDeals">
+        <h1>chat</h1>
+      </div>
+    </div>
+    <!-- content profile -->
+    <div id="profile" class="profile contentBlock" data-number="5">
+      <div class="containerProfile">
         <h1>chat</h1>
       </div>
     </div>
@@ -285,28 +297,28 @@
   <nav class="navbar navbar-default fixed-bottom menuBottom">
     <div class="flex-column justify-content-center containerMenuBottom">
       <ul class="nav d-flex justify-content-around align-items-end">
-        <li class="nav-item active">
-          <a class="nav-link iconShadow" href="index.html">
+        <li class="nav-item buttonContent active" data-number="1">
+          <a class="nav-link iconShadow">
             <img src="./assets/images/icons/nav/iconHome.svg" alt="icon home">
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link iconShadow"  onclick="showSearch()">
+        <li class="nav-item buttonContent" data-number="2">
+          <a class="nav-link iconShadow">
             <img src="./assets/images/icons/nav/iconSearch.svg" alt="icon search">
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
+        <li class="nav-item buttonContent" data-number="3">
+          <a class="nav-link">
             <img src="./assets/images/icons/nav/navenu-logo.svg" alt="icon navenu">
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link iconShadow" href="#">
+        <li class="nav-item buttonContent" data-number="4">
+          <a class="nav-link iconShadow">
             <img src="./assets/images/icons/nav/iconDeals.svg" alt="icon deals">
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link iconShadow" href="#">
+        <li class="nav-item buttonContent" data-number="5">
+          <a class="nav-link iconShadow">
             <img src="./assets/images/icons/nav/iconProfile.svg" alt="icon profile">
           </a>
         </li>
@@ -952,53 +964,52 @@
   <!-- Flickity slider -->
   <script src="./assets/js/vendor/flickity.pkgd.min.js"></script>
 
-  <!-- script change button map | slider -->
-  <script>
-    $(".iconMap").click(function() {
-      $(this).toggleClass("active");
-    })
-  </script>
-
   <!-- states buttons filters -->
-    <script>
-      $(document).ready(function() {
-        $(".btn-filter").on("click", function() {
-          $(this).toggleClass(" active").toggleClass("");
-        })
+  <script>
+    $(document).ready(function() {
+      $(".btn-filter").on("click", function() {
+        $(this).toggleClass(" active").toggleClass("");
+      })
+    });
+  </script>
+
+  <!-- script change content -->
+  <script type="text/javascript">
+    // grab all the buttons
+    let Buttons = document.querySelectorAll(".buttonContent");
+    console.log(Buttons);
+    // loop through the buttons using for..of
+    for (let button of Buttons) {
+      // listen for a click event
+      button.addEventListener('click', function() {
+        // Store the event target in a const
+        // select active class
+        const active = document.querySelector(".buttonContent.active");
+        // check for the button that has active class and remove it
+        if (active) {
+          active.classList.remove("active");
+        }
+        // Add active class to the clicked element
+        this.classList.add("active");
+        // select all classes with the name content
+        let allContent = document.querySelectorAll('.contentBlock');
+        // loop through all content classes
+        for (let content of allContent) {
+          /* display the content if the value in the data attribute of the button and content are the same */
+          if (content.getAttribute('data-number') === button.getAttribute('data-number')) {
+            content.classList.add("active");
+            // content.style.display = "block";
+          }
+          // if it's not equal then hide it.
+          else {
+            content.classList.remove("active");
+            // content.style.display = "none";
+          }
+        }
       });
-    </script>
-
-  <!-- script change map | slider -->
-  <script>
-    function showMap() {
-      console.log("showmap");
-      if (document.querySelector('#carousel-home.active') !== null) {
-        $("#carousel-home").removeClass("active");
-        $(".search").removeClass("active");
-        $(".maps").addClass("active");
-      } else {
-        $("#carousel-home").addClass("active");
-        $(".maps").removeClass("active");
-        $(".search").removeClass("active");
-      }
     }
   </script>
 
-  <!-- script change search | slider -->
-  <script>
-    function showSearch() {
-      console.log("showsearch");
-      if (document.querySelector('#carousel-home.active') !== null) {
-        $(".search").addClass("active");
-        $("#carousel-home").removeClass("active");
-        $(".maps").removeClass("active");
-      } else {
-        $("#carousel-home").addClass("active");
-        $(".search").removeClass("active");
-        $(".maps").removeClass("active");
-      }
-    }
-  </script>
   <!-- active touch in mobile -->
   <script>
     document.addEventListener("touchstart", function() {}, true);
@@ -1018,7 +1029,7 @@
     };
   </script>
 
-<!-- modal lightbox -->
+  <!-- modal lightbox -->
   <script type="text/javascript">
     $(document).ready(function() {
       var $imageSrc;
