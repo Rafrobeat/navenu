@@ -23,6 +23,7 @@
   <link href="./assets/css/navenu.css" rel="stylesheet">
   <link href="./assets/css/carousel.css" rel="stylesheet">
   <link href="./assets/css/fonts.css" rel="stylesheet">
+  <link href="./assets/css/chat.css" rel="stylesheet">
 
   <!-- Flickity slider -->
   <link rel="stylesheet" href="./assets/css/vendor/flickity.min.css">
@@ -406,7 +407,7 @@
       </div>
     </div>
     <div class="modal-footer modal-footer-fixed">
-      <button type="button" class="buttonRedeem" name="button">£ 20 - Redeem Now</button>
+      <button type="button" class="buttonRedeem" name="button" data-toggle="modal" data-target="#contentChat_modal">£ 20 - Redeem Now</button>
     </div>
   </div>
 
@@ -967,6 +968,83 @@
     </div>
   </div>
 
+  <!-- content modal chat -->
+  <div class="modal bottom modalChat full fade" id="contentChat_modal" role="dialog" aria-labelledby="fullscreen_modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="container-close">
+          <div class="contact-profile">
+            <img src="./assets/images/chat/imgSupportChatState.png" alt="Image Support chat"/>
+            <p><b>DANA</b>, NAVENU AGENT</p>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <img src="./assets/images/icons/iconCloseBlack.svg" class="img-fluid" alt="Close Content">
+          </button>
+        </div>
+        <div class="modal-body d-flex flex-column">
+          <div id="frame">
+            <div class="content">
+              <div class="messages">
+                <ul>
+                  <li class="replies">
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="Image Support chat"/>
+                    <p>Hi <user>, We’re glad you are interested in the Virtual GinMasterClass</p>
+                  </li>
+                  <li class="replies">
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="Image Support chat"/>
+                    <p>You can contact GinMasters vía their website and phone below using the code</p>
+                  </li>
+                  <li class="sent">
+                    <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                    <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
+                  </li>
+                  <li class="replies">
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="Image Support chat"/>
+                    <p>When you're backed against the wall, break the god damn thing down.</p>
+                  </li>
+                  <li class="replies">
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="Image Support chat"/>
+                    <p>Excuses don't win championships.</p>
+                  </li>
+                  <li class="sent">
+                    <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                    <p>Oh yeah, did Michael Jordan tell you that?</p>
+                  </li>
+                  <li class="replies">
+                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                    <p>No, I told him that.</p>
+                  </li>
+                  <li class="replies">
+                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                    <p>What are your choices when someone puts a gun to your head?</p>
+                  </li>
+                  <li class="sent">
+                    <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                    <p>What are you talking about? You do what they say or they shoot you.</p>
+                  </li>
+                  <li class="replies">
+                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                    <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="message-input">
+                <div class="wrap">
+                  <input type="text" placeholder="Write your message..." />
+                  <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                  <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer modal-footer-fixed">
+      <button type="button" class="buttonRedeem" name="button">£ 20 - Redeem Now</button>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript -->
   <script src="./assets/vendor/jquery/jquery.min.js"></script>
   <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -1036,6 +1114,36 @@
       }
     }
   }
+  </script>
+
+  <!-- chat -->
+  <script>
+    $(".messages").animate({
+      scrollTop: $(document).height()
+    }, "fast");
+    function newMessage() {
+      message = $(".message-input input").val();
+      if ($.trim(message) == '') {
+        return false;
+      }
+      $('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+      $('.message-input input').val(null);
+      $('.contact.active .preview').html('<span>You: </span>' + message);
+      $(".messages").animate({
+        scrollTop: $(document).height()
+      }, "fast");
+    };
+
+    $('.submit').click(function() {
+      newMessage();
+    });
+
+    $(window).on('keydown', function(e) {
+      if (e.which == 13) {
+        newMessage();
+        return false;
+      }
+    });
   </script>
 
   <!-- active touch in mobile -->

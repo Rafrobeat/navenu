@@ -370,6 +370,10 @@ p.textButtonDown {
   z-index: 1999;
 }
 
+.modalChat {
+  z-index: 2000;
+}
+
 .modal.bottom .modal-dialog {
   position: fixed;
   margin: auto;
@@ -832,6 +836,26 @@ p.textButtonDown {
 .containerChat {
   position: absolute;
   width: 100%;
+}
+
+.modalChat {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal.bottom.modalChat .modal-content {
+  border-radius: 1rem;
+  background: #F2F2F2;
+}
+
+.modal.bottom.modalChat .modal-content .container-close {
+  border-bottom: solid 1px #C4C4C4;
+}
+
+.modal.bottom.modalChat .modal-body {
+  padding: 0 0 6rem;
+  background: #F2F2F2;
+  border-radius: 0;
+  margin-top: 0;
 }
 
 /*---------deals content---------*/
