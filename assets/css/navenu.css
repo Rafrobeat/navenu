@@ -628,8 +628,17 @@ p.textButtonDown {
   position: absolute;
 }
 
-/*---------search content---------*/
+/*-------- search content --------*/
 .search {
+  opacity: 0;
+  transition: opacity .5s;
+  height: 0;
+  position: relative;
+  overflow: auto;
+  z-index: 0;
+}
+
+.searchState2 {
   opacity: 0;
   transition: opacity .5s;
   height: 0;
@@ -649,6 +658,11 @@ p.textButtonDown {
 }
 
 .containerSearch {
+  position: absolute;
+  width: 100%;
+}
+
+.containerSearch2 {
   position: absolute;
   width: 100%;
   /* left: 0; */
@@ -781,14 +795,14 @@ p.textButtonDown {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-.containerSearch .searchImageButton {
+.containerSearch2 .searchImageButton {
   position: relative;
   margin-bottom: 1rem;
   height: 35vh;
   display: block;
 }
 
-.containerSearch img.searchImg {
+.containerSearch2 img.searchImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -801,7 +815,7 @@ p.textButtonDown {
   width: 100%;
 }
 
-.containerSearch .searchImageButton h1 {
+.containerSearch2 .searchImageButton h1 {
   font-family: 'BourtonBase regular';
   font-weight: normal;
   font-size: 24px;
