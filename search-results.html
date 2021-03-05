@@ -72,7 +72,7 @@
 
   <!-- container -->
   <div class="container">
-    <div id="carousel-home" class="carousel active contentBlock" data-number="1" data-flickity='{ "wrapAround": true, "pageDots": false }'>
+    <div id="carousel-home" class="carousel contentBlock" data-number="1" data-flickity='{ "wrapAround": true, "pageDots": false }'>
       <div class="item">
         <div class="bg">
           <img src="./assets/images/explore/slider/slider01.jpg" alt="Silider 01">
@@ -267,19 +267,23 @@
       </div>
     </div>
     <!-- content search -->
-    <div id="search" class="search contentBlock" data-number="2">
+    <div id="search" class="search active contentBlock" data-number="2">
       <div class="containerSearch">
         <form class="searchBox" action="" method="post">
-          <input id="searchTerms" type="text" name="search" onkeyup="searchTerm()" placeholder="search....">
-          <h1>Popular search</h1>
-          <ul id="myUL">
-            <li><a href="#">Popular A</a></li>
-            <li><a href="#">Popular Search B</a></li>
-            <li><a href="#">Popular Sugestion C</a></li>
-            <li><a href="#">Popular Search Sugestion D</a></li>
-            <li><a href="#">Popular E</a></li>
-            <li><a href="#">Popular Search Sugestion F</a></li>
-          </ul>
+          <input id="searchTerms" type="text" name="search" value="What’s new for dinner tonight" placeholder="search....">
+          <div class="buttonsFilterSearch">
+            <div class="btn-group buttonsFilterSearchContent" role="group" aria-label="filter search">
+              <button type="button" class="btn btnFilterSearch active">All</button>
+              <button type="button" class="btn btnFilterSearch">Item 2</button>
+              <button type="button" class="btn btnFilterSearch">Item 3</button>
+              <button type="button" class="btn btnFilterSearch">Item 4</button>
+              <button type="button" class="btn btnFilterSearch">Item 5</button>
+              <button type="button" class="btn btnFilterSearch">Item 6</button>
+              <button type="button" class="btn btnFilterSearch">Item 7</button>
+              <button type="button" class="btn btnFilterSearch">Item 8</button>
+            </div>
+          </div>
+
         </form>
       </div>
     </div>
@@ -308,13 +312,13 @@
   <nav class="navbar navbar-default fixed-bottom menuBottom">
     <div class="flex-column justify-content-center containerMenuBottom">
       <ul class="nav d-flex justify-content-around align-items-end">
-        <li class="nav-item buttonContent active" data-number="1">
+        <li class="nav-item buttonContent" data-number="1">
           <a class="nav-link iconShadow">
             <img src="./assets/images/icons/nav/iconHome.svg" alt="icon home">
           </a>
         </li>
         <li class="nav-item buttonContent" data-number="2">
-          <a class="nav-link iconShadow">
+          <a class="nav-link iconShadow active">
             <img src="./assets/images/icons/nav/iconSearch.svg" alt="icon search">
           </a>
         </li>
@@ -1016,26 +1020,6 @@
         }
       });
     }
-  </script>
-
-  <!-- search term -->
-  <script>
-  function searchTerm() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("searchTerms");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-      }
-    }
-  }
   </script>
 
   <!-- active touch in mobile -->
