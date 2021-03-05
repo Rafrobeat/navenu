@@ -637,7 +637,7 @@ p.textButtonDown {
   overflow: auto;
   z-index: 0;
   margin-left: -.75rem;
-  margin-right: -.75rem;
+  margin-right: -.72rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
@@ -779,6 +779,37 @@ p.textButtonDown {
   color: #FFFFFF;
   background: #000000;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.containerSearch .searchImageButton {
+  position: relative;
+  margin-bottom: 1rem;
+  height: 35vh;
+  display: block;
+}
+
+.containerSearch img.searchImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.searchImageText {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.containerSearch .searchImageButton h1 {
+  font-family: 'BourtonBase regular';
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+  letter-spacing: 0.141952px;
+  color: #FFFFFF;
+  margin-bottom: .25rem;
 }
 
 /*---------chat content---------*/
