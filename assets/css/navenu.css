@@ -1,3 +1,14 @@
+/*-- this file content styles:
+    - regular styles
+    - responsive styles
+    - deal fetails
+    - article content
+    - location info
+    - location Store
+    - search
+    - profile
+ --*/
+
 /*  	CSS Reset    */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -1110,6 +1121,10 @@ p.textButtonDown {
 
 .modalLocation .locationMenuTab .nav-link {
   padding: .5rem 1rem;
+}
+
+.modalLocation .locationMenuTab .nav-link:focus {
+  font-weight: bold;
 }
 
 .modalLocation .locationMenuTab .nav-link.share {

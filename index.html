@@ -408,7 +408,7 @@
             <img src="./assets/images/icons/nav/iconSearch.svg" alt="icon search">
           </a>
         </li>
-        <li class="nav-item buttonContent" data-number="3">
+        <li class="nav-item buttonContent" data-toggle="modal" data-target="#contentChat_modal">
           <a class="nav-link">
             <img src="./assets/images/icons/nav/navenu-logo.svg" alt="icon navenu">
           </a>
@@ -526,7 +526,8 @@
             <div class="nav nav-tabs nav-justified rainbow locationMenuTab" id="nav-tab" role="tablist">
               <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">Info</a>
               <a class="nav-item nav-link" id="nav-directions-tab" data-toggle="tab" href="#nav-directions" role="tab" aria-controls="nav-directions" aria-selected="false">Directions</a>
-              <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="tab" href="#nav-reserve" role="tab" aria-controls="nav-reserve" aria-selected="false">Reserve</a>
+              <!-- <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="tab" href="#nav-reserve" role="tab" aria-controls="nav-reserve" aria-selected="false">Reserve</a> -->
+              <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="modal" data-target="#contentChat_modal">Reserve</a>
               <a class="nav-item nav-link" id="nav-store-tab" data-toggle="tab" href="#nav-store" role="tab" aria-controls="nav-store" aria-selected="false">Store</a>
               <a class="nav-item nav-link share" id="nav-share-tab" href="#" aria-controls="nav-share" aria-selected="false">
                 <img src="./assets/images/icons/iconShare.svg" class="iconShadow" alt="icon share location">
@@ -576,8 +577,8 @@
             </div>
             <div class="tab-pane fade" id="nav-directions" role="tabpanel" aria-labelledby="nav-directions-tab">
               <b>Navigation APP</b><br>is launched here</div>
-            <div class="tab-pane fade" id="nav-reserve" role="tabpanel" aria-labelledby="nav-reserve-tab">
-              <b>OpenTable API</b><br>loads here</div>
+            <!-- <div class="tab-pane fade" id="nav-reserve" role="tabpanel" aria-labelledby="nav-reserve-tab">
+              <b>OpenTable API</b><br>loads here</div> -->
             <div class="tab-pane fade" id="nav-store" role="tabpanel" aria-labelledby="nav-store-tab">
               <h1 class="titleMedium">Deals</h1>
               <div class="sliderTab">
