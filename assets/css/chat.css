@@ -1,12 +1,12 @@
 /*-- this file content styles:
     - chat
  --*/
- 
+
 #frame {
   width: 100%;
   height: 100vh;
   min-height: 300px;
-  /* max-height: 720px; */
+  max-height: 95vh;
 }
 
 @media screen and (max-width: 360px) {
@@ -33,6 +33,10 @@
   width: 100%;
   height: 60px;
   line-height: 60px;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .contact-profile img {
@@ -52,6 +56,7 @@
   max-height: calc(100% - 93px);
   overflow-y: scroll;
   overflow-x: hidden;
+  margin-top: 5rem;
 }
 
 @media screen and (max-width: 735px) {
@@ -99,7 +104,8 @@
 }
 
 #frame .content .messages ul li.replies p {
-  background: #f5f5f5;
+  background: #363A44;
+  color: #f5f5f5;
   /* float: right; */
 }
 
@@ -142,6 +148,7 @@
   padding: 11px 32px 10px 8px;
   font-size: 0.8em;
   color: #32465a;
+  border-bottom-left-radius: .5rem;
 }
 
 @media screen and (max-width: 735px) {
@@ -182,8 +189,7 @@
   width: 50px;
   padding: 12px 0;
   cursor: pointer;
-  background: #32465a;
-  color: #f5f5f5;
+  background: #fff;
 }
 
 @media screen and (max-width: 735px) {

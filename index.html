@@ -295,11 +295,11 @@
       </div>
     </div>
     <!-- content chat -->
-    <div id="chat" class="chat contentBlock" data-number="3">
+    <!-- <div id="chat" class="chat contentBlock" data-number="3">
       <div class="containerChat">
         <h1>chat</h1>
       </div>
-    </div>
+    </div> -->
     <!-- content deals -->
     <div id="deals" class="deals contentBlock" data-number="4">
       <div class="containerDeals">
@@ -388,7 +388,123 @@
     <!-- content profile -->
     <div id="profile" class="profile contentBlock" data-number="5">
       <div class="containerProfile">
-        <h1>profile</h1>
+        <nav>
+          <div class="nav nav-tabs nav-justified profileTab" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-location-tab" data-toggle="tab" href="#nav-location" role="tab" aria-controls="nav-location" aria-selected="true">Location</a>
+            <a class="nav-item nav-link" id="nav-deals-tab" data-toggle="tab" href="#nav-deals" role="tab" aria-controls="nav-deals" aria-selected="false">Deals</a>
+            <a class="nav-item nav-link" id="nav-lists-tab" data-toggle="tab" href="#nav-lists" role="tab" aria-controls="nav-lists" aria-selected="false">Lists</a>
+            <a class="nav-item nav-link" id="nav-Settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="false">Settings</a>
+          </div>
+        </nav>
+        <div class="tab-content locationContentTab" id="nav-tabProfile">
+          <div class="tab-pane fade show active" id="nav-location" role="tabpanel" aria-labelledby="nav-info-tab">
+            <div class="buttonsFilterProfile">
+              <div class="btn-group-toggle buttonsFilterProfileContent" data-toggle="buttons">
+                <label class="btn btnFilterDeal active">
+                  <input type="checkbox" checked autocomplete="off"> All
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Nearby
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> $
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> $$$
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Delivery
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Item 6
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Item 7
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Item 8
+                </label>
+              </div>
+            </div>
+            <div class="dealsProfile">
+              <!-- card location 1 -->
+              <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                      <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <!-- card location 2 -->
+              <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation2_modal">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                      <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <!-- card location 3 -->
+              <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation3_modal">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                      <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-deals" role="tabpanel" aria-labelledby="nav-directions-tab">
+            <div class="buttonsFilterProfile">
+              <div class="btn-group-toggle buttonsFilterProfileContent" data-toggle="buttons">
+                <label class="btn btnFilterDeal active">
+                  <input type="checkbox" checked autocomplete="off"> All
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Nearby
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> $
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> $$$
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Delivery
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Item 6
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Item 7
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="checkbox" checked autocomplete="off"> Item 8
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-lists" role="tabpanel" aria-labelledby="nav-reserve-tab">
+            lists.
+          </div>
+          <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-store-tab">
+            Settings.
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -408,7 +524,7 @@
             <img src="./assets/images/icons/nav/iconSearch.svg" alt="icon search">
           </a>
         </li>
-        <li class="nav-item buttonContent" data-toggle="modal" data-target="#contentChat_modal">
+        <li class="nav-item buttonContent" data-number="3" data-toggle="modal" data-target="#contentChat_modal">
           <a class="nav-link">
             <img src="./assets/images/icons/nav/navenu-logo.svg" alt="icon navenu">
           </a>
@@ -544,7 +660,8 @@
               </div>
               <p>Heard of P Franco? It’s a super-cool Dalston wine shop that also happens to do a mean line in comestibles. Bright is from the same crew, but is a restaurant proper. And it’s the best thing to hit the neighbourhood since sliced
                 bread.
-                Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And cut into
+                Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And cut
+                into
                 quarters.</p>
               <div class="sliderTab">
                 <div class="row sliderTabContent gallery">
@@ -859,7 +976,8 @@
               </div>
               <p>Heard of P Franco? It’s a super-cool Dalston wine shop that also happens to do a mean line in comestibles. Bright is from the same crew, but is a restaurant proper. And it’s the best thing to hit the neighbourhood since sliced
                 bread.
-                Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And cut into
+                Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And cut
+                into
                 quarters.</p>
               <div class="sliderTab">
                 <div class="row sliderTabContent gallery">
@@ -1059,8 +1177,8 @@
   </div>
 
   <!-- content modal chat -->
-  <div class="modal bottom modalChat full fade" id="contentChat_modal" role="dialog" aria-labelledby="fullscreen_modal">
-    <div class="modal-dialog" role="document">
+  <div class="modal modalChat bottom fade" id="contentChat_modal" role="dialog" aria-labelledby="fullscreen_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="container-close">
           <div class="contact-profile">
@@ -1084,54 +1202,31 @@
                     <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
                     <p>You can contact GinMasters vía their website and phone below using the code</p>
                   </li>
-                  <li class="sent">
-                    <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" />
-                    <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
-                  </li>
                   <li class="replies">
                     <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
-                    <p>When you're backed against the wall, break the god damn thing down.</p>
-                  </li>
-                  <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
-                    <p>Excuses don't win championships.</p>
+                    <p>Call this numberXXXXX<br>say magic pass: I am magic</p>
                   </li>
                   <li class="sent">
                     <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" />
-                    <p>Oh yeah, did Michael Jordan tell you that?</p>
-                  </li>
-                  <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
-                    <p>No, I told him that.</p>
-                  </li>
-                  <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
-                    <p>What are your choices when someone puts a gun to your head?</p>
+                    <p>Are you available now?</p>
                   </li>
                   <li class="sent">
                     <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" />
-                    <p>What are you talking about? You do what they say or they shoot you.</p>
-                  </li>
-                  <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
-                    <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                    <p>I booked for this week but I need to postpone, can you help me?</p>
                   </li>
                 </ul>
               </div>
               <div class="message-input">
                 <div class="wrap">
                   <input type="text" placeholder="TYPE your message" />
-                  <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
-                  <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                  <button class="submit"><img src="./assets/images/icons/chat/sendMessage.svg" class="img-fluid" alt="icon send message">
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="modal-footer modal-footer-fixed">
-      <button type="button" class="buttonRedeem" name="button">£ 20 - Redeem Now</button>
     </div>
   </div>
 
@@ -1156,19 +1251,27 @@
   <script type="text/javascript">
     // grab all the buttons
     let Buttons = document.querySelectorAll(".buttonContent");
-    console.log(Buttons);
     // loop through the buttons using for..of
     for (let button of Buttons) {
       // listen for a click event
       button.addEventListener('click', function() {
         // select active class
         const active = document.querySelector(".buttonContent.active");
+        if (button.getAttribute('data-number') == 3) {
+          console.log('chat');
+        }
         // check for the button that has active class and remove it
-        if (active) {
-          active.classList.remove("active");
+        else {
+          if (active) {
+            active.classList.remove("active");
+          }
         }
         // Add active class to the clicked element
-        this.classList.add("active");
+        if (button.getAttribute('data-number') == 3) {
+          console.log('chat');
+        } else {
+          this.classList.add("active");
+        }
         // select all classes with the name content
         let allContent = document.querySelectorAll('.contentBlock');
         // loop through all content classes
@@ -1179,7 +1282,9 @@
           }
           // if it's not equal then hide it.
           else {
-            content.classList.remove("active");
+            if (button.getAttribute('data-number') == 3) {} else {
+              content.classList.remove("active");
+            }
           }
         }
       });
