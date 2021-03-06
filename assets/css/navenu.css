@@ -370,10 +370,6 @@ p.textButtonDown {
   z-index: 1999;
 }
 
-.modalChat {
-  z-index: 2000;
-}
-
 .modal.bottom .modal-dialog {
   position: fixed;
   margin: auto;
@@ -586,7 +582,7 @@ p.textButtonDown {
 }
 
 .modal-footer-fixed {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background: #FFFFFF;
@@ -659,6 +655,7 @@ p.textButtonDown {
   opacity: 1;
   z-index: 1;
   height: 90vh;
+  overflow-x: hidden;
 }
 
 .containerSearch {
@@ -735,8 +732,6 @@ p.textButtonDown {
 }
 
 .buttonsFilterSearch {
-  min-width: 100%;
-  align-items: baseline;
   overflow-x: scroll;
   margin-left: -.75rem;
   margin-right: -.75rem;
@@ -766,12 +761,15 @@ p.textButtonDown {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   border: solid 1px rgba(0, 0, 0, 0.15);
-  margin: 1rem .5rem;
+  margin: 1rem .25rem;
   padding: .75rem;
 }
 
 .buttonsFilterSearchContent {
-  width: 175%;
+  width: max-content;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
 }
 
 .btnFilterSearch:first-child {
@@ -779,7 +777,7 @@ p.textButtonDown {
 }
 
 .btnFilterSearch:last-child {
-  margin-right: .25em;
+  margin-right: 0;
 }
 
 .btnFilterSearch.active {
@@ -825,7 +823,7 @@ p.textButtonDown {
   margin-bottom: .25rem;
 }
 
-/*---------chat content---------*/
+/*-------- chat content --------*/
 .chat {
   opacity: 0;
   transition: opacity .5s;
@@ -849,6 +847,8 @@ p.textButtonDown {
 
 .modalChat {
   background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  position: relative;
 }
 
 .modal.bottom.modalChat .modal-content {
@@ -856,37 +856,153 @@ p.textButtonDown {
   background: #F2F2F2;
 }
 
+.modal.bottom.modalChat .modal-dialog {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 .modal.bottom.modalChat .modal-content .container-close {
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  background: white;
+  width: 100%;
   border-bottom: solid 1px #C4C4C4;
 }
 
 .modal.bottom.modalChat .modal-body {
-  padding: 0 0 6rem;
+  padding: 0;
   background: #F2F2F2;
   border-radius: 0;
   margin-top: 0;
 }
 
-/*---------deals content---------*/
+/*-------- deals content --------*/
 .deals {
   opacity: 0;
   transition: opacity .5s;
-  width: 100%;
   height: 0;
   position: relative;
   overflow: auto;
   z-index: 0;
+  margin-left: -.75rem;
+  margin-right: -.72rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .deals.active {
   opacity: 1;
   z-index: 1;
   height: 90vh;
+  overflow-x: hidden;
 }
 
 .containerDeals {
   position: absolute;
   width: 100%;
+  padding-right: 1.5rem;
+}
+
+.buttonsFilterDeals {
+  min-width: 100%;
+  align-items: baseline;
+  overflow-x: scroll;
+  margin-left: -.75rem;
+  margin-right: -.75rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.btn-group-toggle>.btn, .btn-group-toggle>.btn-group>.btn {
+  margin-bottom: 1rem;
+}
+
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle), .btn-group>.btn-group:not(:last-child)>.btn {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.btn-group>.btn:not(:first-child), .btn-group>.btn-group:not(:first-child)>.btn {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.btnFilterDeal {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.0998911px;
+  color: #292929;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  margin: 1rem .25rem;
+  padding: .75rem;
+}
+
+.btn.btnFilterDeal.focus {
+  box-shadow: 0 0 0 0 !important;
+}
+
+.buttonsFilterDealContent {
+  width: max-content;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.btnFilterDeal:first-child {
+  margin-left: 0;
+}
+
+.btnFilterDeal:last-child {
+  margin-right: 0;
+}
+
+.btnFilterDeal.active {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.0998911px;
+  color: #FFFFFF;
+  background: #000000;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.containerDeals .dealImageButton {
+  position: relative;
+  margin-bottom: 1rem;
+  height: 35vh;
+  display: block;
+}
+
+.containerDeals img.dealImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dealImageText {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.containerDeals .dealImageButton h1 {
+  font-family: 'BourtonBase regular';
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+  letter-spacing: 0.141952px;
+  color: #FFFFFF;
+  margin-bottom: .25rem;
 }
 
 /*---------profile content---------*/
@@ -1002,6 +1118,7 @@ p.textButtonDown {
 
 .modalLocation .locationMenuTab a {
   font-family: 'SF UI Display Regular';
+  font-weight: normal;
   font-size: 12px;
   line-height: 24px;
   color: #000000;
@@ -1010,6 +1127,7 @@ p.textButtonDown {
 
 .modalLocation .locationMenuTab a.active {
   font-weight: bold;
+  font-style: normal;
   color: #000000;
   background-color: transparent;
   border: none;

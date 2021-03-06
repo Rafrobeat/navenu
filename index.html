@@ -1,3 +1,13 @@
+<!-- this file content:
+    - feed
+    - deal fetails
+    - article content
+    - location info
+    - location Store
+    - search (search result with lists)
+    - concierge (chat)
+    - profile
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,19 +61,19 @@
         <button class="btn nav-link btn-block btn-filter do active">
           <img src="./assets/images/icons/explore/iconDo.svg" class="img-fluid" alt="icon do">
         </button>
-        <button class="btn nav-link btn-block btn-filter eat">
+        <button class="btn nav-link btn-block btn-filter eat active">
           <img src="./assets/images/icons/explore/iconEat.svg" class="img-fluid" alt="icon eat">
         </button>
-        <button class="btn nav-link btn-block btn-filter drink">
+        <button class="btn nav-link btn-block btn-filter drink active">
           <img src="./assets/images/icons/explore/iconDrink.svg" class="img-fluid" alt="icon drink">
         </button>
-        <button class="btn nav-link btn-block btn-filter shop">
+        <button class="btn nav-link btn-block btn-filter shop active">
           <img src="./assets/images/icons/explore/iconShop.svg" class="img-fluid" alt="icon shop">
         </button>
-        <button class="btn nav-link btn-block btn-filter stay">
+        <button class="btn nav-link btn-block btn-filter stay active">
           <img src="./assets/images/icons/explore/iconStay.svg" class="img-fluid" alt="icon stay">
         </button>
-        <button class="btn nav-link btn-block btn-filter fit">
+        <button class="btn nav-link btn-block btn-filter fit active">
           <img src="./assets/images/icons/explore/iconFit.svg" class="img-fluid" alt="icon fit">
         </button>
       </div>
@@ -293,7 +303,86 @@
     <!-- content deals -->
     <div id="deals" class="deals contentBlock" data-number="4">
       <div class="containerDeals">
-        <h1>deals</h1>
+        <div class="buttonsFilterDeals">
+          <div class="btn-group-toggle buttonsFilterDealContent" data-toggle="buttons">
+            <label class="btn btnFilterDeal active">
+              <input type="checkbox" checked autocomplete="off"> All
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter A
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter B
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter C
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter D
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter E
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter F
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter G
+            </label>
+          </div>
+        </div>
+        <!-- card location 1 -->
+        <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
+          <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+          <div class="dealImageText">
+            <h1>Location name</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">Category</p>
+              <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+              </button>
+            </div>
+          </div>
+        </a>
+        <!-- card location 2 -->
+        <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
+          <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+          <div class="dealImageText">
+            <h1>Location name</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">Category</p>
+              <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+              </button>
+            </div>
+          </div>
+        </a>
+        <!-- card location 3 -->
+        <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
+          <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+          <div class="dealImageText">
+            <h1>Location name</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">Category</p>
+              <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+              </button>
+            </div>
+          </div>
+        </a>
+        <!-- card location 4 -->
+        <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentDeal1_modal">
+          <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+          <div class="dealImageText">
+            <h1>Location name</h1>
+            <div class="tags">
+              <p class="text-left tagLeft">Category</p>
+              <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+              </button>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
     <!-- content profile -->
@@ -974,7 +1063,7 @@
       <div class="modal-content">
         <div class="container-close">
           <div class="contact-profile">
-            <img src="./assets/images/chat/imgSupportChatState.png" alt="image support chat"/>
+            <img src="./assets/images/chat/imgSupportChatState.png" alt="image support chat" />
             <p><b>DANA</b>, NAVENU AGENT</p>
           </div>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -987,43 +1076,43 @@
               <div class="messages">
                 <ul>
                   <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat"/>
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
                     <p>Hi <user>, We’re glad you are interested in the Virtual GinMasterClass</p>
                   </li>
                   <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat"/>
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
                     <p>You can contact GinMasters vía their website and phone below using the code</p>
                   </li>
                   <li class="sent">
-                    <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat"/>
+                    <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" />
                     <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
                   </li>
                   <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat"/>
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
                     <p>When you're backed against the wall, break the god damn thing down.</p>
                   </li>
                   <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat"/>
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
                     <p>Excuses don't win championships.</p>
                   </li>
                   <li class="sent">
-                    <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat"/>
+                    <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" />
                     <p>Oh yeah, did Michael Jordan tell you that?</p>
                   </li>
                   <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat"/>
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
                     <p>No, I told him that.</p>
                   </li>
                   <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat"/>
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
                     <p>What are your choices when someone puts a gun to your head?</p>
                   </li>
                   <li class="sent">
-                    <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat"/>
+                    <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" />
                     <p>What are you talking about? You do what they say or they shoot you.</p>
                   </li>
                   <li class="replies">
-                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat"/>
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
                     <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
                   </li>
                 </ul>
@@ -1098,22 +1187,22 @@
 
   <!-- search term -->
   <script>
-  function searchTerm() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("searchTerms");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
+    function searchTerm() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("searchTerms");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
       }
     }
-  }
   </script>
 
   <!-- chat -->
@@ -1121,6 +1210,7 @@
     $(".messages").animate({
       scrollTop: $(document).height()
     }, "fast");
+
     function newMessage() {
       message = $(".message-input input").val();
       if ($.trim(message) == '') {

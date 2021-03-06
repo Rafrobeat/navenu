@@ -1,3 +1,6 @@
+<!-- this file content:
+    - search (search result with buttons filters and cards)
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -272,15 +275,31 @@
         <form class="searchBox" action="" method="post">
           <input id="searchTerms" type="text" name="search" value="What’s new for dinner tonight" placeholder="search....">
           <div class="buttonsFilterSearch">
-            <div class="btn-group buttonsFilterSearchContent" role="group" aria-label="filter search">
-              <button type="button" class="btn btnFilterSearch active">All</button>
-              <button type="button" class="btn btnFilterSearch">Item 2</button>
-              <button type="button" class="btn btnFilterSearch">Item 3</button>
-              <button type="button" class="btn btnFilterSearch">Item 4</button>
-              <button type="button" class="btn btnFilterSearch">Item 5</button>
-              <button type="button" class="btn btnFilterSearch">Item 6</button>
-              <button type="button" class="btn btnFilterSearch">Item 7</button>
-              <button type="button" class="btn btnFilterSearch">Item 8</button>
+            <div class="btn-group-toggle buttonsFilterSearchContent" data-toggle="buttons">
+              <label class="btn btnFilterSearch active">
+                <input type="checkbox" checked autocomplete="off"> All
+              </label>
+              <label class="btn btnFilterSearch">
+                <input type="checkbox" checked autocomplete="off"> Item 2
+              </label>
+              <label class="btn btnFilterSearch">
+                <input type="checkbox" checked autocomplete="off"> Item 3
+              </label>
+              <label class="btn btnFilterSearch">
+                <input type="checkbox" checked autocomplete="off"> Item 4
+              </label>
+              <label class="btn btnFilterSearch">
+                <input type="checkbox" checked autocomplete="off"> Item 5
+              </label>
+              <label class="btn btnFilterSearch">
+                <input type="checkbox" checked autocomplete="off"> Item 6
+              </label>
+              <label class="btn btnFilterSearch">
+                <input type="checkbox" checked autocomplete="off"> Item 7
+              </label>
+              <label class="btn btnFilterSearch">
+                <input type="checkbox" checked autocomplete="off"> Item 8
+              </label>
             </div>
           </div>
           <!-- card location 1 -->
