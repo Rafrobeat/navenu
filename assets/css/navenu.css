@@ -37,6 +37,16 @@ a {
   color: #1883ba;
 }
 
+.btn {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 0.307692px;
+  color: #000000;
+}
+
 h1 {
   font-size: 32px;
   font-weight: normal;
@@ -46,6 +56,15 @@ h1 {
 
 h2 {
   font-size: 18px;
+}
+
+p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #292929;
+  margin-bottom: 1rem;
 }
 
 a.btn:focus {
@@ -965,6 +984,7 @@ p.textButtonDown {
   position: relative;
   display: inline-flex;
   vertical-align: middle;
+  margin-right: .75rem;
 }
 
 .btnFilterDeal:first-child {
@@ -1093,8 +1113,77 @@ img.dealImg {
 }
 
 .dealsProfile {
-  margin: 1rem 0;
+  margin: 1rem 0 3rem;
 }
+
+#nav-settings {
+  height: calc(100vh - (175px)) !important;
+}
+
+.form-group label {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.116667px;
+  color: #333333;
+  margin-bottom: .5rem;
+}
+
+.form-group input {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.116667px;
+  color: #333333;
+  padding: 1.5rem .5rem;
+  background: #FFFFFF;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0;
+}
+
+.btnProfile {
+  border: 3px solid #000000;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.btnProfileShare {
+  font-family: 'BourtonBase Regular';
+  font-size: 16px;
+  line-height: 34px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.307692px;
+  color: #FFFFFF;
+  background: #333333;
+  border: 3px solid #FFFFFF;
+  border-radius: 8px;
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+}
+
+.btnProfileShare span {
+  padding-bottom: .25rem;
+  display: block;
+}
+
+.btnProfileShare span:before {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../images/icons/profile/iconShare.svg);
+  background-size: 16px 16px;
+  display: inline-block;
+  content: '';
+  background-repeat: no-repeat;
+}
+
 /*----------- modal locations ----------*/
 .modalLocation {
   background: rgba(0, 0, 0, 0.8);
