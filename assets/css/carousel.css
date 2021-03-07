@@ -164,13 +164,17 @@
   background-repeat: no-repeat;
 }
 
+#carousel-home .tags p {
+  margin-bottom: 0;
+  color: #F2F2F2;
+}
+
 #carousel-home .tags .tagLeft {
   display: contents;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.116667px;
-  color: #F2F2F2;
   text-transform: none;
   align-items: center;
 }
@@ -180,7 +184,6 @@
 }
 
 #carousel-home .tags .tagRight {
-  /* display: inline; */
   position: absolute;
   right: 0;
   float: right;
@@ -188,8 +191,11 @@
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.116667px;
-  color: #F2F2F2;
   align-items: center;
+}
+
+.btn.contentCard {
+  line-height: normal;
 }
 
 /*-------- responsive styles ------------*/
@@ -200,7 +206,7 @@
   }
 
   #carousel-home .item {
-    height: 85vh;
+    height: 82.5vh;
     width: 93vw;
   }
 }
