@@ -294,12 +294,6 @@
         </form>
       </div>
     </div>
-    <!-- content chat -->
-    <!-- <div id="chat" class="chat contentBlock" data-number="3">
-      <div class="containerChat">
-        <h1>chat</h1>
-      </div>
-    </div> -->
     <!-- content deals -->
     <div id="deals" class="deals contentBlock" data-number="4">
       <div class="containerDeals">
@@ -497,20 +491,54 @@
                 </label>
               </div>
             </div>
-            <div class="row ongoing">
+            <h1 class="feedSubTitle">ongoing</h1>
+            <div class="row no-gutters ongoing">
               <div class="col-md-12">
-                <div class="tags">
-                  <div class="profileHomeArticle tagLeft">
-                    <img src="./assets/images/articles/profile.jpg" class="img-fluid profileImage" alt="image profile article">
-                    <p class="text-left">Free Cocktail</p>
-                    <p class="text-right">2.3Km away</p>
-                  </div>
-                  <div class="tagRight">
-                    <p class="numberDeals">3</p>
-                  </div>
+                <div class="tagOngoing">
+                  <a href="#" class="linkOngoing active">
+                    <div class="tagLeft">
+                      <img src="./assets/images/articles/profile.jpg" class="img-fluid profileImage" alt="image profile article">
+                    </div>
+                    <div class="tagCenter">
+                      <p class="textUp">Free Cocktail</p>
+                      <p class="textDown">With any order at Number 97</p>
+                    </div>
+                    <div class="tagRight">
+                      <p class="numberDeals">3</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="tagOngoing">
+                  <a href="#" class="linkOngoing">
+                    <div class="tagLeft">
+                      <img src="./assets/images/articles/profile.jpg" class="img-fluid profileImage" alt="image profile article">
+                    </div>
+                    <div class="tagCenter">
+                      <p class="textUp">Free Cocktail</p>
+                      <p class="textDown">With any order at Number 97</p>
+                    </div>
+                    <div class="tagRight">
+                      <p class="numberDeals">3</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="tagOngoing">
+                  <a href="#" class="linkOngoing">
+                    <div class="tagLeft">
+                      <img src="./assets/images/articles/profile.jpg" class="img-fluid profileImage" alt="image profile article">
+                    </div>
+                    <div class="tagCenter">
+                      <p class="textUp">Free Cocktail</p>
+                      <p class="textDown">With any order at Number 97</p>
+                    </div>
+                    <div class="tagRight">
+                      <p class="numberDeals">3</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
+            <h1 class="feedSubTitle">nearby</h1>
             <div class="dealsProfile">
               <!-- card location 1 -->
               <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
@@ -554,7 +582,67 @@
             </div>
           </div>
           <div class="tab-pane fade" id="nav-lists" role="tabpanel" aria-labelledby="nav-reserve-tab">
-            lists.
+            <div class="row no-gutters h-100 lists active">
+              <div class="col-md-12">
+                <div class="tagList">
+                  <a class="linkList" onclick="showList(1)">
+                    <div class="tagLeft">
+                      <img src="./assets/images/icons/profile/iconList.png" class="img-fluid iconList" alt="icon profile list">
+                    </div>
+                    <div class="tagCenter">
+                      <p>List A</p>
+                    </div>
+                  </a>
+                  <div class="tagRight">
+                    <button class="btn btnShareList"><img src="./assets/images/icons/profile/iconShareList.svg" class="img-fluid iconListOption" alt="icon share list"></button>
+                    <button class="btn btnDeleteList"><img src="./assets/images/icons/profile/iconDeleteList.svg" class="img-fluid iconListOption" alt="icon delete list"></button>
+                  </div>
+                </div>
+                <div class="tagList">
+                  <a href="#" class="linkList">
+                    <div class="tagLeft">
+                      <img src="./assets/images/icons/profile/iconList.png" class="img-fluid iconList" alt="icon profile list">
+                    </div>
+                    <div class="tagCenter">
+                      <p>List B</p>
+                    </div>
+                  </a>
+                  <div class="tagRight">
+                    <button class="btn btnShareList"><img src="./assets/images/icons/profile/iconShareList.svg" class="img-fluid iconListOption" alt="icon share list"></button>
+                    <button class="btn btnDeleteList"><img src="./assets/images/icons/profile/iconDeleteList.svg" class="img-fluid iconListOption" alt="icon delete list"></button>
+                  </div>
+                </div>
+                <div class="tagList">
+                  <a href="#" class="linkList">
+                    <div class="tagLeft">
+                      <img src="./assets/images/icons/profile/iconList.png" class="img-fluid iconList" alt="icon profile list">
+                    </div>
+                    <div class="tagCenter">
+                      <p>List C</p>
+                    </div>
+                  </a>
+                  <div class="tagRight">
+                    <button class="btn btnShareList"><img src="./assets/images/icons/profile/iconShareList.svg" class="img-fluid iconListOption" alt="icon share list"></button>
+                    <button class="btn btnDeleteList"><img src="./assets/images/icons/profile/iconDeleteList.svg" class="img-fluid iconListOption" alt="icon delete list"></button>
+                  </div>
+                </div>
+                <button class="btn btn-outline-dark btnProfile btnAddList shadow-none" type="button" name="buttonProfile">Create New List</button>
+              </div>
+            </div>
+            <div class="showList1">
+              <div class="tagOpenList">
+                <div class="tagLeft">
+                  <img src="./assets/images/icons/profile/iconBackList.svg" class="img-fluid iconList" alt="icon back list">
+                </div>
+                <div class="tagCenter">
+                  <p>List A</p>
+                </div>
+                <div class="tagRight">
+                  <button class="btn btnShareList"><img src="./assets/images/icons/profile/iconShareList.svg" class="img-fluid iconListOption" alt="icon share list"></button>
+                  <button class="btn btnDeleteList"><img src="./assets/images/icons/profile/iconDeleteList.svg" class="img-fluid iconListOption" alt="icon delete list"></button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-store-tab">
             <div class="form-group">
@@ -1258,7 +1346,7 @@
                 <ul>
                   <li class="replies">
                     <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
-                    <p>Hi <user>, We’re glad you are interested in the Virtual GinMasterClass</p>
+                    <p>Hi user, We’re glad you are interested in the Virtual GinMasterClass</p>
                   </li>
                   <li class="replies">
                     <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
@@ -1274,13 +1362,13 @@
                   </li>
                   <li class="sent">
                     <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" />
-                    <p>I booked for this week but I need to postpone, can you help me?</p>
+                    <p>I booked for this week but i need to postpone, can you help me?</p>
                   </li>
                 </ul>
               </div>
               <div class="message-input">
                 <div class="wrap">
-                  <input type="text" placeholder="TYPE your message" />
+                  <input type="text" placeholder="TYPE your message">
                   <button class="submit"><img src="./assets/images/icons/chat/sendMessage.svg" class="img-fluid" alt="icon send message">
                   </button>
                 </div>
@@ -1403,6 +1491,24 @@
         return false;
       }
     });
+  </script>
+
+  <!-- show list -->
+  <script>
+    function showList(numberList) {
+      console.log("showlist");
+      $(".showList" + numberList + "").addClass("active");
+      $(".lists").removeClass("active");
+    }
+  </script>
+
+  <!-- hide list -->
+  <script>
+    function hideList(numberList) {
+      console.log("hidelist");
+      $("." + numberList + "").addClass("active");
+      $("#carousel-home").removeClass("active");
+    }
   </script>
 
   <!-- active touch in mobile -->

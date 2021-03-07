@@ -1116,6 +1116,197 @@ img.dealImg {
   margin: 1rem 0 3rem;
 }
 
+h1.feedSubTitle {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1.83333px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 1rem 0;
+}
+
+.tagOngoing {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(0 2 5 / 0.3), rgba(0, 0, 0, 0)) 1;
+  border-top: 0;
+}
+
+.tagOngoing:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.tagOngoing:last-child {
+  margin-bottom: 0;
+}
+
+.linkOngoing {
+  display: contents;
+}
+
+.linkOngoing:hover,
+.linkOngoing:active,
+.linkOngoing:focus {
+  text-decoration: none;
+}
+
+.profileImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.tagOngoing p {
+  margin-bottom: 0
+}
+
+.tagOngoing p.textUp {
+  font-size: 16px;
+}
+
+.tagOngoing .tagLeft {
+  width: 10%;
+}
+
+.tagOngoing .tagCenter {
+  width: 80%;
+  margin-left: .5rem;
+}
+
+.tagOngoing .tagRight {
+  width: 10%;
+}
+
+.tagOngoing a.linkOngoing .numberDeals {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  align-items: center;
+  letter-spacing: 0.116667px;
+  color: #FFFFFF;
+  float: right;
+  background: #999999;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 6px 10px;
+}
+
+.tagOngoing a.linkOngoing.active .numberDeals {
+  background: #5AED16;
+}
+
+#nav-lists {
+  height: calc(100vh - (175px)) !important;
+}
+
+.tagList {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(0 2 5 / 0.3), rgba(0, 0, 0, 0)) 1;
+  border-top: 0;
+}
+
+.lists {
+  opacity: 0;
+  transition: opacity .5s;
+  width: 100%;
+  height: 0;
+  position: relative;
+  overflow: auto;
+  z-index: 0;
+}
+
+.lists.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.linkList {
+  display: contents;
+}
+
+.linkList:hover,
+.linkList:active,
+.linkList:focus {
+  text-decoration: none;
+}
+
+
+.tagList .tagLeft {
+  width: 10%;
+}
+
+.tagList .tagCenter {
+  width: 65%;
+  margin-left: .5rem;
+}
+
+.tagList .tagRight {
+  width: 25%;
+  display: inline-flex;
+}
+
+.tagList .tagRight .btn {
+  padding: 0;
+  margin: 0;
+}
+
+.iconList {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.iconListOption {
+  width: 40px;
+  height: 40px;
+}
+
+.tagList p {
+  margin-bottom: 0
+}
+
+.btnAddList {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.showList1 {
+  opacity: 0;
+  transition: opacity .5s;
+  width: 100%;
+  height: 0;
+  position: relative;
+  overflow: auto;
+  z-index: 0;
+}
+
+.showList1.active {
+  opacity: 1;
+  z-index: 1;
+  height: 90vh;
+}
+
 #nav-settings {
   height: calc(100vh - (175px)) !important;
 }
@@ -1556,6 +1747,7 @@ h1.titleMedium {
     right: 1.5rem;
   }
 }
+
 /*------- only iphone 8 -------*/
 @media only screen and (device-width : 375px) and (device-height : 667px) and (-webkit-device-pixel-ratio : 2) {}
 
