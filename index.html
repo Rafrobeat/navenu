@@ -706,7 +706,7 @@
   <nav class="navbar navbar-default fixed-bottom menuBottom">
     <div class="flex-column justify-content-center containerMenuBottom">
       <ul class="nav d-flex justify-content-around align-items-end">
-        <li class="nav-item buttonContent active" data-number="1">
+        <li class="nav-item buttonContent iconHome active" data-number="1">
           <a class="nav-link iconShadow">
             <img src="./assets/images/icons/nav/iconHome.svg" alt="icon home">
           </a>
@@ -1467,6 +1467,8 @@
       button.addEventListener('click', function() {
         // select active class
         const active = document.querySelector(".buttonContent.active");
+        const mapActive = document.querySelector(".iconMap.active");
+        const home = document.querySelector(".iconHome");
         if (button.getAttribute('data-number') == 3) {
           console.log('chat');
         }
@@ -1479,20 +1481,33 @@
         // Add active class to the clicked element
         if (button.getAttribute('data-number') == 3) {
           console.log('chat');
-        } else {
+        }
+       else if (button.getAttribute('data-number') == 6 && mapActive) {
+          console.log('map active');
+          home.classList.add("active");
+        }
+        else {
           this.classList.add("active");
         }
         // select all classes with the name content
         let allContent = document.querySelectorAll('.contentBlock');
         // loop through all content classes
         for (let content of allContent) {
+          const carousel = document.querySelector(".carousel");
+          const map = document.querySelector(".maps");
           /* display the content if the value in the data attribute of the button and content are the same */
           if (content.getAttribute('data-number') === button.getAttribute('data-number')) {
             content.classList.add("active");
           }
           // if it's not equal then hide it.
           else {
-            if (button.getAttribute('data-number') == 3) {} else {
+            if (button.getAttribute('data-number') == 3) {
+            }
+            else if (button.getAttribute('data-number') == 6 && mapActive) {
+              map.classList.remove("active");
+              carousel.classList.add("active");
+            }
+            else {
               content.classList.remove("active");
             }
           }
