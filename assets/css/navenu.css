@@ -167,10 +167,36 @@ hr {
   filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
 }
 
-/* hides every element except the first */
-/* .content:not(:first-child) {
-	display: none;
-} */
+.logo {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.logo.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+span.changeCity {
+  opacity: 0;
+  transition: opacity .5s;
+  display: none;
+}
+
+span.changeCity.active {
+  opacity: 1;
+  z-index: 1;
+  display: inline;
+}
+
+a.changeCityButton {
+  text-decoration: underline !important;
+}
+
+a.changeCityButton:hover {
+  text-decoration: none;
+}
+
 .nav-item.active {
   border-bottom: solid 6px #676767;
 }
@@ -333,6 +359,7 @@ p.location {
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 p.textFilter {
@@ -388,6 +415,45 @@ p.textButtonDown {
 
 .containerMenuBottom {
   width: 100%;
+}
+
+/*------- modal city -----------*/
+.modalCity {
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+}
+
+.modalCity .modal-content {
+  min-height: 75vh;
+}
+
+.modal.modalCity .close {
+  position: relative;
+  top: .5rem;
+  right: .5rem;
+}
+
+.modal.modalCity .modal-content {
+  margin: .5rem;
+  border-radius: .5rem;
+  background: #F2F2F2;
+}
+
+.modal.modalCity.bottom .modal-body {
+  padding: 0;
+  background: #F2F2F2;
+  border-radius: .5rem;
+  margin-top: 0;
+}
+
+.modalCity h1 {
+  font-family: 'BourtonBase Regular';
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.116667px;
+  color: #292929;
+  text-transform: uppercase;
+  text-align: center
 }
 
 /*------- modal content ------*/
@@ -1112,6 +1178,7 @@ img.dealImg {
   background: #333333;
 }
 
+/*------- profile deals -------*/
 .dealsProfile {
   margin: 1rem 0 3rem;
 }
@@ -1208,6 +1275,7 @@ h1.feedSubTitle {
   background: #5AED16;
 }
 
+/*--------- profile lists -----------*/
 #nav-lists {
   height: calc(100vh - (175px)) !important;
 }
@@ -1237,6 +1305,7 @@ h1.feedSubTitle {
 .lists.active {
   opacity: 1;
   z-index: 1;
+  height: 100%;
 }
 
 .linkList {
@@ -1248,7 +1317,6 @@ h1.feedSubTitle {
 .linkList:focus {
   text-decoration: none;
 }
-
 
 .tagList .tagLeft {
   width: 10%;
@@ -1264,7 +1332,9 @@ h1.feedSubTitle {
   display: inline-flex;
 }
 
-.tagList .tagRight .btn {
+.tagList .tagRight .btn,
+.tagOpenList .tagLeft .btn,
+.tagOpenList .tagRight .btn {
   padding: 0;
   margin: 0;
 }
@@ -1304,9 +1374,60 @@ h1.feedSubTitle {
 .showList1.active {
   opacity: 1;
   z-index: 1;
-  height: 90vh;
+  height: 100%;
 }
 
+.tagOpenList {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.tagOpenList .tagLeft {
+  width: 10%;
+}
+
+.tagOpenList .tagCenter {
+  width: 65%;
+  margin-left: .5rem;
+}
+
+.tagOpenList .tagRight {
+  width: 25%;
+  display: inline-flex;
+}
+
+.tagOpenList p {
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dealImageList {
+  position: relative;
+  margin-bottom: 1rem;
+  height: 25vh;
+  display: block;
+}
+
+.dealImageList h1 {
+  font-family: 'BourtonBase regular';
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+  letter-spacing: 0.141952px;
+  color: #FFFFFF;
+  margin-bottom: .25rem;
+}
+
+.iconRemoveDeal {
+  margin-top: -1.5rem;
+  padding: 0;
+}
+
+/*------ profile settings --------*/
 #nav-settings {
   height: calc(100vh - (175px)) !important;
 }

@@ -46,11 +46,12 @@
       <img src="./assets/images/icons/header/icon-map.svg" class="map iconShadow" alt="icon map">
       <img src="./assets/images/icons/header/icon-btnStories.svg" class="stories iconShadow" alt="icon Stories">
     </button>
-    <div class="logo text-center">
+    <div class="logo active text-center">
       <img src="./assets/images/icons/header/icon-navenu.svg" alt="logo navenu">
-      <p class="location">LONDON, <b>Hackney</b></p>
+      <p class="location">LONDON, <b>Hackney</b><span class="changeCity"> - <a class="changeCityButton" data-toggle="modal" data-target="#contentCities_modal">change</a></span></p>
+
     </div>
-    <button class="navbar-toggler menuFilter collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler menuFilter collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="changeCity()">
       <span>
         <img src="./assets/images/icons/header/icon-filter.svg" class="filter iconShadow" alt="icon filter">
         <img src="./assets/images/icons/header/icon-buttonBack.svg" class="back" alt="icon back">
@@ -582,7 +583,7 @@
             </div>
           </div>
           <div class="tab-pane fade" id="nav-lists" role="tabpanel" aria-labelledby="nav-reserve-tab">
-            <div class="row no-gutters h-100 lists active">
+            <div class="row no-gutters lists active">
               <div class="col-md-12">
                 <div class="tagList">
                   <a class="linkList" onclick="showList(1)">
@@ -632,7 +633,9 @@
             <div class="showList1">
               <div class="tagOpenList">
                 <div class="tagLeft">
-                  <img src="./assets/images/icons/profile/iconBackList.svg" class="img-fluid iconList" alt="icon back list">
+                  <button type="button" name="button" class="btn btnBackLists" onclick="closeList(1)">
+                    <img src="./assets/images/icons/profile/iconBackList.svg" class="img-fluid iconList" alt="icon back list">
+                  </button>
                 </div>
                 <div class="tagCenter">
                   <p>List A</p>
@@ -640,6 +643,45 @@
                 <div class="tagRight">
                   <button class="btn btnShareList"><img src="./assets/images/icons/profile/iconShareList.svg" class="img-fluid iconListOption" alt="icon share list"></button>
                   <button class="btn btnDeleteList"><img src="./assets/images/icons/profile/iconDeleteList.svg" class="img-fluid iconListOption" alt="icon delete list"></button>
+                </div>
+              </div>
+              <!-- card location 1 -->
+              <div class="dealImageList">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonRemoveDeal" class="btn iconRemoveDeal iconShadow float-right">
+                      <img src="./assets/images/icons/profile/iconButtonRemoveList.svg" class="text-right iconShadow" alt="icon remove deal location">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card location 2 -->
+              <div class="dealImageList">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonRemoveDeal" class="btn iconRemoveDeal iconShadow float-right">
+                      <img src="./assets/images/icons/profile/iconButtonRemoveList.svg" class="text-right iconShadow" alt="icon remove deal location">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card location 3 -->
+              <div class="dealImageList">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonRemoveDeal" class="btn iconRemoveDeal iconShadow float-right">
+                      <img src="./assets/images/icons/profile/iconButtonRemoveList.svg" class="text-right iconShadow" alt="icon remove deal location">
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -693,6 +735,22 @@
     </div>
   </nav>
   <!-- ./menu-bottom -->
+
+  <!-- content modal city -->
+  <div class="modal modalCity bottom fade" id="contentCities_modal" role="dialog" aria-labelledby="fullscreen_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="container-close">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <img src="./assets/images/icons/iconCloseBlack.svg" class="img-fluid" alt="Close Content">
+          </button>
+        </div>
+        <div class="modal-body d-flex flex-column">
+          <h1>navenu cities</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- content modal card1 -->
   <div class="modal modalCard bottom full fade" id="contentCard1_modal" role="dialog" aria-labelledby="fullscreen_modal">
@@ -809,10 +867,8 @@
                 <p class="textCard"><b>£:</b> Dinner for two with drinks and service: around <b>£105.</b></p>
               </div>
               <p>Heard of P Franco? It’s a super-cool Dalston wine shop that also happens to do a mean line in comestibles. Bright is from the same crew, but is a restaurant proper. And it’s the best thing to hit the neighbourhood since sliced
-                bread.
-                Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And cut
-                into
-                quarters.</p>
+                bread. Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And
+                cut into quarters.</p>
               <div class="sliderTab">
                 <div class="row sliderTabContent gallery">
                   <div class="col-auto">
@@ -1125,10 +1181,8 @@
                 <p class="textCard"><b>£:</b> Dinner for two with drinks and service: around <b>£105.</b></p>
               </div>
               <p>Heard of P Franco? It’s a super-cool Dalston wine shop that also happens to do a mean line in comestibles. Bright is from the same crew, but is a restaurant proper. And it’s the best thing to hit the neighbourhood since sliced
-                bread.
-                Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And cut
-                into
-                quarters.</p>
+                bread. Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And
+                cut into quarters.</p>
               <div class="sliderTab">
                 <div class="row sliderTabContent gallery">
                   <div class="col-auto">
@@ -1397,6 +1451,12 @@
     });
   </script>
 
+  <script type="text/javascript">
+    function changeCity() {
+      $(".changeCity").toggleClass(" active").toggleClass("");
+    }
+  </script>
+
   <!-- script change content -->
   <script type="text/javascript">
     // grab all the buttons
@@ -1501,6 +1561,16 @@
       $(".lists").removeClass("active");
     }
   </script>
+
+  <!-- close list -->
+  <script>
+    function closeList(numberList) {
+      console.log("closelist");
+      $(".lists").addClass("active");
+      $(".showList" + numberList + "").removeClass("active");
+    }
+  </script>
+
 
   <!-- hide list -->
   <script>
