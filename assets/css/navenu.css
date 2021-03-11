@@ -434,16 +434,14 @@ p.textButtonDown {
   right: .5rem;
 }
 
-.modal.modalCity .modal-content {
+.modal.modalCity.bottom .modal-content {
   margin: .5rem;
   border-radius: .5rem;
   background: #F2F2F2;
 }
 
 .modal.modalCity.bottom .modal-body {
-  padding: 0;
   background: #F2F2F2;
-  border-radius: .5rem;
   margin-top: 0;
 }
 
@@ -454,7 +452,6 @@ p.textButtonDown {
   letter-spacing: 0.116667px;
   color: #292929;
   text-transform: uppercase;
-  text-align: center
 }
 
 /*------- modal content ------*/
@@ -1600,6 +1597,29 @@ h1.profileLocation {
   display: inline-block;
   content: '';
   background-repeat: no-repeat;
+}
+
+/*----- profile refine -----*/
+.modalProfileRefine {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+}
+
+.modal.modalProfileRefine .close {
+    position: relative;
+    top: .5rem;
+    right: .5rem;
+}
+
+.modal.modalProfileRefine .modal-content {
+    margin: .5rem;
+    border-radius: .5rem;
+    background: #F2F2F2;
+}
+
+.modal.modalProfileRefine.bottom .modal-body {
+    background: #F2F2F2;
+    margin-top: 0;
 }
 
 /*----------- modal locations ----------*/
