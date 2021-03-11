@@ -131,24 +131,41 @@
 #frame .content .message-input {
   position: absolute;
   bottom: 0;
-  width: 100%;
   z-index: 99;
+  border-top: 2px solid #999999;
+  margin: 0 1rem;
+  left: 0;
+  right: 0;
 }
 
 #frame .content .message-input .wrap {
   position: relative;
+  display: flex;
+  margin: .5rem 0;
 }
 
 #frame .content .message-input .wrap input {
-  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
   float: left;
   border: none;
-  text-transform: uppercase;
   width: calc(100% - 50px);
   padding: 11px 32px 10px 8px;
-  font-size: 0.8em;
-  color: #32465a;
   border-bottom-left-radius: .5rem;
+  font-family: 'BourtonBase Regular';
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  opacity: 0.5;
+  background: transparent;
+}
+
+#frame .content .message-input .input-group {
+  padding: 0;
+  background: transparent;
+  width: 85%;
+}
+
+#frame .content .message-input .input-group img {
+  padding: 17.5px 0;
 }
 
 @media screen and (max-width: 735px) {
@@ -189,7 +206,8 @@
   width: 50px;
   padding: 12px 0;
   cursor: pointer;
-  background: #fff;
+  background: transparent;
+  text-align: right;
 }
 
 @media screen and (max-width: 735px) {

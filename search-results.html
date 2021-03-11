@@ -26,6 +26,7 @@
   <link href="./assets/css/navenu.css" rel="stylesheet">
   <link href="./assets/css/carousel.css" rel="stylesheet">
   <link href="./assets/css/fonts.css" rel="stylesheet">
+  <link href="./assets/css/chat.css" rel="stylesheet">
 
   <!-- Flickity slider -->
   <link rel="stylesheet" href="./assets/css/vendor/flickity.min.css">
@@ -38,11 +39,12 @@
       <img src="./assets/images/icons/header/icon-map.svg" class="map iconShadow" alt="icon map">
       <img src="./assets/images/icons/header/icon-btnStories.svg" class="stories iconShadow" alt="icon Stories">
     </button>
-    <div class="logo text-center">
+    <div class="logo active text-center">
       <img src="./assets/images/icons/header/icon-navenu.svg" alt="logo navenu">
-      <p class="location">LONDON, <b>Hackney</b></p>
+      <p class="location">LONDON, <b>Hackney</b><span class="changeCity"> - <a class="changeCityButton" data-toggle="modal" data-target="#contentCities_modal">change</a></span></p>
+
     </div>
-    <button class="navbar-toggler menuFilter collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler menuFilter collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="changeCity()">
       <span>
         <img src="./assets/images/icons/header/icon-filter.svg" class="filter iconShadow" alt="icon filter">
         <img src="./assets/images/icons/header/icon-buttonBack.svg" class="back" alt="icon back">
@@ -53,19 +55,19 @@
         <button class="btn nav-link btn-block btn-filter do active">
           <img src="./assets/images/icons/explore/iconDo.svg" class="img-fluid" alt="icon do">
         </button>
-        <button class="btn nav-link btn-block btn-filter eat">
+        <button class="btn nav-link btn-block btn-filter eat active">
           <img src="./assets/images/icons/explore/iconEat.svg" class="img-fluid" alt="icon eat">
         </button>
-        <button class="btn nav-link btn-block btn-filter drink">
+        <button class="btn nav-link btn-block btn-filter drink active">
           <img src="./assets/images/icons/explore/iconDrink.svg" class="img-fluid" alt="icon drink">
         </button>
-        <button class="btn nav-link btn-block btn-filter shop">
+        <button class="btn nav-link btn-block btn-filter shop active">
           <img src="./assets/images/icons/explore/iconShop.svg" class="img-fluid" alt="icon shop">
         </button>
-        <button class="btn nav-link btn-block btn-filter stay">
+        <button class="btn nav-link btn-block btn-filter stay active">
           <img src="./assets/images/icons/explore/iconStay.svg" class="img-fluid" alt="icon stay">
         </button>
-        <button class="btn nav-link btn-block btn-filter fit">
+        <button class="btn nav-link btn-block btn-filter fit active">
           <img src="./assets/images/icons/explore/iconFit.svg" class="img-fluid" alt="icon fit">
         </button>
       </div>
@@ -81,6 +83,10 @@
           <img src="./assets/images/explore/slider/slider01.jpg" alt="Silider 01">
         </div>
         <a href="#" class="sliderUrl">
+          <div class="sponsorContent">
+            <h1 class="sponsorText">SPONSORED BY:</h1>
+            <img src="./assets/images/explore/sponsorLogo.png" class="img-fluid sponsorLogo" alt="image sponsor">
+          </div>
           <div class="content">
             <h2>EXCLUSIVE ITEM</h2>
             <h1>Virtual Gin Masterclass</h1>
@@ -112,6 +118,10 @@
           <img src="./assets/images/explore/slider/slider02.jpg" alt="Silider 02">
         </div>
         <a href="#" class="sliderUrl">
+          <div class="sponsorContent">
+            <h1 class="sponsorText">SPONSORED BY:</h1>
+            <img src="./assets/images/explore/sponsorLogo.png" class="img-fluid sponsorLogo" alt="image sponsor">
+          </div>
           <div class="content">
             <h2>top 10 list</h2>
             <h1>Tokyo’s Top 5 Contemporary Labels</h1>
@@ -143,6 +153,10 @@
           <img src="./assets/images/explore/slider/slider03.jpg" alt="Silider 02">
         </div>
         <a href="#" class="sliderUrl">
+          <div class="sponsorContent active">
+            <h1 class="sponsorText">SPONSORED BY:</h1>
+            <img src="./assets/images/explore/sponsorLogo.png" class="img-fluid sponsorLogo" alt="image sponsor">
+          </div>
           <div class="content">
             <h2>Competition</h2>
             <h1>Win a VIP holiday to Dubai</h1>
@@ -302,10 +316,99 @@
               </label>
             </div>
           </div>
+          <div class="dealsContent">
+            <!-- card location 1 -->
+            <a href="#" class="searchImageButton" data-toggle="modal" data-target="#contentSearch1_modal">
+              <img src="./assets/images/location/header.jpg" class="img-fluid searchImg" alt="image content">
+              <div class="searchImageText">
+                <h1>Location name</h1>
+                <div class="tags">
+                  <p class="text-left tagLeft">Category</p>
+                  <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                    <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                  </button>
+                </div>
+              </div>
+            </a>
+            <!-- card location 2 -->
+            <a href="#" class="searchImageButton" data-toggle="modal" data-target="#contentSearch2_modal">
+              <img src="./assets/images/location/header.jpg" class="img-fluid searchImg" alt="image content">
+              <div class="searchImageText">
+                <h1>Location name</h1>
+                <div class="tags">
+                  <p class="text-left tagLeft">Category</p>
+                  <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                    <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                  </button>
+                </div>
+              </div>
+            </a>
+            <!-- card location 3 -->
+            <a href="#" class="searchImageButton" data-toggle="modal" data-target="#contentSearch3_modal">
+              <img src="./assets/images/location/header.jpg" class="img-fluid searchImg" alt="image content">
+              <div class="searchImageText">
+                <h1>Location name</h1>
+                <div class="tags">
+                  <p class="text-left tagLeft">Category</p>
+                  <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                    <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                  </button>
+                </div>
+              </div>
+            </a>
+            <!-- card location 4 -->
+            <a href="#" class="searchImageButton" data-toggle="modal" data-target="#contentSearch4_modal">
+              <img src="./assets/images/location/header.jpg" class="img-fluid searchImg" alt="image content">
+              <div class="searchImageText">
+                <h1>Location name</h1>
+                <div class="tags">
+                  <p class="text-left tagLeft">Category</p>
+                  <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                    <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                  </button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- content deals -->
+    <div id="deals" class="deals contentBlock" data-number="4">
+      <div class="containerDeals">
+        <div class="buttonsFilterDeals">
+          <div class="btn-group-toggle buttonsFilterDealContent" data-toggle="buttons">
+            <label class="btn btnFilterDeal active">
+              <input type="checkbox" checked autocomplete="off"> All
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter A
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter B
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter C
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter D
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter E
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter F
+            </label>
+            <label class="btn btnFilterDeal">
+              <input type="checkbox" checked autocomplete="off"> Filter G
+            </label>
+          </div>
+        </div>
+        <div class="dealsContent">
           <!-- card location 1 -->
-          <a href="#" class="searchImageButton" data-toggle="modal" data-target="#contentSearch1_modal">
-            <img src="./assets/images/location/header.jpg" class="img-fluid searchImg" alt="image content">
-            <div class="searchImageText">
+          <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
+            <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+            <div class="dealImageText">
               <h1>Location name</h1>
               <div class="tags">
                 <p class="text-left tagLeft">Category</p>
@@ -316,9 +419,9 @@
             </div>
           </a>
           <!-- card location 2 -->
-          <a href="#" class="searchImageButton" data-toggle="modal" data-target="#contentSearch2_modal">
-            <img src="./assets/images/location/header.jpg" class="img-fluid searchImg" alt="image content">
-            <div class="searchImageText">
+          <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
+            <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+            <div class="dealImageText">
               <h1>Location name</h1>
               <div class="tags">
                 <p class="text-left tagLeft">Category</p>
@@ -329,9 +432,9 @@
             </div>
           </a>
           <!-- card location 3 -->
-          <a href="#" class="searchImageButton" data-toggle="modal" data-target="#contentSearch3_modal">
-            <img src="./assets/images/location/header.jpg" class="img-fluid searchImg" alt="image content">
-            <div class="searchImageText">
+          <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
+            <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+            <div class="dealImageText">
               <h1>Location name</h1>
               <div class="tags">
                 <p class="text-left tagLeft">Category</p>
@@ -342,9 +445,9 @@
             </div>
           </a>
           <!-- card location 4 -->
-          <a href="#" class="searchImageButton" data-toggle="modal" data-target="#contentSearch4_modal">
-            <img src="./assets/images/location/header.jpg" class="img-fluid searchImg" alt="image content">
-            <div class="searchImageText">
+          <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentDeal1_modal">
+            <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+            <div class="dealImageText">
               <h1>Location name</h1>
               <div class="tags">
                 <p class="text-left tagLeft">Category</p>
@@ -354,45 +457,359 @@
               </div>
             </div>
           </a>
-        </form>
-      </div>
-    </div>
-    <!-- content chat -->
-    <div id="chat" class="chat contentBlock" data-number="3">
-      <div class="containerChat">
-        <h1>chat</h1>
-      </div>
-    </div>
-    <!-- content deals -->
-    <div id="deals" class="deals contentBlock" data-number="4">
-      <div class="containerDeals">
-        <h1>deals</h1>
+        </div>
       </div>
     </div>
     <!-- content profile -->
     <div id="profile" class="profile contentBlock" data-number="5">
       <div class="containerProfile">
-        <h1>profile</h1>
+        <nav>
+          <div class="nav nav-tabs nav-justified profileTab" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-location-tab" data-toggle="tab" href="#nav-location" role="tab" aria-controls="nav-location" aria-selected="true">Location</a>
+            <a class="nav-item nav-link" id="nav-deals-tab" data-toggle="tab" href="#nav-deals" role="tab" aria-controls="nav-deals" aria-selected="false">Deals</a>
+            <a class="nav-item nav-link" id="nav-lists-tab" data-toggle="tab" href="#nav-lists" role="tab" aria-controls="nav-lists" aria-selected="false">Lists</a>
+            <a class="nav-item nav-link" id="nav-Settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="false">Settings</a>
+          </div>
+        </nav>
+        <div class="tab-content locationContentTab" id="nav-tabProfile">
+          <div class="tab-pane fade show active" id="nav-location" role="tabpanel" aria-labelledby="nav-info-tab">
+            <div class="buttonsFilterProfile">
+              <div class="btn-group btn-group-toggle buttonsFilterProfileContent" data-toggle="buttons">
+                <label class="btn btnFilterDeal active">
+                  <input type="radio" checked autocomplete="off"> All
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Nearby
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> $
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> $$$
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Delivery
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Item 6
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Item 7
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Item 8
+                </label>
+              </div>
+            </div>
+            <div class="dealsProfile">
+              <!-- card location 1 -->
+              <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>WEEKEND DISCOUNT AT ARTIST RESIDENCE LONDON</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                      <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <!-- card location 2 -->
+              <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation2_modal">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                      <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <!-- card location 3 -->
+              <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation3_modal">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                      <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-deals" role="tabpanel" aria-labelledby="nav-directions-tab">
+            <div class="buttonsFilterProfile">
+              <div class="btn-group-toggle buttonsFilterProfileContent" data-toggle="buttons">
+                <label class="btn btnFilterDeal active">
+                  <input type="radio" autocomplete="off"> All
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Nearby
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> $
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> $$$
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Delivery
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Item 6
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Item 7
+                </label>
+                <label class="btn btnFilterDeal">
+                  <input type="radio" autocomplete="off"> Item 8
+                </label>
+              </div>
+            </div>
+            <h1 class="feedSubTitle">ongoing</h1>
+            <div class="row no-gutters ongoing">
+              <div class="col-md-12">
+                <div class="tagOngoing">
+                  <a href="#" class="linkOngoing active">
+                    <div class="tagLeft">
+                      <img src="./assets/images/articles/profile.jpg" class="img-fluid profileImage" alt="image profile article">
+                    </div>
+                    <div class="tagCenter">
+                      <p class="textUp">Free Cocktail</p>
+                      <p class="textDown">With any order at Number 97</p>
+                    </div>
+                    <div class="tagRight">
+                      <p class="numberDeals">3</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="tagOngoing">
+                  <a href="#" class="linkOngoing">
+                    <div class="tagLeft">
+                      <img src="./assets/images/articles/profile.jpg" class="img-fluid profileImage" alt="image profile article">
+                    </div>
+                    <div class="tagCenter">
+                      <p class="textUp">Free Cocktail</p>
+                      <p class="textDown">With any order at Number 97</p>
+                    </div>
+                    <div class="tagRight">
+                      <p class="numberDeals">3</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="tagOngoing">
+                  <a href="#" class="linkOngoing">
+                    <div class="tagLeft">
+                      <img src="./assets/images/articles/profile.jpg" class="img-fluid profileImage" alt="image profile article">
+                    </div>
+                    <div class="tagCenter">
+                      <p class="textUp">Free Cocktail</p>
+                      <p class="textDown">With any order at Number 97</p>
+                    </div>
+                    <div class="tagRight">
+                      <p class="numberDeals">3</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h1 class="feedSubTitle">nearby</h1>
+            <div class="dealsProfile">
+              <!-- card location 1 -->
+              <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation1_modal">
+                <img src="./assets/images/location/location2.jpg" class="img-fluid dealImg" alt="image deal">
+                <div class="dealImageText">
+                  <h1>WEEKEND DISCOUNT AT RESIDENCE LONDON</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Discount</p>
+                    <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                      <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <!-- card location 2 -->
+              <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation2_modal">
+                <img src="./assets/images/location/location2.jpg" class="img-fluid dealImg" alt="image deal">
+                <div class="dealImageText">
+                  <h1>WEEKEND DISCOUNT AT RESIDENCE LONDON</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Discount</p>
+                    <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                      <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <!-- card location 3 -->
+              <a href="#" class="dealImageButton" data-toggle="modal" data-target="#contentLocation3_modal">
+                <img src="./assets/images/location/location2.jpg" class="img-fluid dealImg" alt="image deal">
+                <div class="dealImageText">
+                  <h1>WEEKEND DISCOUNT AT RESIDENCE LONDON</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Discount</p>
+                    <button type="button" name="buttonCard" class="btn iconCardLocation iconShadow float-right">
+                      <img src="./assets/images/icons/search/iconButtonSavedDisabled.svg" class="text-right iconShadow" alt="icon card location">
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-lists" role="tabpanel" aria-labelledby="nav-reserve-tab">
+            <div class="row no-gutters lists active">
+              <div class="col-md-12">
+                <div class="tagList">
+                  <a class="linkList" onclick="showList(1)">
+                    <div class="tagLeft">
+                      <img src="./assets/images/icons/profile/iconList.png" class="img-fluid iconList" alt="icon profile list">
+                    </div>
+                    <div class="tagCenter">
+                      <p>List A</p>
+                    </div>
+                  </a>
+                  <div class="tagRight">
+                    <button class="btn btnShareList"><img src="./assets/images/icons/profile/iconShareList.svg" class="img-fluid iconListOption" alt="icon share list"></button>
+                    <button class="btn btnDeleteList"><img src="./assets/images/icons/profile/iconDeleteList.svg" class="img-fluid iconListOption" alt="icon delete list"></button>
+                  </div>
+                </div>
+                <div class="tagList">
+                  <a href="#" class="linkList">
+                    <div class="tagLeft">
+                      <img src="./assets/images/icons/profile/iconList.png" class="img-fluid iconList" alt="icon profile list">
+                    </div>
+                    <div class="tagCenter">
+                      <p>List B</p>
+                    </div>
+                  </a>
+                  <div class="tagRight">
+                    <button class="btn btnShareList"><img src="./assets/images/icons/profile/iconShareList.svg" class="img-fluid iconListOption" alt="icon share list"></button>
+                    <button class="btn btnDeleteList"><img src="./assets/images/icons/profile/iconDeleteList.svg" class="img-fluid iconListOption" alt="icon delete list"></button>
+                  </div>
+                </div>
+                <div class="tagList">
+                  <a href="#" class="linkList">
+                    <div class="tagLeft">
+                      <img src="./assets/images/icons/profile/iconList.png" class="img-fluid iconList" alt="icon profile list">
+                    </div>
+                    <div class="tagCenter">
+                      <p>List C</p>
+                    </div>
+                  </a>
+                  <div class="tagRight">
+                    <button class="btn btnShareList"><img src="./assets/images/icons/profile/iconShareList.svg" class="img-fluid iconListOption" alt="icon share list"></button>
+                    <button class="btn btnDeleteList"><img src="./assets/images/icons/profile/iconDeleteList.svg" class="img-fluid iconListOption" alt="icon delete list"></button>
+                  </div>
+                </div>
+                <button class="btn btn-outline-dark btnProfile btnAddList shadow-none" type="button" name="buttonProfile">Create New List</button>
+              </div>
+            </div>
+            <div class="showList1">
+              <div class="tagOpenList">
+                <div class="tagLeft">
+                  <button type="button" name="button" class="btn btnBackLists" onclick="closeList(1)">
+                    <img src="./assets/images/icons/profile/iconBackList.svg" class="img-fluid iconList" alt="icon back list">
+                  </button>
+                </div>
+                <div class="tagCenter">
+                  <p>List A</p>
+                </div>
+                <div class="tagRight">
+                  <button class="btn btnShareList"><img src="./assets/images/icons/profile/iconShareList.svg" class="img-fluid iconListOption" alt="icon share list"></button>
+                  <button class="btn btnDeleteList"><img src="./assets/images/icons/profile/iconDeleteList.svg" class="img-fluid iconListOption" alt="icon delete list"></button>
+                </div>
+              </div>
+              <!-- card location 1 -->
+              <div class="dealImageList">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonRemoveDeal" class="btn iconRemoveDeal iconShadow float-right">
+                      <img src="./assets/images/icons/profile/iconButtonRemoveList.svg" class="text-right iconShadow" alt="icon remove deal location">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card location 2 -->
+              <div class="dealImageList">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonRemoveDeal" class="btn iconRemoveDeal iconShadow float-right">
+                      <img src="./assets/images/icons/profile/iconButtonRemoveList.svg" class="text-right iconShadow" alt="icon remove deal location">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- card location 3 -->
+              <div class="dealImageList">
+                <img src="./assets/images/location/header.jpg" class="img-fluid dealImg" alt="image content">
+                <div class="dealImageText">
+                  <h1>Location name</h1>
+                  <div class="tags">
+                    <p class="text-left tagLeft">Category</p>
+                    <button type="button" name="buttonRemoveDeal" class="btn iconRemoveDeal iconShadow float-right">
+                      <img src="./assets/images/icons/profile/iconButtonRemoveList.svg" class="text-right iconShadow" alt="icon remove deal location">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-store-tab">
+            <div class="form-group">
+              <label for="email">Username</label>
+              <input id="username" type="text" class="form-control" value="username" name="username" required="required">
+            </div>
+            <button class="btn btn-outline-dark btnProfile btnProfileLocation shadow-none" type="button" name="buttonProfile">Edit preferred locations</button>
+            <h1 class="profileLocation"><strong>You are Watching: </strong><span class="ProfileLocationCity">London</span><span class="blankSpaceLocation"> </span><span class="countProfileLocation">(2 Buroughs)</span></h1>
+            <button class="btn btn-outline-dark btnProfile btnProfileRefine shadow-none" type="button" name="buttonProfile">Refine your profile information</button>
+            <p>Navenu text about how importan is for suggestions that we have information about the user and also how serious are we in regards of their data and information.</p>
+            <p><strong>Learn more about how we protect your information</strong></p>
+            <button class="btn btn-secondary btnProfileShare shadow-none" type="button" name="buttonProfile"><span>SHARE WITH FRIENDS</span></button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <!-- ./container -->
 
+  <!-- addToList -->
+  <div class="addToList">
+    <div class="contentAddToList rainbowWhite">
+      <p class="addToListText"><span class="addToListInit">Location added to</span><br><span class="nameAddList">Lista</span></p>
+      <div class="buttonsAddToList">
+        <button id="addToListOk" class="btn buttonAddToList addToListOk">OK</button>
+        <button id="addToListCancel" class="btn buttonAddToList addToListChange">Change</button>
+      </div>
+    </div>
+  </div>
+
   <!-- menu-bottom -->
   <nav class="navbar navbar-default fixed-bottom menuBottom">
     <div class="flex-column justify-content-center containerMenuBottom">
       <ul class="nav d-flex justify-content-around align-items-end">
-        <li class="nav-item buttonContent" data-number="1">
+        <li class="nav-item buttonContent iconHome" data-number="1">
           <a class="nav-link iconShadow">
             <img src="./assets/images/icons/nav/iconHome.svg" alt="icon home">
           </a>
         </li>
-        <li class="nav-item buttonContent active" data-number="2">
+        <li class="nav-item buttonContent searchButton active" data-number="2">
           <a class="nav-link iconShadow">
             <img src="./assets/images/icons/nav/iconSearch.svg" alt="icon search">
           </a>
         </li>
-        <li class="nav-item buttonContent" data-number="3">
+        <li class="nav-item buttonContent" data-number="3" data-toggle="modal" data-target="#contentChat_modal">
           <a class="nav-link">
             <img src="./assets/images/icons/nav/navenu-logo.svg" alt="icon navenu">
           </a>
@@ -402,7 +819,7 @@
             <img src="./assets/images/icons/nav/iconDeals.svg" alt="icon deals">
           </a>
         </li>
-        <li class="nav-item buttonContent" data-number="5">
+        <li class="nav-item buttonContent profileButton" data-number="5">
           <a class="nav-link iconShadow">
             <img src="./assets/images/icons/nav/iconProfile.svg" alt="icon profile">
           </a>
@@ -411,6 +828,22 @@
     </div>
   </nav>
   <!-- ./menu-bottom -->
+
+  <!-- content modal cities -->
+  <div class="modal modalCity bottom fade" id="contentCities_modal" role="dialog" aria-labelledby="fullscreen_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="container-close">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <img src="./assets/images/icons/iconCloseBlack.svg" class="img-fluid" alt="Close Content">
+          </button>
+        </div>
+        <div class="modal-body d-flex flex-column">
+          <h1>navenu cities</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- content modal card1 -->
   <div class="modal modalCard bottom full fade" id="contentCard1_modal" role="dialog" aria-labelledby="fullscreen_modal">
@@ -480,7 +913,7 @@
       </div>
     </div>
     <div class="modal-footer modal-footer-fixed">
-      <button type="button" class="buttonRedeem" name="button">£ 20 - Redeem Now</button>
+      <button type="button" class="buttonRedeem" name="button" data-toggle="modal" data-target="#contentChat_modal">£ 20 - Redeem Now</button>
     </div>
   </div>
 
@@ -510,7 +943,8 @@
             <div class="nav nav-tabs nav-justified rainbow locationMenuTab" id="nav-tab" role="tablist">
               <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">Info</a>
               <a class="nav-item nav-link" id="nav-directions-tab" data-toggle="tab" href="#nav-directions" role="tab" aria-controls="nav-directions" aria-selected="false">Directions</a>
-              <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="tab" href="#nav-reserve" role="tab" aria-controls="nav-reserve" aria-selected="false">Reserve</a>
+              <!-- <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="tab" href="#nav-reserve" role="tab" aria-controls="nav-reserve" aria-selected="false">Reserve</a> -->
+              <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="modal" data-target="#contentChat_modal">Reserve</a>
               <a class="nav-item nav-link" id="nav-store-tab" data-toggle="tab" href="#nav-store" role="tab" aria-controls="nav-store" aria-selected="false">Store</a>
               <a class="nav-item nav-link share" id="nav-share-tab" href="#" aria-controls="nav-share" aria-selected="false">
                 <img src="./assets/images/icons/iconShare.svg" class="iconShadow" alt="icon share location">
@@ -526,9 +960,8 @@
                 <p class="textCard"><b>£:</b> Dinner for two with drinks and service: around <b>£105.</b></p>
               </div>
               <p>Heard of P Franco? It’s a super-cool Dalston wine shop that also happens to do a mean line in comestibles. Bright is from the same crew, but is a restaurant proper. And it’s the best thing to hit the neighbourhood since sliced
-                bread.
-                Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And cut into
-                quarters.</p>
+                bread. Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And
+                cut into quarters.</p>
               <div class="sliderTab">
                 <div class="row sliderTabContent gallery">
                   <div class="col-auto">
@@ -560,8 +993,8 @@
             </div>
             <div class="tab-pane fade" id="nav-directions" role="tabpanel" aria-labelledby="nav-directions-tab">
               <b>Navigation APP</b><br>is launched here</div>
-            <div class="tab-pane fade" id="nav-reserve" role="tabpanel" aria-labelledby="nav-reserve-tab">
-              <b>OpenTable API</b><br>loads here</div>
+            <!-- <div class="tab-pane fade" id="nav-reserve" role="tabpanel" aria-labelledby="nav-reserve-tab">
+              <b>OpenTable API</b><br>loads here</div> -->
             <div class="tab-pane fade" id="nav-store" role="tabpanel" aria-labelledby="nav-store-tab">
               <h1 class="titleMedium">Deals</h1>
               <div class="sliderTab">
@@ -825,7 +1258,7 @@
             <div class="nav nav-tabs nav-justified rainbow locationMenuTab" id="nav-tab" role="tablist">
               <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab" href="#nav-info-article" role="tab" aria-controls="nav-info" aria-selected="true">Info</a>
               <a class="nav-item nav-link" id="nav-directions-tab" data-toggle="tab" href="#nav-directions-article" role="tab" aria-controls="nav-directions" aria-selected="false">Directions</a>
-              <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="tab" href="#nav-reserve-article" role="tab" aria-controls="nav-reserve" aria-selected="false">Reserve</a>
+              <a class="nav-item nav-link" id="nav-reserve-tab" data-toggle="modal" data-target="#contentChat_modal">Reserve</a>
               <a class="nav-item nav-link" id="nav-store-tab" data-toggle="tab" href="#nav-store-article" role="tab" aria-controls="nav-store" aria-selected="false">Store</a>
               <a class="nav-item nav-link share" id="nav-share-tab" href="#" aria-controls="nav-share" aria-selected="false">
                 <img src="./assets/images/icons/iconShare.svg" class="iconShadow" alt="icon share location">
@@ -841,9 +1274,8 @@
                 <p class="textCard"><b>£:</b> Dinner for two with drinks and service: around <b>£105.</b></p>
               </div>
               <p>Heard of P Franco? It’s a super-cool Dalston wine shop that also happens to do a mean line in comestibles. Bright is from the same crew, but is a restaurant proper. And it’s the best thing to hit the neighbourhood since sliced
-                bread.
-                Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And cut into
-                quarters.</p>
+                bread. Sliced bread also happens to be the makings of the cutest thing on the menu – a meaty take on a fish finger sarnie, using Japanese katsu chicken (ie crumbed and deep-fried) in a white bread sandwich. With its crusts off. And
+                cut into quarters.</p>
               <div class="sliderTab">
                 <div class="row sliderTabContent gallery">
                   <div class="col-auto">
@@ -1041,6 +1473,63 @@
     </div>
   </div>
 
+  <!-- content modal chat -->
+  <div class="modal modalChat bottom fade" id="contentChat_modal" role="dialog" aria-labelledby="fullscreen_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="container-close">
+          <div class="contact-profile">
+            <img src="./assets/images/chat/imgSupportChatState.png" alt="image support chat" />
+            <p><b>DANA</b>, NAVENU AGENT</p>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <img src="./assets/images/icons/iconCloseBlack.svg" class="img-fluid" alt="Close Content">
+          </button>
+        </div>
+        <div class="modal-body d-flex flex-column">
+          <div id="frame">
+            <div class="content">
+              <div class="messages">
+                <ul>
+                  <li class="replies">
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
+                    <p>Hi user, We’re glad you are interested in the Virtual GinMasterClass</p>
+                  </li>
+                  <li class="replies">
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
+                    <p>You can contact GinMasters vía their website and phone below using the code</p>
+                  </li>
+                  <li class="replies">
+                    <img src="./assets/images/chat/imgSupportChat.png" alt="image support chat" />
+                    <p>Call this numberXXXXX<br>say magic pass: I am magic</p>
+                  </li>
+                  <li class="sent">
+                    <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" />
+                    <p>Are you available now?</p>
+                  </li>
+                  <li class="sent">
+                    <img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" />
+                    <p>I booked for this week but i need to postpone, can you help me?</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="message-input">
+                <div class="wrap">
+                  <div class="input-group">
+                    <span><img src="./assets/images/icons/chat/addMessage.svg" alt="icon add message chat" /></span>
+                    <input type="text" class="inputChat" placeholder="Type your message">
+                  </div>
+                  <button class="submit"><img src="./assets/images/icons/chat/sendMessage.svg" class="img-fluid" alt="icon send message">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript -->
   <script src="./assets/vendor/jquery/jquery.min.js"></script>
   <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -1058,38 +1547,102 @@
     });
   </script>
 
+  <!-- change cities -->
+  <script type="text/javascript">
+    function changeCity() {
+      $(".changeCity").toggleClass(" active").toggleClass("");
+    }
+  </script>
+
   <!-- script change content -->
   <script type="text/javascript">
     // grab all the buttons
     let Buttons = document.querySelectorAll(".buttonContent");
-    console.log(Buttons);
     // loop through the buttons using for..of
     for (let button of Buttons) {
       // listen for a click event
       button.addEventListener('click', function() {
         // select active class
         const active = document.querySelector(".buttonContent.active");
+        const mapActive = document.querySelector(".iconMap.active");
+        const home = document.querySelector(".iconHome");
+        if (button.getAttribute('data-number') == 3) {
+          console.log('chat');
+        }
         // check for the button that has active class and remove it
-        if (active) {
-          active.classList.remove("active");
+        else {
+          if (active) {
+            active.classList.remove("active");
+          }
         }
         // Add active class to the clicked element
-        this.classList.add("active");
+        if (button.getAttribute('data-number') == 3) {
+          console.log('chat');
+        } else if (button.getAttribute('data-number') == 6 && mapActive) {
+          console.log('map active');
+          home.classList.add("active");
+        } else {
+          this.classList.add("active");
+        }
         // select all classes with the name content
         let allContent = document.querySelectorAll('.contentBlock');
         // loop through all content classes
         for (let content of allContent) {
+          const carousel = document.querySelector(".carousel");
+          const map = document.querySelector(".maps");
           /* display the content if the value in the data attribute of the button and content are the same */
           if (content.getAttribute('data-number') === button.getAttribute('data-number')) {
             content.classList.add("active");
           }
           // if it's not equal then hide it.
           else {
-            content.classList.remove("active");
+            if (button.getAttribute('data-number') == 3) {} else if (button.getAttribute('data-number') == 6 && mapActive) {
+              map.classList.remove("active");
+              carousel.classList.add("active");
+            } else {
+              content.classList.remove("active");
+            }
           }
         }
       });
     }
+  </script>
+
+  <!-- iconCard Location to list show -->
+  <script>
+    $(document).ready(function() {
+      $(".iconCardLocation").on("click", function() {
+        $(".addToList").addClass("active");
+      })
+    });
+  </script>
+
+  <!-- iconCard Location to list hide -->
+  <script>
+    $(document).ready(function() {
+      $(".addToListOk").on("click", function() {
+        $(".addToList").removeClass("active");
+      })
+    });
+  </script>
+
+  <!-- iconCard Location to list change -->
+  <script>
+    $(document).ready(function() {
+      $(".addToListChange").on("click", function() {
+        $(".searchState2").removeClass("active");
+        $(".searchButton").removeClass("active");
+        $(".profileButton").addClass("active");
+        $(".addToList").removeClass("active");
+        $(".profile").addClass("active");
+        activaTab('nav-lists');
+      })
+    });
+
+    function activaTab(tab) {
+      console.log('show ' + tab + '');
+      $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+    };
   </script>
 
   <!-- active touch in mobile -->
