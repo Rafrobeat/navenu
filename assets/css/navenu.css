@@ -447,10 +447,58 @@ p.textButtonDown {
 
 .modalCity h1 {
   font-family: 'BourtonBase Regular';
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0.143087px;
+  color: #333333;
+}
+
+.modalCity .form-check-label {
+  font-family: 'BourtonBase Regular';
+  font-weight: normal;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 0;
   letter-spacing: 0.116667px;
   color: #292929;
+}
+
+.optionCity {
+  margin: 1rem 0;
+}
+
+.optionCity div {
+  margin-bottom: .5rem;
+}
+
+.optionCity .cbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 32px;
+  height: 32px;
+  border: none;
+  margin-right: 5px;
+  background: #00CD00;
+  border: 3px solid #333333;
+  border-radius: 25px;
+  padding: 7.5px;
+}
+
+.optionCity input[type=checkbox]:checked:after {
+  position: absolute;
+  content: url('checkbox.svg');
+  margin-top: -.25rem;
+  margin-left: -.15rem;
+}
+
+.optionCity .cboxText {
+  font-family: 'BourtonBase Regular';
+  font-weight: normal;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: 0.116667px;
+  color: #292929;
+  vertical-align: top;
   text-transform: uppercase;
 }
 
@@ -1601,25 +1649,205 @@ h1.profileLocation {
 
 /*----- profile refine -----*/
 .modalProfileRefine {
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 2000;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
 }
 
 .modal.modalProfileRefine .close {
-    position: relative;
-    top: .5rem;
-    right: .5rem;
+  position: relative;
+  top: .5rem;
+  right: .5rem;
+}
+
+.modal.bottom.modalProfileRefine .modal-body {
+  padding: 2rem 1rem;
+  background: #F2F2F2;
+  border-radius: 24px 24px 0px 0px;
+  margin-top: -2rem;
 }
 
 .modal.modalProfileRefine .modal-content {
-    margin: .5rem;
-    border-radius: .5rem;
-    background: #F2F2F2;
+  margin: .5rem;
+  border-radius: .5rem;
+  background: #F2F2F2;
 }
 
 .modal.modalProfileRefine.bottom .modal-body {
-    background: #F2F2F2;
-    margin-top: 0;
+  background: #F2F2F2;
+  margin-top: 0;
+}
+
+.modalProfileRefine h1 {
+  font-family: 'BourtonBase Regular';
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.116667px;
+  color: #292929;
+  text-transform: uppercase;
+}
+
+.modalProfileRefine p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.116667px;
+  color: #292929;
+}
+
+.modalProfileRefine h2.categoriesProfile {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1.83333px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 1.5rem 0 1rem;
+}
+
+.profileRefineCard {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.slideContainerAge {
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(114.92deg, #FF0000 10.45%, #0085FF 77.98%);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.slideContainerGender {
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(114.92deg, #FF7A00 10.45%, #0066FF 77.98%);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.slideContainerBudget {
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(114.92deg, #CC00FF 10.45%, #FF8A00 77.98%);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.slideContainerRelationship {
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(114.92deg, rgba(0, 255, 71, 0.5) 10.45%, rgba(0, 118, 255, 0.5) 77.98%);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  opacity: .9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 46px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 3px solid #515151;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 46px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 3px solid #515151;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+p.slideText {
+  font-family: 'SF UI Display Regular';
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.116667px;
+  color: #292929;
+  text-align: center;
+}
+
+.slideText .textLeft {
+  float: left;
+}
+
+.slideText .textCenter {
+  margin-left: .5rem;
+}
+
+.slideText .textRight {
+  float: right;
+}
+
+.profileRefineCard .btn-toggle {
+  border-radius: 200px;
+  margin: 0 4rem;
+  padding: 0;
+  position: relative;
+  border: none;
+  height: 2.25rem;
+  width: 4rem;
+  color: #6b7381;
+  background: #999999;
+}
+
+.profileRefineCard .btn-toggle:before, .profileRefineCard .btn-toggle:after {
+  line-height: 1.5rem;
+  width: 4rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0;
+  transition: opacity 0.25s;
+}
+
+.profileRefineCard .btn-toggle.active {
+  background: #00CD00;
+  transition: background-color 0.25s;
+}
+
+.profileRefineCard .btn-toggle>.handle {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.5rem;
+  height: 1.75rem;
+  background: #FFFFFF;
+  border-radius: 187.819px;
+  transition: left 0.25s;
+}
+
+.btn-toggle.active>.handle {
+  left: 2.25rem;
+  transition: left 0.25s;
 }
 
 /*----------- modal locations ----------*/

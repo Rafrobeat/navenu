@@ -33,10 +33,10 @@
   <link href="./assets/css/navenu.css" rel="stylesheet">
   <link href="./assets/css/carousel.css" rel="stylesheet">
   <link href="./assets/css/fonts.css" rel="stylesheet">
-  <link href="./assets/css/chat.css" rel="styleºsheet">
+  <link href="./assets/css/chat.css" rel="stylesheet">
 
   <!-- Flickity slider -->
-  <link rel="stylesheet" href="./assets/css/vendor/flickity.min.css">
+  <link href="./assets/css/vendor/flickity.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -707,7 +707,7 @@
             </div>
             <button class="btn btn-outline-dark btnProfile btnProfileLocation shadow-none" type="button" name="buttonProfile" data-toggle="modal" data-target="#contentCities_modal">Edit preferred locations</button>
             <h1 class="profileLocation"><strong>You are Watching: </strong><span class="ProfileLocationCity">London</span><span class="blankSpaceLocation"> </span><span class="countProfileLocation">(2 Buroughs)</span></h1>
-            <button class="btn btn-outline-dark btnProfile btnProfileRefine shadow-none" type="button" name="buttonProfile"  data-toggle="modal" data-target="#contentProfileRefine_modal">Refine your profile information</button>
+            <button class="btn btn-outline-dark btnProfile btnProfileRefine shadow-none" type="button" name="buttonProfile" data-toggle="modal" data-target="#contentProfileRefine_modal">Refine your profile information</button>
             <p>Navenu text about how importan is for suggestions that we have information about the user and also how serious are we in regards of their data and information.</p>
             <p><strong>Learn more about how we protect your information</strong></p>
             <button class="btn btn-secondary btnProfileShare shadow-none" type="button" name="buttonProfile"><span>SHARE WITH FRIENDS</span></button>
@@ -763,6 +763,32 @@
         </div>
         <div class="modal-body d-flex flex-column">
           <h1>London</h1>
+          <div class="optionCity">
+            <div>
+              <input id="cbox1" class="cbox" type="checkbox" name="cbox1" value="a" checked></input>
+              <span class="cboxText">borough A</span>
+            </div>
+            <div>
+              <input id="cbox2" class="cbox" type="checkbox" name="cbox2" value="b"></input>
+              <span class="cboxText">borough B</span>
+            </div>
+            <div>
+              <input id="cbox3" class="cbox" type="checkbox" name="cbox3" value="c"></input>
+              <span class="cboxText">borough C</span>
+            </div>
+            <div>
+              <input id="cbox4" class="cbox" type="checkbox" name="cbox4" value="d"></input>
+              <span class="cboxText">borough D</span>
+            </div>
+            <div>
+              <input id="cbox5" class="cbox" type="checkbox" name="cbox5" value="e"></input>
+              <span class="cboxText">borough E</span>
+            </div>
+            <div>
+              <input id="cbox6" class="cbox" type="checkbox" name="cbox6" value="f"></input>
+              <span class="cboxText">borough F</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1454,7 +1480,7 @@
   </div>
 
   <!-- content modal profile refine -->
-  <div class="modal modalProfileRefine bottom fade" id="contentProfileRefine_modal" role="dialog" aria-labelledby="fullscreen_modal">
+  <div class="modal modalProfileRefine fade" id="contentProfileRefine_modal" role="dialog" aria-labelledby="fullscreen_modal">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="container-close">
@@ -1463,7 +1489,48 @@
           </button>
         </div>
         <div class="modal-body d-flex flex-column">
-          <h1>refine profile</h1>
+          <h1>let us know more about you</h1>
+          <p>Your data is protected with Navenu. It’s only used to provide you better custom results</p>
+          <h2 class="categoriesProfile">how young or old do you feel</h2>
+          <div class="profileRefineCard">
+            <p class="slideText"><span class="textLeft">0</span><span class="textCenter">50</span><span class="textRight">100</span></p>
+            <div class="slideContainerAge">
+              <input type="range" min="1" max="100" value="50" class="slider age" id="age">
+            </div>
+            <button type="button" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
+              <div class="handle"></div>
+            </button>
+          </div>
+          <h2 class="categoriesProfile">position in the gender spectrum</h2>
+          <div class="profileRefineCard">
+            <p class="slideText"><span class="textLeft">Straight</span><span class="textCenter"></span><span class="textRight">Queer</span></p>
+            <div class="slideContainerGender">
+              <input type="range" min="1" max="100" value="50" class="slider gender" id="gender">
+            </div>
+            <button type="button" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
+              <div class="handle"></div>
+            </button>
+          </div>
+          <h2 class="categoriesProfile">What type of budget describes you best</h2>
+          <div class="profileRefineCard">
+            <p class="slideText"><span class="textLeft">Frugal</span><span class="textCenter"></span><span class="textRight">Spendy</span></p>
+            <div class="slideContainerBudget">
+              <input type="range" min="1" max="100" value="50" class="slider budget" id="budget">
+            </div>
+            <button type="button" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
+              <div class="handle"></div>
+            </button>
+          </div>
+          <h2 class="categoriesProfile">What’s your relationship status</h2>
+          <div class="profileRefineCard">
+            <p class="slideText"><span class="textLeft">Single</span><span class="textCenter">One relationship</span><span class="textRight">Many</span></p>
+            <div class="slideContainerRelationship">
+              <input type="range" min="1" max="100" value="50" class="slider relationship" id="relationship">
+            </div>
+            <button type="button" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
+              <div class="handle"></div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
