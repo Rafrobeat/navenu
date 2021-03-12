@@ -35,16 +35,18 @@
 <body>
   <!-- menu-top -->
   <nav class="navbar menuTop">
-    <button id="iconMap" class="iconMap buttonContent" data-number="6">
+    <button id="iconMap" class="iconMap activated buttonContent" data-number="6">
       <img src="./assets/images/icons/header/icon-map.svg" class="map iconShadow" alt="icon map">
       <img src="./assets/images/icons/header/icon-btnStories.svg" class="stories iconShadow" alt="icon Stories">
     </button>
     <div class="logo active text-center">
       <img src="./assets/images/icons/header/icon-navenu.svg" alt="logo navenu">
       <p class="location">LONDON, <b>Hackney</b><span class="changeCity"> - <a class="changeCityButton" data-toggle="modal" data-target="#contentCities_modal">change</a></span></p>
-
     </div>
-    <button class="navbar-toggler menuFilter collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="changeCity()">
+    <div class="username">
+      <h1>username</h1>
+    </div>
+    <button class="navbar-toggler menuFilter activated collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="changeCityButton()">
       <span>
         <img src="./assets/images/icons/header/icon-filter.svg" class="filter iconShadow" alt="icon filter">
         <img src="./assets/images/icons/header/icon-buttonBack.svg" class="back" alt="icon back">
@@ -465,10 +467,10 @@
       <div class="containerProfile">
         <nav>
           <div class="nav nav-tabs nav-justified profileTab" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-location-tab" data-toggle="tab" href="#nav-location" role="tab" aria-controls="nav-location" aria-selected="true">Location</a>
-            <a class="nav-item nav-link" id="nav-deals-tab" data-toggle="tab" href="#nav-deals" role="tab" aria-controls="nav-deals" aria-selected="false">Deals</a>
-            <a class="nav-item nav-link" id="nav-lists-tab" data-toggle="tab" href="#nav-lists" role="tab" aria-controls="nav-lists" aria-selected="false">Lists</a>
-            <a class="nav-item nav-link" id="nav-Settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="false">Settings</a>
+            <a class="nav-item nav-link buttonTab active" id="nav-location-tab" data-toggle="tab" href="#nav-location" role="tab" aria-controls="nav-location" aria-selected="true" data-number-tab="1">Location</a>
+            <a class="nav-item nav-link buttonTab" id="nav-deals-tab" data-toggle="tab" href="#nav-deals" role="tab" aria-controls="nav-deals" aria-selected="false" data-number-tab="2">Deals</a>
+            <a class="nav-item nav-link buttonTab" id="nav-lists-tab" data-toggle="tab" href="#nav-lists" role="tab" aria-controls="nav-lists" aria-selected="false" data-number-tab="3">Lists</a>
+            <a class="nav-item nav-link buttonTab" id="nav-Settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="false" data-number-tab="4">Settings</a>
           </div>
         </nav>
         <div class="tab-content locationContentTab" id="nav-tabProfile">
@@ -771,9 +773,9 @@
               <label for="email">Username</label>
               <input id="username" type="text" class="form-control" value="username" name="username" required="required">
             </div>
-            <button class="btn btn-outline-dark btnProfile btnProfileLocation shadow-none" type="button" name="buttonProfile">Edit preferred locations</button>
+            <button class="btn btn-outline-dark btnProfile btnProfileLocation shadow-none" type="button" name="buttonProfile" data-toggle="modal" data-target="#contentCities_modal">Edit preferred locations</button>
             <h1 class="profileLocation"><strong>You are Watching: </strong><span class="ProfileLocationCity">London</span><span class="blankSpaceLocation"> </span><span class="countProfileLocation">(2 Buroughs)</span></h1>
-            <button class="btn btn-outline-dark btnProfile btnProfileRefine shadow-none" type="button" name="buttonProfile">Refine your profile information</button>
+            <button class="btn btn-outline-dark btnProfile btnProfileRefine shadow-none" type="button" name="buttonProfile" data-toggle="modal" data-target="#contentProfileRefine_modal">Refine your profile information</button>
             <p>Navenu text about how importan is for suggestions that we have information about the user and also how serious are we in regards of their data and information.</p>
             <p><strong>Learn more about how we protect your information</strong></p>
             <button class="btn btn-secondary btnProfileShare shadow-none" type="button" name="buttonProfile"><span>SHARE WITH FRIENDS</span></button>
@@ -1530,6 +1532,63 @@
     </div>
   </div>
 
+  <!-- content modal profile refine -->
+  <div class="modal modalProfileRefine fade" id="contentProfileRefine_modal" role="dialog" aria-labelledby="fullscreen_modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="container-close">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <img src="./assets/images/icons/iconCloseBlack.svg" class="img-fluid" alt="Close Content">
+          </button>
+        </div>
+        <div class="modal-body d-flex flex-column">
+          <h1>let us know more about you</h1>
+          <p>Your data is protected with Navenu. It’s only used to provide you better custom results</p>
+          <h2 class="categoriesProfile">how young or old do you feel</h2>
+          <div class="profileRefineCard">
+            <p class="slideText"><span class="textLeft">0</span><span class="textCenter">50</span><span class="textRight">100</span></p>
+            <div class="slideContainerAge">
+              <input type="range" min="1" max="100" value="50" class="slider age" id="age">
+            </div>
+            <button type="button" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
+              <div class="handle"></div>
+            </button>
+          </div>
+          <h2 class="categoriesProfile">position in the gender spectrum</h2>
+          <div class="profileRefineCard">
+            <p class="slideText"><span class="textLeft">Straight</span><span class="textCenter"></span><span class="textRight">Queer</span></p>
+            <div class="slideContainerGender">
+              <input type="range" min="1" max="100" value="50" class="slider gender" id="gender">
+            </div>
+            <button type="button" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
+              <div class="handle"></div>
+            </button>
+          </div>
+          <h2 class="categoriesProfile">What type of budget describes you best</h2>
+          <div class="profileRefineCard">
+            <p class="slideText"><span class="textLeft">Frugal</span><span class="textCenter"></span><span class="textRight">Spendy</span></p>
+            <div class="slideContainerBudget">
+              <input type="range" min="1" max="100" value="50" class="slider budget" id="budget">
+            </div>
+            <button type="button" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
+              <div class="handle"></div>
+            </button>
+          </div>
+          <h2 class="categoriesProfile">What’s your relationship status</h2>
+          <div class="profileRefineCard">
+            <p class="slideText"><span class="textLeft">Single</span><span class="textCenter">One relationship</span><span class="textRight">Many</span></p>
+            <div class="slideContainerRelationship">
+              <input type="range" min="1" max="100" value="50" class="slider relationship" id="relationship">
+            </div>
+            <button type="button" class="btn btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
+              <div class="handle"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript -->
   <script src="./assets/vendor/jquery/jquery.min.js"></script>
   <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -1549,8 +1608,63 @@
 
   <!-- change cities -->
   <script type="text/javascript">
-    function changeCity() {
+    function changeCityButton() {
       $(".changeCity").toggleClass(" active").toggleClass("");
+    }
+  </script>
+
+  <!-- script show/hide username -->
+  <script type="text/javascript">
+    // grab all the buttons
+    let ButtonsU = document.querySelectorAll(".buttonContent");
+    // loop through the buttons using for..of
+    for (let buttonU of ButtonsU) {
+      // listen for a click event
+      buttonU.addEventListener('click', function() {
+        switch (buttonU.getAttribute('data-number')) {
+
+          case '1':
+          case '2':
+          case '4':
+            $(".logo").addClass("active");
+            $(".username").removeClass("active");
+            $(".iconMap").addClass("activated");
+            $(".menuFilter").addClass("activated");
+            break;
+          case '5':
+            $(".logo").removeClass("active");
+            $(".username").addClass("active");
+            break;
+        }
+      })
+    }
+  </script>
+
+  <!-- script show/hide map/filters -->
+  <script type="text/javascript">
+    // grab all the buttons
+    let ButtonsTab = document.querySelectorAll(".buttonTab");
+    console.log(ButtonsTab);
+    // loop through the buttons using for..of
+    for (let buttonTab of ButtonsTab) {
+      // listen for a click event
+      buttonTab.addEventListener('click', function() {
+        switch (buttonTab.getAttribute('data-number-tab')) {
+
+          case '1':
+          case '2':
+            console.log('1 2');
+            $(".iconMap").addClass("activated");
+            $(".menuFilter").addClass("activated");
+            break;
+          case '3':
+          case '4':
+            console.log('3 4');
+            $(".iconMap").removeClass("activated");
+            $(".menuFilter").removeClass("activated");
+            break;
+        }
+      })
     }
   </script>
 
@@ -1606,6 +1720,58 @@
         }
       });
     }
+  </script>
+
+  <!-- search term -->
+  <script>
+    function searchTerm() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("searchTerms");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+  <!-- chat -->
+  <script>
+    $(".messages").animate({
+      scrollTop: $(document).height()
+    }, "fast");
+
+    function newMessage() {
+      message = $(".message-input input").val();
+      if ($.trim(message) == '') {
+        return false;
+      }
+      $('<li class="sent"><img src="./assets/images/chat/imgUserChat.svg" alt="image user chat" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+      $('.message-input input').val(null);
+
+      $('.contact.active .preview').html('<span>You: </span>' + message);
+      $(".messages").animate({
+        scrollTop: $(document).height()
+      }, "fast");
+    };
+
+    $('.submit').click(function() {
+      newMessage();
+    });
+
+    $(window).on('keydown', function(e) {
+      if (e.which == 13) {
+        newMessage();
+        return false;
+      }
+    });
   </script>
 
   <!-- iconCard Location to list show -->

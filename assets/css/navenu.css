@@ -127,6 +127,14 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
+  opacity: 0;
+  transition: opacity .5s;
+  z-index: -1;
+}
+
+.iconMap.activated {
+  opacity: 1;
+  z-index: 1;
 }
 
 .iconMap .map {
@@ -170,11 +178,13 @@ hr {
 .logo {
   opacity: 0;
   transition: opacity .5s;
+  display: none;
 }
 
 .logo.active {
   opacity: 1;
   z-index: 1;
+  display: inline;
 }
 
 span.changeCity {
@@ -197,12 +207,44 @@ a.changeCityButton:hover {
   text-decoration: none;
 }
 
+.username {
+  opacity: 0;
+  transition: opacity .5s;
+  display: none;
+}
+
+.username.active {
+  opacity: 1;
+  z-index: 1;
+  display: inline;
+}
+
+.username h1 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 0
+}
+
 .nav-item.active {
   border-bottom: solid 6px #676767;
 }
 
 .nav-item.active .nav-link {
   padding-bottom: 1px;
+}
+
+.menuFilter {
+  opacity: 0;
+  transition: opacity .5s;
+  z-index: -1;
+}
+
+.menuFilter.activated {
+  opacity: 1;
+  z-index: 1;
 }
 
 .menuFilter span {

@@ -42,16 +42,18 @@
 <body>
   <!-- menu-top -->
   <nav class="navbar menuTop">
-    <button id="iconMap" class="iconMap buttonContent" data-number="6">
+    <button id="iconMap" class="iconMap activated buttonContent" data-number="6">
       <img src="./assets/images/icons/header/icon-map.svg" class="map iconShadow" alt="icon map">
       <img src="./assets/images/icons/header/icon-btnStories.svg" class="stories iconShadow" alt="icon Stories">
     </button>
     <div class="logo active text-center">
       <img src="./assets/images/icons/header/icon-navenu.svg" alt="logo navenu">
       <p class="location">LONDON, <b>Hackney</b><span class="changeCity"> - <a class="changeCityButton" data-toggle="modal" data-target="#contentCities_modal">change</a></span></p>
-
     </div>
-    <button class="navbar-toggler menuFilter collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="changeCity()">
+    <div class="username">
+      <h1>username</h1>
+    </div>
+    <button class="navbar-toggler menuFilter activated collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="changeCityButton()">
       <span>
         <img src="./assets/images/icons/header/icon-filter.svg" class="filter iconShadow" alt="icon filter">
         <img src="./assets/images/icons/header/icon-buttonBack.svg" class="back" alt="icon back">
@@ -399,10 +401,10 @@
       <div class="containerProfile">
         <nav>
           <div class="nav nav-tabs nav-justified profileTab" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-location-tab" data-toggle="tab" href="#nav-location" role="tab" aria-controls="nav-location" aria-selected="true">Location</a>
-            <a class="nav-item nav-link" id="nav-deals-tab" data-toggle="tab" href="#nav-deals" role="tab" aria-controls="nav-deals" aria-selected="false">Deals</a>
-            <a class="nav-item nav-link" id="nav-lists-tab" data-toggle="tab" href="#nav-lists" role="tab" aria-controls="nav-lists" aria-selected="false">Lists</a>
-            <a class="nav-item nav-link" id="nav-Settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="false">Settings</a>
+            <a class="nav-item nav-link buttonTab active" id="nav-location-tab" data-toggle="tab" href="#nav-location" role="tab" aria-controls="nav-location" aria-selected="true" data-number-tab="1">Location</a>
+            <a class="nav-item nav-link buttonTab" id="nav-deals-tab" data-toggle="tab" href="#nav-deals" role="tab" aria-controls="nav-deals" aria-selected="false" data-number-tab="2">Deals</a>
+            <a class="nav-item nav-link buttonTab" id="nav-lists-tab" data-toggle="tab" href="#nav-lists" role="tab" aria-controls="nav-lists" aria-selected="false" data-number-tab="3">Lists</a>
+            <a class="nav-item nav-link buttonTab" id="nav-Settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="false" data-number-tab="4">Settings</a>
           </div>
         </nav>
         <div class="tab-content locationContentTab" id="nav-tabProfile">
@@ -1555,8 +1557,63 @@
 
   <!-- change cities -->
   <script type="text/javascript">
-    function changeCity() {
+    function changeCityButton() {
       $(".changeCity").toggleClass(" active").toggleClass("");
+    }
+  </script>
+
+  <!-- script show/hide username -->
+  <script type="text/javascript">
+    // grab all the buttons
+    let ButtonsU = document.querySelectorAll(".buttonContent");
+    // loop through the buttons using for..of
+    for (let buttonU of ButtonsU) {
+      // listen for a click event
+      buttonU.addEventListener('click', function() {
+        switch (buttonU.getAttribute('data-number')) {
+
+          case '1':
+          case '2':
+          case '4':
+            $(".logo").addClass("active");
+            $(".username").removeClass("active");
+            $(".iconMap").addClass("activated");
+            $(".menuFilter").addClass("activated");
+            break;
+          case '5':
+            $(".logo").removeClass("active");
+            $(".username").addClass("active");
+            break;
+        }
+      })
+    }
+  </script>
+
+  <!-- script show/hide map/filters -->
+  <script type="text/javascript">
+    // grab all the buttons
+    let ButtonsTab = document.querySelectorAll(".buttonTab");
+    console.log(ButtonsTab);
+    // loop through the buttons using for..of
+    for (let buttonTab of ButtonsTab) {
+      // listen for a click event
+      buttonTab.addEventListener('click', function() {
+        switch (buttonTab.getAttribute('data-number-tab')) {
+
+          case '1':
+          case '2':
+            console.log('1 2');
+            $(".iconMap").addClass("activated");
+            $(".menuFilter").addClass("activated");
+            break;
+          case '3':
+          case '4':
+            console.log('3 4');
+            $(".iconMap").removeClass("activated");
+            $(".menuFilter").removeClass("activated");
+            break;
+        }
+      })
     }
   </script>
 
@@ -1572,6 +1629,7 @@
         const active = document.querySelector(".buttonContent.active");
         const mapActive = document.querySelector(".iconMap.active");
         const home = document.querySelector(".iconHome");
+
         if (button.getAttribute('data-number') == 3) {
           console.log('chat');
         }
