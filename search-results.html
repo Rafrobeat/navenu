@@ -467,10 +467,10 @@
       <div class="containerProfile">
         <nav>
           <div class="nav nav-tabs nav-justified profileTab" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link buttonTab active" id="nav-location-tab" data-toggle="tab" href="#nav-location" role="tab" aria-controls="nav-location" aria-selected="true" data-number-tab="1">Location</a>
-            <a class="nav-item nav-link buttonTab" id="nav-deals-tab" data-toggle="tab" href="#nav-deals" role="tab" aria-controls="nav-deals" aria-selected="false" data-number-tab="2">Deals</a>
-            <a class="nav-item nav-link buttonTab" id="nav-lists-tab" data-toggle="tab" href="#nav-lists" role="tab" aria-controls="nav-lists" aria-selected="false" data-number-tab="3">Lists</a>
-            <a class="nav-item nav-link buttonTab" id="nav-Settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="false" data-number-tab="4">Settings</a>
+            <a class="nav-item nav-link buttonTab nav-location-tab active" id="nav-location-tab" data-toggle="tab" href="#nav-location" role="tab" aria-controls="nav-location" aria-selected="true" data-number-tab="1">Location</a>
+            <a class="nav-item nav-link buttonTab nav-deals-tab" id="nav-deals-tab" data-toggle="tab" href="#nav-deals" role="tab" aria-controls="nav-deals" aria-selected="false" data-number-tab="2">Deals</a>
+            <a class="nav-item nav-link buttonTab nav-lists-tab" id="nav-lists-tab" data-toggle="tab" href="#nav-lists" role="tab" aria-controls="nav-lists" aria-selected="false" data-number-tab="3">Lists</a>
+            <a class="nav-item nav-link buttonTab nav-settings-tab" id="nav-settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="false" data-number-tab="4">Settings</a>
           </div>
         </nav>
         <div class="tab-content locationContentTab" id="nav-tabProfile">
@@ -1621,8 +1621,10 @@
     for (let buttonU of ButtonsU) {
       // listen for a click event
       buttonU.addEventListener('click', function() {
-        switch (buttonU.getAttribute('data-number')) {
+        const listsActive = document.querySelector(".nav-lists-tab.active");
+        const settingsActive = document.querySelector(".nav-settings-tab.active");
 
+        switch (buttonU.getAttribute('data-number')) {
           case '1':
           case '2':
           case '4':
@@ -1632,6 +1634,10 @@
             $(".menuFilter").addClass("activated");
             break;
           case '5':
+            if (listsActive || settingsActive) {
+              $(".iconMap").removeClass("activated");
+              $(".menuFilter").removeClass("activated");
+            }
             $(".logo").removeClass("active");
             $(".username").addClass("active");
             break;
