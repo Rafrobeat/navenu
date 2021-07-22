@@ -139,6 +139,10 @@
   background-color: transparent;
 }
 
+.flickity-button:hover {
+    background: transparent !important;
+}
+
 .carousel .flickity-prev-next-button.next {
   right: 0;
 }
